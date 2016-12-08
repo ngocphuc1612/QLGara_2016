@@ -22,46 +22,12 @@ namespace QLGara
         public MainForm()
         {
             InitializeComponent();
-            //this.tabProfile.CloseButtonVisible = true;
             int roleId = LoginForm.MyProfile.Role;
-
-            if (roleId > 3)
-            {
-                this.rbUsersList.Visible = false;
-            }
-            else
-            {
-                this.rbUsersList.Visible = true;
-            }
-
-            //cbbRoles.DataSource = rl.GetData();
-            //cbbRoles.DisplayMember = "ROLE_NAME";
-            //cbbRoles.ValueMember = "ROLE_ID";
-
-            //initiated
-            //grUsers.DataSource = us.GetData();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnUsersList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (!CheckOpenTabs("UsersList"))
-            {
-                SuperTabItem t = superTab.CreateTab("UsersList");
-                FormUsersList frm = new FormUsersList();
-                frm.TopLevel = false;
-                frm.Dock = DockStyle.Fill;
-                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-                t.AttachedControl.Controls.Add(frm.pnl);
-                frm.Show();
-                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
-            }
-            else
-                superTab.TabIndex = superTab.Tabs.Count - 1;
         }
 
         public bool CheckOpenTabs(string name)
@@ -77,11 +43,11 @@ namespace QLGara
             return false;
         }
 
-        private void btnProfile_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnYourProfile_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!CheckOpenTabs("Profile"))
+            if (!CheckOpenTabs("Hồ sơ của bạn"))
             {
-                SuperTabItem t = superTab.CreateTab("Profile");
+                SuperTabItem t = superTab.CreateTab("Hồ sơ của bạn");
                 FormProfile frm = new FormProfile();
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
@@ -94,11 +60,11 @@ namespace QLGara
                 superTab.TabIndex = superTab.Tabs.Count - 1;
         }
 
-        private void btnVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnListAccessary_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!CheckOpenTabs("Vật Tư"))
+            if (!CheckOpenTabs("Danh mục phụ tùng"))
             {
-                SuperTabItem t = superTab.CreateTab("Vật Tư");
+                SuperTabItem t = superTab.CreateTab("Danh mục phụ tùng");
                 FormVatTu frm = new FormVatTu();
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
@@ -109,6 +75,33 @@ namespace QLGara
             }
             else
                 superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
+
+        private void btnAllUsers_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!CheckOpenTabs("Danh mục tài khoản"))
+            {
+                SuperTabItem t = superTab.CreateTab("Danh mục tài khoản");
+                FormUsersList frm = new FormUsersList();
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+                t.AttachedControl.Controls.Add(frm.pnl);
+                frm.Show();
+                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            }
+            else
+                superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
+
+        private void btnNewUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void superTab_SelectedTabChanged(object sender, SuperTabStripSelectedTabChangedEventArgs e)
+        {
+
         }
     }
 }

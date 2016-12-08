@@ -82,7 +82,7 @@
             this.gbUpdateUser.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.gbUpdateUser.Controls.Add(this.panel2);
             this.gbUpdateUser.Controls.Add(this.panel1);
-            this.gbUpdateUser.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.gbUpdateUser.DisabledBackColor = System.Drawing.Color.Empty;
             this.gbUpdateUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbUpdateUser.Location = new System.Drawing.Point(296, 0);
             this.gbUpdateUser.Name = "gbUpdateUser";
@@ -361,7 +361,7 @@
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.lblUsername);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
