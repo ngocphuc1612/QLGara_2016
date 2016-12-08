@@ -30,6 +30,10 @@
         {
             this.pnlVatTu = new System.Windows.Forms.Panel();
             this.gwVatTu = new System.Windows.Forms.DataGridView();
+            this.VT_MAVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VT_TENVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VT_DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VT_SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlVatTu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gwVatTu)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +53,45 @@
             this.gwVatTu.AllowUserToDeleteRows = false;
             this.gwVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gwVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gwVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gwVatTu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VT_MAVT,
+            this.VT_TENVT,
+            this.VT_DONGIA,
+            this.VT_SL});
+            this.gwVatTu.Dock = System.Windows.Forms.DockStyle.Top;
             this.gwVatTu.Location = new System.Drawing.Point(0, 0);
             this.gwVatTu.Name = "gwVatTu";
             this.gwVatTu.ReadOnly = true;
-            this.gwVatTu.Size = new System.Drawing.Size(646, 429);
+            this.gwVatTu.Size = new System.Drawing.Size(646, 208);
             this.gwVatTu.TabIndex = 0;
+            // 
+            // VT_MAVT
+            // 
+            this.VT_MAVT.DataPropertyName = "MAVT";
+            this.VT_MAVT.HeaderText = "Mã VT";
+            this.VT_MAVT.Name = "VT_MAVT";
+            this.VT_MAVT.ReadOnly = true;
+            // 
+            // VT_TENVT
+            // 
+            this.VT_TENVT.DataPropertyName = "TENVT";
+            this.VT_TENVT.HeaderText = "Tên VT";
+            this.VT_TENVT.Name = "VT_TENVT";
+            this.VT_TENVT.ReadOnly = true;
+            // 
+            // VT_DONGIA
+            // 
+            this.VT_DONGIA.DataPropertyName = "DONGIA";
+            this.VT_DONGIA.HeaderText = "Đơn giá";
+            this.VT_DONGIA.Name = "VT_DONGIA";
+            this.VT_DONGIA.ReadOnly = true;
+            // 
+            // VT_SL
+            // 
+            this.VT_SL.DataPropertyName = "SL";
+            this.VT_SL.HeaderText = "Số lượng";
+            this.VT_SL.Name = "VT_SL";
+            this.VT_SL.ReadOnly = true;
             // 
             // FormVatTu
             // 
@@ -74,5 +111,9 @@
 
         private System.Windows.Forms.Panel pnlVatTu;
         private System.Windows.Forms.DataGridView gwVatTu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VT_MAVT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VT_TENVT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VT_DONGIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VT_SL;
     }
 }

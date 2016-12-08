@@ -40,9 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_CTPhieuNhap.cs" />
+    <Compile Include="BUS_CTPSC.cs" />
+    <Compile Include="BUS_DongXe.cs" />
+    <Compile Include="BUS_HieuXe.cs" />
+    <Compile Include="BUS_KhachHang.cs" />
+    <Compile Include="BUS_NhaCungCap.cs" />
+    <Compile Include="BUS_PhieuNhap.cs" />
+    <Compile Include="BUS_PhieuSuaChua.cs" />
+    <Compile Include="BUS_PhieuThanhToan.cs" />
     <Compile Include="BUS_ROLES.cs" />
+    <Compile Include="BUS_TienCong.cs" />
     <Compile Include="BUS_Users.cs" />
     <Compile Include="BUS_VatTu.cs" />
+    <Compile Include="BUS_Xe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
