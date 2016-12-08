@@ -24,7 +24,9 @@ namespace QLGara
         private void setupProperties()
         {
             this.pnl = this.pnlUsers;
-            this.gvUsers.DataSource = us.GetData();
+            DataTable dt = us.GetData();
+            this.gvUsers.DataSource = Utility.Instance.changeGender(dt, "GENDER");
+            
         }
     }
 }
