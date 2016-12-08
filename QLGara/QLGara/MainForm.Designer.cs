@@ -49,6 +49,9 @@
             this.btnMainCheckCar = new DevExpress.XtraBars.BarButtonItem();
             this.btnMainRepairCar = new DevExpress.XtraBars.BarButtonItem();
             this.btnPayment = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReportIncome = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReportStork = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonGaraGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonGaraGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -59,22 +62,19 @@
             this.ribbonListPartner = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonListItem = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonListOrthers = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonReportGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonUsers = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonOptions = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonOptionsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonUsers = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.superTab = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.tabWelcome = new DevComponents.DotNetBar.SuperTabItem();
-            this.ribbonReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonReportGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnReportIncome = new DevExpress.XtraBars.BarButtonItem();
-            this.btnReportStork = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTab)).BeginInit();
@@ -205,6 +205,7 @@
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAbout_ItemClick);
             // 
             // btnSupport
             // 
@@ -216,6 +217,7 @@
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSupport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSupport_ItemClick);
             // 
             // btnListCustomer
             // 
@@ -227,6 +229,7 @@
             this.btnListCustomer.Name = "btnListCustomer";
             this.btnListCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnListCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListCustomer_ItemClick);
             // 
             // btnListPartner
             // 
@@ -238,6 +241,7 @@
             this.btnListPartner.Name = "btnListPartner";
             this.btnListPartner.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnListPartner.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListPartner_ItemClick);
             // 
             // btnListAccessary
             // 
@@ -248,6 +252,7 @@
             this.btnListAccessary.Name = "btnListAccessary";
             this.btnListAccessary.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnListAccessary.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAccessary_ItemClick_1);
             // 
             // btnSettings
             // 
@@ -269,6 +274,7 @@
             this.btnListCar.Name = "btnListCar";
             this.btnListCar.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnListCar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListCar_ItemClick);
             // 
             // btnListCarBrand
             // 
@@ -279,6 +285,7 @@
             this.btnListCarBrand.Name = "btnListCarBrand";
             this.btnListCarBrand.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnListCarBrand.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListCarBrand_ItemClick);
             // 
             // btnUserRoles
             // 
@@ -332,6 +339,30 @@
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // btnReportIncome
+            // 
+            this.btnReportIncome.Caption = "Báo cáo doanh thu";
+            this.btnReportIncome.Id = 31;
+            this.btnReportIncome.LargeWidth = 120;
+            this.btnReportIncome.Name = "btnReportIncome";
+            this.btnReportIncome.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // btnReportStork
+            // 
+            this.btnReportStork.Caption = "Báo cáo tồn kho";
+            this.btnReportStork.Id = 32;
+            this.btnReportStork.LargeWidth = 100;
+            this.btnReportStork.Name = "btnReportStork";
+            this.btnReportStork.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 33;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // ribbonMain
             // 
@@ -406,6 +437,36 @@
             this.ribbonListOrthers.Name = "ribbonListOrthers";
             this.ribbonListOrthers.Text = "Khác";
             // 
+            // ribbonReport
+            // 
+            this.ribbonReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonReportGroup1});
+            this.ribbonReport.Name = "ribbonReport";
+            this.ribbonReport.Text = "Báo cáo";
+            // 
+            // ribbonReportGroup1
+            // 
+            this.ribbonReportGroup1.ItemLinks.Add(this.btnReportIncome);
+            this.ribbonReportGroup1.ItemLinks.Add(this.btnReportStork);
+            this.ribbonReportGroup1.Name = "ribbonReportGroup1";
+            this.ribbonReportGroup1.Text = "Báo cáo";
+            // 
+            // ribbonUsers
+            // 
+            this.ribbonUsers.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
+            this.ribbonUsers.Name = "ribbonUsers";
+            this.ribbonUsers.Text = "Thành viên";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnAllUsers);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewUser);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnYourProfile);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnUserRoles);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Thành viên";
+            // 
             // ribbonOptions
             // 
             this.ribbonOptions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -432,22 +493,6 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.btnAbout);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Trợ Giúp";
-            // 
-            // ribbonUsers
-            // 
-            this.ribbonUsers.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.ribbonUsers.Name = "ribbonUsers";
-            this.ribbonUsers.Text = "Thành viên";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnAllUsers);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewUser);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnYourProfile);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnUserRoles);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Thành viên";
             // 
             // repositoryItemPictureEdit1
             // 
@@ -510,45 +555,7 @@
             this.tabWelcome.CloseButtonVisible = false;
             this.tabWelcome.GlobalItem = false;
             this.tabWelcome.Name = "tabWelcome";
-            this.tabWelcome.Text = "Welcome";
-            // 
-            // ribbonReport
-            // 
-            this.ribbonReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonReportGroup1});
-            this.ribbonReport.Name = "ribbonReport";
-            this.ribbonReport.Text = "Báo cáo";
-            // 
-            // ribbonReportGroup1
-            // 
-            this.ribbonReportGroup1.ItemLinks.Add(this.btnReportIncome);
-            this.ribbonReportGroup1.ItemLinks.Add(this.btnReportStork);
-            this.ribbonReportGroup1.Name = "ribbonReportGroup1";
-            this.ribbonReportGroup1.Text = "Báo cáo";
-            // 
-            // btnReportIncome
-            // 
-            this.btnReportIncome.Caption = "Báo cáo doanh thu";
-            this.btnReportIncome.Id = 31;
-            this.btnReportIncome.LargeWidth = 120;
-            this.btnReportIncome.Name = "btnReportIncome";
-            this.btnReportIncome.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // btnReportStork
-            // 
-            this.btnReportStork.Caption = "Báo cáo tồn kho";
-            this.btnReportStork.Id = 32;
-            this.btnReportStork.LargeWidth = 100;
-            this.btnReportStork.Name = "btnReportStork";
-            this.btnReportStork.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 33;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.tabWelcome.Text = "Trang chủ";
             // 
             // MainForm
             // 
