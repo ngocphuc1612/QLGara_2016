@@ -45,7 +45,7 @@
             this.txtDanDong = new System.Windows.Forms.TextBox();
             this.cbbSoCua = new System.Windows.Forms.ComboBox();
             this.txtHopSo = new System.Windows.Forms.TextBox();
-            this.txtHieuXe = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnThemMoi = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -63,6 +63,8 @@
             this.layoutControlItem8 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem9 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem10 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.txtHieuXe = new System.Windows.Forms.TextBox();
+            this.layoutControlItem11 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.pnlDongXe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gwDongXe)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -160,13 +162,14 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txtHieuXe);
             this.layoutControl1.Controls.Add(this.txtKieuDang);
             this.layoutControl1.Controls.Add(this.cbbSoGhe);
             this.layoutControl1.Controls.Add(this.txtNhienLieu);
             this.layoutControl1.Controls.Add(this.txtDanDong);
             this.layoutControl1.Controls.Add(this.cbbSoCua);
             this.layoutControl1.Controls.Add(this.txtHopSo);
-            this.layoutControl1.Controls.Add(this.txtHieuXe);
+            this.layoutControl1.Controls.Add(this.txtID);
             this.layoutControl1.Controls.Add(this.btnThemMoi);
             this.layoutControl1.Controls.Add(this.btnSua);
             this.layoutControl1.Controls.Add(this.btnLuu);
@@ -193,7 +196,7 @@
             this.txtKieuDang.Margin = new System.Windows.Forms.Padding(0);
             this.txtKieuDang.Name = "txtKieuDang";
             this.txtKieuDang.Size = new System.Drawing.Size(379, 20);
-            this.txtKieuDang.TabIndex = 7;
+            this.txtKieuDang.TabIndex = 8;
             // 
             // cbbSoGhe
             // 
@@ -213,7 +216,7 @@
             this.cbbSoGhe.Margin = new System.Windows.Forms.Padding(0);
             this.cbbSoGhe.Name = "cbbSoGhe";
             this.cbbSoGhe.Size = new System.Drawing.Size(60, 21);
-            this.cbbSoGhe.TabIndex = 5;
+            this.cbbSoGhe.TabIndex = 6;
             // 
             // txtNhienLieu
             // 
@@ -221,7 +224,7 @@
             this.txtNhienLieu.Margin = new System.Windows.Forms.Padding(0);
             this.txtNhienLieu.Name = "txtNhienLieu";
             this.txtNhienLieu.Size = new System.Drawing.Size(250, 20);
-            this.txtNhienLieu.TabIndex = 6;
+            this.txtNhienLieu.TabIndex = 7;
             // 
             // txtDanDong
             // 
@@ -229,7 +232,7 @@
             this.txtDanDong.Margin = new System.Windows.Forms.Padding(0);
             this.txtDanDong.Name = "txtDanDong";
             this.txtDanDong.Size = new System.Drawing.Size(250, 20);
-            this.txtDanDong.TabIndex = 4;
+            this.txtDanDong.TabIndex = 5;
             // 
             // cbbSoCua
             // 
@@ -245,7 +248,7 @@
             this.cbbSoCua.Margin = new System.Windows.Forms.Padding(0);
             this.cbbSoCua.Name = "cbbSoCua";
             this.cbbSoCua.Size = new System.Drawing.Size(60, 21);
-            this.cbbSoCua.TabIndex = 3;
+            this.cbbSoCua.TabIndex = 4;
             // 
             // txtHopSo
             // 
@@ -253,15 +256,15 @@
             this.txtHopSo.Margin = new System.Windows.Forms.Padding(0);
             this.txtHopSo.Name = "txtHopSo";
             this.txtHopSo.Size = new System.Drawing.Size(379, 20);
-            this.txtHopSo.TabIndex = 2;
+            this.txtHopSo.TabIndex = 3;
             // 
-            // txtHieuXe
+            // txtID
             // 
-            this.txtHieuXe.Location = new System.Drawing.Point(109, 8);
-            this.txtHieuXe.Margin = new System.Windows.Forms.Padding(0);
-            this.txtHieuXe.Name = "txtHieuXe";
-            this.txtHieuXe.Size = new System.Drawing.Size(379, 20);
-            this.txtHieuXe.TabIndex = 1;
+            this.txtID.Location = new System.Drawing.Point(109, 8);
+            this.txtID.Margin = new System.Windows.Forms.Padding(0);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(60, 20);
+            this.txtID.TabIndex = 1;
             // 
             // btnThemMoi
             // 
@@ -271,7 +274,7 @@
             this.btnThemMoi.Margin = new System.Windows.Forms.Padding(0);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(75, 24);
-            this.btnThemMoi.TabIndex = 11;
+            this.btnThemMoi.TabIndex = 12;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             // 
@@ -281,7 +284,7 @@
             this.btnSua.Margin = new System.Windows.Forms.Padding(0);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 24);
-            this.btnSua.TabIndex = 12;
+            this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
@@ -291,7 +294,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(0);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 24);
-            this.btnLuu.TabIndex = 13;
+            this.btnLuu.TabIndex = 14;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
@@ -308,6 +311,7 @@
             this.layoutGroup2.Height = 100;
             this.layoutGroup2.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
             this.layoutControlItem1,
+            this.layoutControlItem11,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
@@ -322,13 +326,12 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.txtHieuXe;
+            this.layoutControlItem1.Control = this.txtID;
             this.layoutControlItem1.Height = 28;
             this.layoutControlItem1.MinSize = new System.Drawing.Size(120, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Text = "Hiệu xe:";
-            this.layoutControlItem1.Width = 100;
-            this.layoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.layoutControlItem1.Text = "ID:";
+            this.layoutControlItem1.Width = 129;
             // 
             // layoutControlItem2
             // 
@@ -427,6 +430,25 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Width = 83;
             // 
+            // txtHieuXe
+            // 
+            this.txtHieuXe.Location = new System.Drawing.Point(243, 8);
+            this.txtHieuXe.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.txtHieuXe.Name = "txtHieuXe";
+            this.txtHieuXe.Size = new System.Drawing.Size(245, 20);
+            this.txtHieuXe.TabIndex = 2;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.txtHieuXe;
+            this.layoutControlItem11.Height = 28;
+            this.layoutControlItem11.MinSize = new System.Drawing.Size(120, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Text = "Hiệu xe:";
+            this.layoutControlItem11.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.layoutControlItem11.Width = 100;
+            this.layoutControlItem11.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
             // FormDongXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +475,7 @@
         private System.Windows.Forms.TextBox txtDanDong;
         private System.Windows.Forms.ComboBox cbbSoCua;
         private System.Windows.Forms.TextBox txtHopSo;
-        private System.Windows.Forms.TextBox txtHieuXe;
+        private System.Windows.Forms.TextBox txtID;
         private DevComponents.DotNetBar.Layout.LayoutGroup layoutGroup1;
         private DevComponents.DotNetBar.Layout.LayoutGroup layoutGroup2;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem1;
@@ -480,5 +502,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DX_DANDONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DX_NHIENLIEU;
         private System.Windows.Forms.DataGridViewTextBoxColumn DX_KIEUDANG;
+        private System.Windows.Forms.TextBox txtHieuXe;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem11;
     }
 }
