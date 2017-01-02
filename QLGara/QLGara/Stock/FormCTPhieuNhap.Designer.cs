@@ -31,11 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlCTPhieuNhap = new System.Windows.Forms.Panel();
-            this.gwCTPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.CTPN_MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTPN_MAVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTPN_SLNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTPN_TONGPHIEUNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtSearch = new DevExpress.XtraEditors.TextEdit();
@@ -59,8 +54,12 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.gwCTPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.CTPN_MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTPN_MAVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTPN_SLNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTPN_TONGPHIEUNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCTPhieuNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gwCTPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -83,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gwCTPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCTPhieuNhap
@@ -94,55 +94,6 @@
             this.pnlCTPhieuNhap.Name = "pnlCTPhieuNhap";
             this.pnlCTPhieuNhap.Size = new System.Drawing.Size(757, 350);
             this.pnlCTPhieuNhap.TabIndex = 0;
-            // 
-            // gwCTPhieuNhap
-            // 
-            this.gwCTPhieuNhap.AllowUserToAddRows = false;
-            this.gwCTPhieuNhap.AllowUserToDeleteRows = false;
-            this.gwCTPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gwCTPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gwCTPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CTPN_MAPN,
-            this.CTPN_MAVT,
-            this.CTPN_SLNHAP,
-            this.CTPN_TONGPHIEUNHAP});
-            this.gwCTPhieuNhap.Location = new System.Drawing.Point(12, 207);
-            this.gwCTPhieuNhap.Name = "gwCTPhieuNhap";
-            this.gwCTPhieuNhap.ReadOnly = true;
-            this.gwCTPhieuNhap.Size = new System.Drawing.Size(733, 131);
-            this.gwCTPhieuNhap.TabIndex = 0;
-            // 
-            // CTPN_MAPN
-            // 
-            this.CTPN_MAPN.DataPropertyName = "MAPN";
-            this.CTPN_MAPN.HeaderText = "Mã Phiếu Nhập";
-            this.CTPN_MAPN.Name = "CTPN_MAPN";
-            this.CTPN_MAPN.ReadOnly = true;
-            // 
-            // CTPN_MAVT
-            // 
-            this.CTPN_MAVT.DataPropertyName = "MAVT";
-            this.CTPN_MAVT.HeaderText = "Mã Vật Tư";
-            this.CTPN_MAVT.Name = "CTPN_MAVT";
-            this.CTPN_MAVT.ReadOnly = true;
-            // 
-            // CTPN_SLNHAP
-            // 
-            this.CTPN_SLNHAP.DataPropertyName = "SLNHAP";
-            dataGridViewCellStyle1.Format = "N0";
-            this.CTPN_SLNHAP.DefaultCellStyle = dataGridViewCellStyle1;
-            this.CTPN_SLNHAP.HeaderText = "Số Lượng";
-            this.CTPN_SLNHAP.Name = "CTPN_SLNHAP";
-            this.CTPN_SLNHAP.ReadOnly = true;
-            // 
-            // CTPN_TONGPHIEUNHAP
-            // 
-            this.CTPN_TONGPHIEUNHAP.DataPropertyName = "TONGPHIEUNHAP";
-            dataGridViewCellStyle2.Format = "N0";
-            this.CTPN_TONGPHIEUNHAP.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CTPN_TONGPHIEUNHAP.HeaderText = "Tổng Tiền Nhập";
-            this.CTPN_TONGPHIEUNHAP.Name = "CTPN_TONGPHIEUNHAP";
-            this.CTPN_TONGPHIEUNHAP.ReadOnly = true;
             // 
             // groupControl2
             // 
@@ -382,6 +333,55 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(88, 149);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // gwCTPhieuNhap
+            // 
+            this.gwCTPhieuNhap.AllowUserToAddRows = false;
+            this.gwCTPhieuNhap.AllowUserToDeleteRows = false;
+            this.gwCTPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gwCTPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gwCTPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CTPN_MAPN,
+            this.CTPN_MAVT,
+            this.CTPN_SLNHAP,
+            this.CTPN_TONGPHIEUNHAP});
+            this.gwCTPhieuNhap.Location = new System.Drawing.Point(12, 207);
+            this.gwCTPhieuNhap.Name = "gwCTPhieuNhap";
+            this.gwCTPhieuNhap.ReadOnly = true;
+            this.gwCTPhieuNhap.Size = new System.Drawing.Size(733, 131);
+            this.gwCTPhieuNhap.TabIndex = 0;
+            // 
+            // CTPN_MAPN
+            // 
+            this.CTPN_MAPN.DataPropertyName = "MAPN";
+            this.CTPN_MAPN.HeaderText = "Mã Phiếu Nhập";
+            this.CTPN_MAPN.Name = "CTPN_MAPN";
+            this.CTPN_MAPN.ReadOnly = true;
+            // 
+            // CTPN_MAVT
+            // 
+            this.CTPN_MAVT.DataPropertyName = "MAVT";
+            this.CTPN_MAVT.HeaderText = "Mã Vật Tư";
+            this.CTPN_MAVT.Name = "CTPN_MAVT";
+            this.CTPN_MAVT.ReadOnly = true;
+            // 
+            // CTPN_SLNHAP
+            // 
+            this.CTPN_SLNHAP.DataPropertyName = "SLNHAP";
+            dataGridViewCellStyle1.Format = "N0";
+            this.CTPN_SLNHAP.DefaultCellStyle = dataGridViewCellStyle1;
+            this.CTPN_SLNHAP.HeaderText = "Số Lượng";
+            this.CTPN_SLNHAP.Name = "CTPN_SLNHAP";
+            this.CTPN_SLNHAP.ReadOnly = true;
+            // 
+            // CTPN_TONGPHIEUNHAP
+            // 
+            this.CTPN_TONGPHIEUNHAP.DataPropertyName = "TONGPHIEUNHAP";
+            dataGridViewCellStyle2.Format = "N0";
+            this.CTPN_TONGPHIEUNHAP.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CTPN_TONGPHIEUNHAP.HeaderText = "Tổng Tiền Nhập";
+            this.CTPN_TONGPHIEUNHAP.Name = "CTPN_TONGPHIEUNHAP";
+            this.CTPN_TONGPHIEUNHAP.ReadOnly = true;
+            // 
             // FormCTPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +391,6 @@
             this.Name = "FormCTPhieuNhap";
             this.Text = "FormCTPhieuNhap";
             this.pnlCTPhieuNhap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gwCTPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -414,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gwCTPhieuNhap)).EndInit();
             this.ResumeLayout(false);
 
         }

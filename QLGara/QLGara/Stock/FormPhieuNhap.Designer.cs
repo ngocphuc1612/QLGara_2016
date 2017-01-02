@@ -30,12 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPhieuNhap = new System.Windows.Forms.Panel();
-            this.gwPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.PN_MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PN_NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PN_TONGTIENNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.txtSeach = new DevExpress.XtraEditors.TextEdit();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -54,10 +51,12 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gwPhieuNhap = new System.Windows.Forms.DataGridView();
+            this.PN_MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PN_NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PN_TONGTIENNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPhieuNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -78,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPhieuNhap
@@ -89,48 +89,6 @@
             this.pnlPhieuNhap.Name = "pnlPhieuNhap";
             this.pnlPhieuNhap.Size = new System.Drawing.Size(711, 361);
             this.pnlPhieuNhap.TabIndex = 0;
-            // 
-            // gwPhieuNhap
-            // 
-            this.gwPhieuNhap.AllowUserToAddRows = false;
-            this.gwPhieuNhap.AllowUserToDeleteRows = false;
-            this.gwPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gwPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gwPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gwPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PN_MAPN,
-            this.PN_NGAYNHAP,
-            this.PN_TONGTIENNHAP});
-            this.gwPhieuNhap.Location = new System.Drawing.Point(12, 173);
-            this.gwPhieuNhap.Name = "gwPhieuNhap";
-            this.gwPhieuNhap.ReadOnly = true;
-            this.gwPhieuNhap.Size = new System.Drawing.Size(685, 185);
-            this.gwPhieuNhap.TabIndex = 0;
-            // 
-            // PN_MAPN
-            // 
-            this.PN_MAPN.DataPropertyName = "MAPN";
-            this.PN_MAPN.HeaderText = "Mã Phiếu Nhập";
-            this.PN_MAPN.Name = "PN_MAPN";
-            this.PN_MAPN.ReadOnly = true;
-            // 
-            // PN_NGAYNHAP
-            // 
-            this.PN_NGAYNHAP.DataPropertyName = "NGAYNHAP";
-            this.PN_NGAYNHAP.HeaderText = "Ngày Nhập";
-            this.PN_NGAYNHAP.Name = "PN_NGAYNHAP";
-            this.PN_NGAYNHAP.ReadOnly = true;
-            // 
-            // PN_TONGTIENNHAP
-            // 
-            this.PN_TONGTIENNHAP.DataPropertyName = "TONGTIENNHAP";
-            dataGridViewCellStyle1.Format = "N0";
-            this.PN_TONGTIENNHAP.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PN_TONGTIENNHAP.HeaderText = "Tổng Tiền";
-            this.PN_TONGTIENNHAP.Name = "PN_TONGTIENNHAP";
-            this.PN_TONGTIENNHAP.ReadOnly = true;
             // 
             // groupControl2
             // 
@@ -159,6 +117,13 @@
             this.layoutControl1.Size = new System.Drawing.Size(707, 163);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dtNgayNhap
+            // 
+            this.dtNgayNhap.Location = new System.Drawing.Point(151, 53);
+            this.dtNgayNhap.Name = "dtNgayNhap";
+            this.dtNgayNhap.Size = new System.Drawing.Size(290, 21);
+            this.dtNgayNhap.TabIndex = 16;
             // 
             // txtSeach
             // 
@@ -343,13 +308,6 @@
             this.emptySpaceItem5.Size = new System.Drawing.Size(65, 143);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // dtNgayNhap
-            // 
-            this.dtNgayNhap.Location = new System.Drawing.Point(151, 53);
-            this.dtNgayNhap.Name = "dtNgayNhap";
-            this.dtNgayNhap.Size = new System.Drawing.Size(290, 21);
-            this.dtNgayNhap.TabIndex = 16;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dtNgayNhap;
@@ -358,6 +316,48 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(368, 24);
             this.layoutControlItem2.Text = "Ngày Nhập";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(71, 13);
+            // 
+            // gwPhieuNhap
+            // 
+            this.gwPhieuNhap.AllowUserToAddRows = false;
+            this.gwPhieuNhap.AllowUserToDeleteRows = false;
+            this.gwPhieuNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gwPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gwPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gwPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PN_MAPN,
+            this.PN_NGAYNHAP,
+            this.PN_TONGTIENNHAP});
+            this.gwPhieuNhap.Location = new System.Drawing.Point(12, 173);
+            this.gwPhieuNhap.Name = "gwPhieuNhap";
+            this.gwPhieuNhap.ReadOnly = true;
+            this.gwPhieuNhap.Size = new System.Drawing.Size(685, 185);
+            this.gwPhieuNhap.TabIndex = 0;
+            // 
+            // PN_MAPN
+            // 
+            this.PN_MAPN.DataPropertyName = "MAPN";
+            this.PN_MAPN.HeaderText = "Mã Phiếu Nhập";
+            this.PN_MAPN.Name = "PN_MAPN";
+            this.PN_MAPN.ReadOnly = true;
+            // 
+            // PN_NGAYNHAP
+            // 
+            this.PN_NGAYNHAP.DataPropertyName = "NGAYNHAP";
+            this.PN_NGAYNHAP.HeaderText = "Ngày Nhập";
+            this.PN_NGAYNHAP.Name = "PN_NGAYNHAP";
+            this.PN_NGAYNHAP.ReadOnly = true;
+            // 
+            // PN_TONGTIENNHAP
+            // 
+            this.PN_TONGTIENNHAP.DataPropertyName = "TONGTIENNHAP";
+            dataGridViewCellStyle1.Format = "N0";
+            this.PN_TONGTIENNHAP.DefaultCellStyle = dataGridViewCellStyle1;
+            this.PN_TONGTIENNHAP.HeaderText = "Tổng Tiền";
+            this.PN_TONGTIENNHAP.Name = "PN_TONGTIENNHAP";
+            this.PN_TONGTIENNHAP.ReadOnly = true;
             // 
             // FormPhieuNhap
             // 
@@ -368,7 +368,6 @@
             this.Name = "FormPhieuNhap";
             this.Text = "FormPhieuNhap";
             this.pnlPhieuNhap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -389,6 +388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuNhap)).EndInit();
             this.ResumeLayout(false);
 
         }
