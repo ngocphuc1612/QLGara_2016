@@ -14,11 +14,6 @@ namespace QLGara
     public partial class FormPhieuTT : MyFormPage
     {
         private BUS_PhieuThanhToan ptt = new BUS_PhieuThanhToan();
-        public FormPhieuTT()
-        {
-            InitializeComponent();
-            this.pnl = this.pnlPhieuTT;
-            this.gwPhieuTT.DataSource = ptt.getData();
-        }
+
     }
 }

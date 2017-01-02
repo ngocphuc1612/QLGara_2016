@@ -28,73 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPhieuTT = new System.Windows.Forms.Panel();
-            this.gwPhieuTT = new System.Windows.Forms.DataGridView();
-            this.PTT_MAPTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PTT_MAPSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PTT_NGAYTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PTT_TONGTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlPhieuTT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuTT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPhieuTT
             // 
-            this.pnlPhieuTT.Controls.Add(this.gwPhieuTT);
+            this.pnlPhieuTT.Controls.Add(this.splitContainerControl1);
             this.pnlPhieuTT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPhieuTT.Location = new System.Drawing.Point(0, 0);
             this.pnlPhieuTT.Name = "pnlPhieuTT";
             this.pnlPhieuTT.Size = new System.Drawing.Size(628, 345);
             this.pnlPhieuTT.TabIndex = 0;
             // 
-            // gwPhieuTT
+            // splitContainerControl1
             // 
-            this.gwPhieuTT.AllowUserToAddRows = false;
-            this.gwPhieuTT.AllowUserToDeleteRows = false;
-            this.gwPhieuTT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gwPhieuTT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gwPhieuTT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PTT_MAPTT,
-            this.PTT_MAPSC,
-            this.PTT_NGAYTT,
-            this.PTT_TONGTT});
-            this.gwPhieuTT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gwPhieuTT.Location = new System.Drawing.Point(0, 0);
-            this.gwPhieuTT.Name = "gwPhieuTT";
-            this.gwPhieuTT.ReadOnly = true;
-            this.gwPhieuTT.Size = new System.Drawing.Size(628, 195);
-            this.gwPhieuTT.TabIndex = 0;
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl1);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(628, 345);
+            this.splitContainerControl1.SplitterPosition = 443;
+            this.splitContainerControl1.TabIndex = 0;
+            this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // PTT_MAPTT
+            // layoutControl1
             // 
-            this.PTT_MAPTT.DataPropertyName = "MAPTT";
-            this.PTT_MAPTT.HeaderText = "Mã PTT";
-            this.PTT_MAPTT.Name = "PTT_MAPTT";
-            this.PTT_MAPTT.ReadOnly = true;
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(443, 345);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // PTT_MAPSC
+            // layoutControlGroup1
             // 
-            this.PTT_MAPSC.DataPropertyName = "MAPSC";
-            this.PTT_MAPSC.HeaderText = "Mã PSC";
-            this.PTT_MAPSC.Name = "PTT_MAPSC";
-            this.PTT_MAPSC.ReadOnly = true;
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(443, 345);
+            this.layoutControlGroup1.TextVisible = false;
             // 
-            // PTT_NGAYTT
+            // dataGridView1
             // 
-            this.PTT_NGAYTT.DataPropertyName = "NGAYTT";
-            this.PTT_NGAYTT.HeaderText = "Ngày TT";
-            this.PTT_NGAYTT.Name = "PTT_NGAYTT";
-            this.PTT_NGAYTT.ReadOnly = true;
-            // 
-            // PTT_TONGTT
-            // 
-            this.PTT_TONGTT.DataPropertyName = "TONGTT";
-            dataGridViewCellStyle1.Format = "N0";
-            this.PTT_TONGTT.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PTT_TONGTT.HeaderText = "Tổng tiền";
-            this.PTT_TONGTT.Name = "PTT_TONGTT";
-            this.PTT_TONGTT.ReadOnly = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(180, 345);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FormPhieuTT
             // 
@@ -105,7 +101,11 @@
             this.Name = "FormPhieuTT";
             this.Text = "FormPhieuTT";
             this.pnlPhieuTT.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gwPhieuTT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,10 +113,9 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlPhieuTT;
-        private System.Windows.Forms.DataGridView gwPhieuTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PTT_MAPTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PTT_MAPSC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PTT_NGAYTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PTT_TONGTT;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
