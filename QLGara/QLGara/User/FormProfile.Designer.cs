@@ -165,7 +165,6 @@
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.ReadOnly = true;
             this.textEdit7.Size = new System.Drawing.Size(62, 20);
-            this.textEdit7.StyleController = this.layoutControl1;
             this.textEdit7.TabIndex = 1;
             // 
             // textEdit8
@@ -174,7 +173,6 @@
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.ReadOnly = true;
             this.textEdit8.Size = new System.Drawing.Size(143, 20);
-            this.textEdit8.StyleController = this.layoutControl1;
             this.textEdit8.TabIndex = 4;
             // 
             // textEdit1
@@ -182,7 +180,6 @@
             this.textEdit1.Location = new System.Drawing.Point(106, 38);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(194, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 5;
             // 
             // textEdit2
@@ -190,7 +187,6 @@
             this.textEdit2.Location = new System.Drawing.Point(106, 65);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(194, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 7;
             // 
             // textEdit4
@@ -198,7 +194,6 @@
             this.textEdit4.Location = new System.Drawing.Point(408, 65);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(185, 20);
-            this.textEdit4.StyleController = this.layoutControl1;
             this.textEdit4.TabIndex = 10;
             // 
             // dateEdit1
@@ -211,7 +206,6 @@
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(78, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 11;
             // 
             // textEdit3
@@ -219,7 +213,6 @@
             this.textEdit3.Location = new System.Drawing.Point(106, 89);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(487, 20);
-            this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 6;
             // 
             // comboBoxEdit1
@@ -230,7 +223,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit1.Properties.ReadOnly = true;
             this.comboBoxEdit1.Size = new System.Drawing.Size(78, 20);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
             this.comboBoxEdit1.TabIndex = 12;
             // 
             // textEdit6
@@ -238,7 +230,6 @@
             this.textEdit6.Location = new System.Drawing.Point(106, 113);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(194, 20);
-            this.textEdit6.StyleController = this.layoutControl1;
             this.textEdit6.TabIndex = 13;
             // 
             // textEdit5
@@ -246,7 +237,6 @@
             this.textEdit5.Location = new System.Drawing.Point(408, 113);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(185, 20);
-            this.textEdit5.StyleController = this.layoutControl1;
             this.textEdit5.TabIndex = 14;
             // 
             // layoutControlGroup1
@@ -273,7 +263,7 @@
             this.emptySpaceItem4,
             this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(605, 486);
             this.layoutControlGroup1.TextVisible = false;
             // 
