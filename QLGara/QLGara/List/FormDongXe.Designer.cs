@@ -39,32 +39,30 @@
             this.DX_NHIENLIEU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DX_KIEUDANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.layoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
+            this.txtKieuDang = new System.Windows.Forms.TextBox();
+            this.cbbSoGhe = new System.Windows.Forms.ComboBox();
+            this.txtNhienLieu = new System.Windows.Forms.TextBox();
+            this.txtDanDong = new System.Windows.Forms.TextBox();
+            this.cbbSoCua = new System.Windows.Forms.ComboBox();
+            this.txtHopSo = new System.Windows.Forms.TextBox();
+            this.txtHieuXe = new System.Windows.Forms.TextBox();
+            this.btnThemMoi = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.layoutGroup1 = new DevComponents.DotNetBar.Layout.LayoutGroup();
             this.layoutGroup2 = new DevComponents.DotNetBar.Layout.LayoutGroup();
-            this.txtHieuXe = new System.Windows.Forms.TextBox();
             this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.txtHopSo = new System.Windows.Forms.TextBox();
             this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.cbbSoCua = new System.Windows.Forms.ComboBox();
             this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.txtDanDong = new System.Windows.Forms.TextBox();
             this.layoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.txtNhienLieu = new System.Windows.Forms.TextBox();
-            this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.cbbSoGhe = new System.Windows.Forms.ComboBox();
             this.layoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.txtKieuDang = new System.Windows.Forms.TextBox();
+            this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem7 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutGroup3 = new DevComponents.DotNetBar.Layout.LayoutGroup();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThemMoi = new System.Windows.Forms.Button();
             this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutControlItem8 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem9 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem10 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.layoutControlItem11 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.pnlDongXe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gwDongXe)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -72,8 +70,8 @@
             // 
             // pnlDongXe
             // 
-            this.pnlDongXe.Controls.Add(this.layoutControl1);
             this.pnlDongXe.Controls.Add(this.gwDongXe);
+            this.pnlDongXe.Controls.Add(this.layoutControl1);
             this.pnlDongXe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDongXe.Location = new System.Drawing.Point(0, 0);
             this.pnlDongXe.Name = "pnlDongXe";
@@ -84,6 +82,9 @@
             // 
             this.gwDongXe.AllowUserToAddRows = false;
             this.gwDongXe.AllowUserToDeleteRows = false;
+            this.gwDongXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gwDongXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gwDongXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gwDongXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -95,12 +96,11 @@
             this.DX_DANDONG,
             this.DX_NHIENLIEU,
             this.DX_KIEUDANG});
-            this.gwDongXe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gwDongXe.Location = new System.Drawing.Point(0, 0);
+            this.gwDongXe.Location = new System.Drawing.Point(0, 206);
             this.gwDongXe.Name = "gwDongXe";
             this.gwDongXe.ReadOnly = true;
-            this.gwDongXe.Size = new System.Drawing.Size(817, 174);
-            this.gwDongXe.TabIndex = 0;
+            this.gwDongXe.Size = new System.Drawing.Size(817, 258);
+            this.gwDongXe.TabIndex = 2;
             // 
             // DX_ID
             // 
@@ -170,9 +170,8 @@
             this.layoutControl1.Controls.Add(this.btnThemMoi);
             this.layoutControl1.Controls.Add(this.btnSua);
             this.layoutControl1.Controls.Add(this.btnLuu);
-            this.layoutControl1.Controls.Add(this.btnXoa);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 174);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             // 
             // 
@@ -184,10 +183,117 @@
             this.layoutSpacerItem1,
             this.layoutControlItem8,
             this.layoutControlItem9,
-            this.layoutControlItem10,
-            this.layoutControlItem11});
-            this.layoutControl1.Size = new System.Drawing.Size(817, 257);
+            this.layoutControlItem10});
+            this.layoutControl1.Size = new System.Drawing.Size(817, 200);
             this.layoutControl1.TabIndex = 1;
+            // 
+            // txtKieuDang
+            // 
+            this.txtKieuDang.Location = new System.Drawing.Point(109, 122);
+            this.txtKieuDang.Margin = new System.Windows.Forms.Padding(0);
+            this.txtKieuDang.Name = "txtKieuDang";
+            this.txtKieuDang.Size = new System.Drawing.Size(379, 20);
+            this.txtKieuDang.TabIndex = 7;
+            // 
+            // cbbSoGhe
+            // 
+            this.cbbSoGhe.FormattingEnabled = true;
+            this.cbbSoGhe.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "7",
+            "10",
+            "16",
+            "24",
+            "32"});
+            this.cbbSoGhe.Location = new System.Drawing.Point(109, 93);
+            this.cbbSoGhe.Margin = new System.Windows.Forms.Padding(0);
+            this.cbbSoGhe.Name = "cbbSoGhe";
+            this.cbbSoGhe.Size = new System.Drawing.Size(60, 21);
+            this.cbbSoGhe.TabIndex = 5;
+            // 
+            // txtNhienLieu
+            // 
+            this.txtNhienLieu.Location = new System.Drawing.Point(238, 93);
+            this.txtNhienLieu.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNhienLieu.Name = "txtNhienLieu";
+            this.txtNhienLieu.Size = new System.Drawing.Size(250, 20);
+            this.txtNhienLieu.TabIndex = 6;
+            // 
+            // txtDanDong
+            // 
+            this.txtDanDong.Location = new System.Drawing.Point(238, 64);
+            this.txtDanDong.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDanDong.Name = "txtDanDong";
+            this.txtDanDong.Size = new System.Drawing.Size(250, 20);
+            this.txtDanDong.TabIndex = 4;
+            // 
+            // cbbSoCua
+            // 
+            this.cbbSoCua.FormattingEnabled = true;
+            this.cbbSoCua.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cbbSoCua.Location = new System.Drawing.Point(109, 64);
+            this.cbbSoCua.Margin = new System.Windows.Forms.Padding(0);
+            this.cbbSoCua.Name = "cbbSoCua";
+            this.cbbSoCua.Size = new System.Drawing.Size(60, 21);
+            this.cbbSoCua.TabIndex = 3;
+            // 
+            // txtHopSo
+            // 
+            this.txtHopSo.Location = new System.Drawing.Point(109, 36);
+            this.txtHopSo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtHopSo.Name = "txtHopSo";
+            this.txtHopSo.Size = new System.Drawing.Size(379, 20);
+            this.txtHopSo.TabIndex = 2;
+            // 
+            // txtHieuXe
+            // 
+            this.txtHieuXe.Location = new System.Drawing.Point(109, 8);
+            this.txtHieuXe.Margin = new System.Windows.Forms.Padding(0);
+            this.txtHieuXe.Name = "txtHieuXe";
+            this.txtHieuXe.Size = new System.Drawing.Size(379, 20);
+            this.txtHieuXe.TabIndex = 1;
+            // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.AllowDrop = true;
+            this.btnThemMoi.AutoEllipsis = true;
+            this.btnThemMoi.Location = new System.Drawing.Point(104, 174);
+            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(75, 24);
+            this.btnThemMoi.TabIndex = 11;
+            this.btnThemMoi.Text = "Thêm mới";
+            this.btnThemMoi.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(187, 174);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 24);
+            this.btnSua.TabIndex = 12;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(270, 174);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 24);
+            this.btnLuu.TabIndex = 13;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // layoutGroup1
             // 
@@ -214,14 +320,6 @@
             this.layoutGroup2.Width = 60;
             this.layoutGroup2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
-            // txtHieuXe
-            // 
-            this.txtHieuXe.Location = new System.Drawing.Point(109, 8);
-            this.txtHieuXe.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.txtHieuXe.Name = "txtHieuXe";
-            this.txtHieuXe.Size = new System.Drawing.Size(389, 20);
-            this.txtHieuXe.TabIndex = 1;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtHieuXe;
@@ -231,14 +329,6 @@
             this.layoutControlItem1.Text = "Hiệu xe:";
             this.layoutControlItem1.Width = 100;
             this.layoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
-            // 
-            // txtHopSo
-            // 
-            this.txtHopSo.Location = new System.Drawing.Point(109, 36);
-            this.txtHopSo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.txtHopSo.Name = "txtHopSo";
-            this.txtHopSo.Size = new System.Drawing.Size(389, 20);
-            this.txtHopSo.TabIndex = 2;
             // 
             // layoutControlItem2
             // 
@@ -250,22 +340,6 @@
             this.layoutControlItem2.Width = 100;
             this.layoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
-            // cbbSoCua
-            // 
-            this.cbbSoCua.FormattingEnabled = true;
-            this.cbbSoCua.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cbbSoCua.Location = new System.Drawing.Point(109, 64);
-            this.cbbSoCua.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cbbSoCua.Name = "cbbSoCua";
-            this.cbbSoCua.Size = new System.Drawing.Size(60, 21);
-            this.cbbSoCua.TabIndex = 3;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.cbbSoCua;
@@ -274,14 +348,6 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Text = "Số cửa:";
             this.layoutControlItem3.Width = 129;
-            // 
-            // txtDanDong
-            // 
-            this.txtDanDong.Location = new System.Drawing.Point(238, 64);
-            this.txtDanDong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.txtDanDong.Name = "txtDanDong";
-            this.txtDanDong.Size = new System.Drawing.Size(260, 20);
-            this.txtDanDong.TabIndex = 4;
             // 
             // layoutControlItem4
             // 
@@ -293,13 +359,14 @@
             this.layoutControlItem4.Width = 100;
             this.layoutControlItem4.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
-            // txtNhienLieu
+            // layoutControlItem6
             // 
-            this.txtNhienLieu.Location = new System.Drawing.Point(238, 93);
-            this.txtNhienLieu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.txtNhienLieu.Name = "txtNhienLieu";
-            this.txtNhienLieu.Size = new System.Drawing.Size(260, 20);
-            this.txtNhienLieu.TabIndex = 6;
+            this.layoutControlItem6.Control = this.cbbSoGhe;
+            this.layoutControlItem6.Height = 29;
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Text = "Số ghế:";
+            this.layoutControlItem6.Width = 129;
             // 
             // layoutControlItem5
             // 
@@ -310,43 +377,6 @@
             this.layoutControlItem5.Text = "Nhiên liệu:";
             this.layoutControlItem5.Width = 100;
             this.layoutControlItem5.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
-            // 
-            // cbbSoGhe
-            // 
-            this.cbbSoGhe.FormattingEnabled = true;
-            this.cbbSoGhe.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "4",
-            "5",
-            "6",
-            "7",
-            "10",
-            "16",
-            "24",
-            "32"});
-            this.cbbSoGhe.Location = new System.Drawing.Point(109, 93);
-            this.cbbSoGhe.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cbbSoGhe.Name = "cbbSoGhe";
-            this.cbbSoGhe.Size = new System.Drawing.Size(60, 21);
-            this.cbbSoGhe.TabIndex = 5;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.cbbSoGhe;
-            this.layoutControlItem6.Height = 29;
-            this.layoutControlItem6.MinSize = new System.Drawing.Size(64, 18);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Text = "Số ghế:";
-            this.layoutControlItem6.Width = 129;
-            // 
-            // txtKieuDang
-            // 
-            this.txtKieuDang.Location = new System.Drawing.Point(109, 122);
-            this.txtKieuDang.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.txtKieuDang.Name = "txtKieuDang";
-            this.txtKieuDang.Size = new System.Drawing.Size(389, 20);
-            this.txtKieuDang.TabIndex = 7;
             // 
             // layoutControlItem7
             // 
@@ -366,48 +396,6 @@
             this.layoutGroup3.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
             this.layoutGroup3.Width = 40;
             this.layoutGroup3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(353, 174);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 24);
-            this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(270, 174);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 24);
-            this.btnLuu.TabIndex = 13;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(187, 174);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 24);
-            this.btnSua.TabIndex = 12;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThemMoi
-            // 
-            this.btnThemMoi.AllowDrop = true;
-            this.btnThemMoi.AutoEllipsis = true;
-            this.btnThemMoi.Location = new System.Drawing.Point(104, 174);
-            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.Size = new System.Drawing.Size(75, 24);
-            this.btnThemMoi.TabIndex = 11;
-            this.btnThemMoi.Text = "Thêm mới";
-            this.btnThemMoi.UseVisualStyleBackColor = true;
             // 
             // layoutSpacerItem1
             // 
@@ -439,14 +427,6 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Width = 83;
             // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.btnXoa;
-            this.layoutControlItem11.Height = 31;
-            this.layoutControlItem11.MinSize = new System.Drawing.Size(32, 20);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Width = 83;
-            // 
             // FormDongXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,15 +446,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDongXe;
-        private System.Windows.Forms.DataGridView gwDongXe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_HX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_SOCUA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_SOGHE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_HOPSO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_DANDONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_NHIENLIEU;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DX_KIEUDANG;
         private DevComponents.DotNetBar.Layout.LayoutControl layoutControl1;
         private System.Windows.Forms.TextBox txtKieuDang;
         private System.Windows.Forms.ComboBox cbbSoGhe;
@@ -493,7 +464,6 @@
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem5;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem7;
         private DevComponents.DotNetBar.Layout.LayoutGroup layoutGroup3;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThemMoi;
@@ -501,6 +471,14 @@
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem8;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem9;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem10;
-        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem11;
+        private System.Windows.Forms.DataGridView gwDongXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_HX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_SOCUA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_SOGHE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_HOPSO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_DANDONG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_NHIENLIEU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DX_KIEUDANG;
     }
 }
