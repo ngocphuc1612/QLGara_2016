@@ -16,9 +16,9 @@ namespace QLGara
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
             //Application.Run(new FormUsersList());
-            Application.Run(new FormProfile());
+            //Application.Run(new FormProfile());
             //Application.Run(new FormUsersList());
             //Application.Run(new FormUsersList());
             //Application.Run(new FormUsersList());

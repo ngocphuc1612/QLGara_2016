@@ -60,7 +60,9 @@
             this.btnReportCNDoanhNghiep = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportCNCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTaiKhoan = new DevExpress.XtraBars.BarLinkContainerItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonGaraGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonGaraGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -81,12 +83,14 @@
             this.ribbonHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.superTab = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.tabWelcome = new DevComponents.DotNetBar.SuperTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTab)).BeginInit();
             this.superTab.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -128,11 +132,13 @@
             this.btnReportCNDoanhNghiep,
             this.btnReportCNCaNhan,
             this.barButtonItem3,
-            this.btnThoat});
+            this.btnTaiKhoan,
+            this.barButtonItem4,
+            this.barButtonItem5});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 47;
+            this.ribbonControl.MaxItemId = 53;
             this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.PageHeaderItemLinks.Add(this.btnThoat);
+            this.ribbonControl.PageHeaderItemLinks.Add(this.btnTaiKhoan);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonMain,
             this.ribbonStock,
@@ -142,7 +148,8 @@
             this.ribbonOptions,
             this.ribbonHelp});
             this.ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemPictureEdit1});
+            this.repositoryItemPictureEdit1,
+            this.repositoryItemButtonEdit1});
             this.ribbonControl.Size = new System.Drawing.Size(1184, 141);
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
@@ -472,17 +479,39 @@
             this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // btnThoat
+            // btnTaiKhoan
             // 
-            this.btnThoat.Caption = "Thoát";
-            this.btnThoat.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThoat.Glyph")));
-            this.btnThoat.Id = 46;
-            this.btnThoat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnThoat.LargeGlyph")));
-            this.btnThoat.LargeWidth = 100;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnTaiKhoan.AllowRightClickInMenu = false;
+            this.btnTaiKhoan.Caption = "Tài khoản";
+            this.btnTaiKhoan.Glyph = global::QLGara.Properties.Resources.Logout_icon;
+            this.btnTaiKhoan.Id = 50;
+            this.btnTaiKhoan.LargeGlyph = global::QLGara.Properties.Resources.Logout_icon;
+            this.btnTaiKhoan.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            this.btnTaiKhoan.MenuCaption = "Tài khoản";
+            this.btnTaiKhoan.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.SmallImagesText;
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.OptionsMultiColumn.LargeImages = DevExpress.Utils.DefaultBoolean.False;
+            this.btnTaiKhoan.OptionsMultiColumn.ShowItemText = DevExpress.Utils.DefaultBoolean.False;
+            this.btnTaiKhoan.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
+            this.btnTaiKhoan.ShortcutKeyDisplayString = "Tài khoản";
+            this.btnTaiKhoan.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.False;
+            this.btnTaiKhoan.ShowMenuCaption = true;
+            this.btnTaiKhoan.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Thoát";
+            this.barButtonItem4.Id = 51;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Thông tin tài khoản";
+            this.barButtonItem5.Id = 52;
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // ribbonMain
             // 
@@ -631,6 +660,14 @@
             // 
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
             // superTab
             // 
             this.superTab.CloseButtonOnTabsVisible = true;
@@ -702,6 +739,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTab)).EndInit();
             this.superTab.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
@@ -768,6 +806,9 @@
         private DevExpress.XtraBars.BarButtonItem btnReportCNCaNhan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem btnThoat;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraBars.BarLinkContainerItem btnTaiKhoan;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }
