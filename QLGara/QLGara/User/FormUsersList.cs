@@ -43,10 +43,5 @@ namespace QLGara
         {
 
         }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

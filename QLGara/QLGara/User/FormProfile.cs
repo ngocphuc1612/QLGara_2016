@@ -23,7 +23,7 @@ namespace QLGara
         private void setupView()
         {
             Entity_User getUser = LoginForm.MyProfile;
-            this.pnl = this.pnlProfile;
+            //this.pnl = this.pnlProfile;
             //this.lblFullname.Text = getUser.FullName;
             //this.lblUsername.Text = getUser.Username;
             //this.lblEmail.Text = getUser.Email;

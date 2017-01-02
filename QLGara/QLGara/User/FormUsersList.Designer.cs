@@ -284,6 +284,7 @@
             // 
             this.textEdit8.Location = new System.Drawing.Point(429, 113);
             this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Properties.ReadOnly = true;
             this.textEdit8.Size = new System.Drawing.Size(205, 20);
             this.textEdit8.StyleController = this.layoutControl1;
             this.textEdit8.TabIndex = 14;
@@ -292,18 +293,19 @@
             // 
             this.textEdit7.Location = new System.Drawing.Point(106, 113);
             this.textEdit7.Name = "textEdit7";
+            this.textEdit7.Properties.ReadOnly = true;
             this.textEdit7.Size = new System.Drawing.Size(215, 20);
             this.textEdit7.StyleController = this.layoutControl1;
             this.textEdit7.TabIndex = 13;
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Enabled = false;
-            this.comboBoxEdit1.Location = new System.Drawing.Point(574, 12);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(524, 12);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(60, 20);
+            this.comboBoxEdit1.Properties.ReadOnly = true;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(110, 20);
             this.comboBoxEdit1.StyleController = this.layoutControl1;
             this.comboBoxEdit1.TabIndex = 12;
             // 
@@ -348,13 +350,13 @@
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(518, 38);
+            this.dateEdit1.Location = new System.Drawing.Point(524, 38);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(116, 20);
+            this.dateEdit1.Size = new System.Drawing.Size(110, 20);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 11;
             // 
@@ -370,14 +372,14 @@
             // 
             this.radioButton2.Location = new System.Drawing.Point(382, 36);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(42, 25);
+            this.radioButton2.Size = new System.Drawing.Size(48, 25);
             this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(325, 36);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -413,18 +415,18 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Enabled = false;
             this.textEdit2.Location = new System.Drawing.Point(289, 12);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(175, 20);
+            this.textEdit2.Properties.ReadOnly = true;
+            this.textEdit2.Size = new System.Drawing.Size(141, 20);
             this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 4;
             // 
             // textEdit1
             // 
-            this.textEdit1.Enabled = false;
             this.textEdit1.Location = new System.Drawing.Point(106, 12);
             this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.ReadOnly = true;
             this.textEdit1.Size = new System.Drawing.Size(73, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 1;
@@ -472,7 +474,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(171, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 2, 2, 2);
-            this.layoutControlItem2.Size = new System.Drawing.Size(285, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(251, 24);
             this.layoutControlItem2.Text = "Tên đăng nhập";
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(91, 13);
@@ -512,7 +514,7 @@
             this.layoutControlItem7.Control = this.radioButton2;
             this.layoutControlItem7.Location = new System.Drawing.Point(370, 24);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(46, 29);
+            this.layoutControlItem7.Size = new System.Drawing.Size(52, 29);
             this.layoutControlItem7.Text = "Nữ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
@@ -531,13 +533,13 @@
             // 
             this.layoutControlItem9.Control = this.dateEdit1;
             this.layoutControlItem9.FillControlToClientArea = false;
-            this.layoutControlItem9.Location = new System.Drawing.Point(416, 24);
+            this.layoutControlItem9.Location = new System.Drawing.Point(422, 24);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(20, 2, 4, 2);
-            this.layoutControlItem9.Size = new System.Drawing.Size(210, 29);
+            this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 2, 4, 2);
+            this.layoutControlItem9.Size = new System.Drawing.Size(204, 29);
             this.layoutControlItem9.Text = "Ngày sinh";
             this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(70, 13);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(75, 13);
             this.layoutControlItem9.TextToControlDistance = 2;
             // 
             // layoutControlItem4
@@ -588,13 +590,13 @@
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.comboBoxEdit1;
-            this.layoutControlItem14.Location = new System.Drawing.Point(456, 0);
+            this.layoutControlItem14.Location = new System.Drawing.Point(422, 0);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 2, 2, 2);
-            this.layoutControlItem14.Size = new System.Drawing.Size(170, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(204, 24);
             this.layoutControlItem14.Text = "Quyền hạn";
             this.layoutControlItem14.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(91, 13);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(75, 13);
             this.layoutControlItem14.TextToControlDistance = 5;
             // 
             // layoutControlItem15
