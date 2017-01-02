@@ -20,5 +20,20 @@ namespace QLGara
             this.pnl = pnlDongXe;
             this.gwDongXe.DataSource = dx.getData();
         }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
