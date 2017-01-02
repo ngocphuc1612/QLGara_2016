@@ -606,7 +606,9 @@
             // btnReportHetHan
             // 
             this.btnReportHetHan.Caption = "Phụ tùng hết hạn";
+            this.btnReportHetHan.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportHetHan.Glyph")));
             this.btnReportHetHan.Id = 38;
+            this.btnReportHetHan.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportHetHan.LargeGlyph")));
             this.btnReportHetHan.LargeWidth = 120;
             this.btnReportHetHan.Name = "btnReportHetHan";
             this.btnReportHetHan.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -615,7 +617,9 @@
             // barReportCanNhap
             // 
             this.barReportCanNhap.Caption = "Phụ tùng cần nhập";
+            this.barReportCanNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("barReportCanNhap.Glyph")));
             this.barReportCanNhap.Id = 39;
+            this.barReportCanNhap.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barReportCanNhap.LargeGlyph")));
             this.barReportCanNhap.LargeWidth = 120;
             this.barReportCanNhap.Name = "barReportCanNhap";
             this.barReportCanNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -624,7 +628,9 @@
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "Phụ tùng xuất nhiều";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 40;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.LargeWidth = 120;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -640,7 +646,9 @@
             // btnReportCNDoanhNghiep
             // 
             this.btnReportCNDoanhNghiep.Caption = "Doanh nghiệp";
+            this.btnReportCNDoanhNghiep.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNDoanhNghiep.Glyph")));
             this.btnReportCNDoanhNghiep.Id = 41;
+            this.btnReportCNDoanhNghiep.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNDoanhNghiep.LargeGlyph")));
             this.btnReportCNDoanhNghiep.LargeWidth = 100;
             this.btnReportCNDoanhNghiep.Name = "btnReportCNDoanhNghiep";
             this.btnReportCNDoanhNghiep.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -649,7 +657,9 @@
             // btnReportCNCaNhan
             // 
             this.btnReportCNCaNhan.Caption = "Cá Nhân";
+            this.btnReportCNCaNhan.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNCaNhan.Glyph")));
             this.btnReportCNCaNhan.Id = 42;
+            this.btnReportCNCaNhan.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNCaNhan.LargeGlyph")));
             this.btnReportCNCaNhan.LargeWidth = 100;
             this.btnReportCNCaNhan.Name = "btnReportCNCaNhan";
             this.btnReportCNCaNhan.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
