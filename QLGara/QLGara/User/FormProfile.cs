@@ -24,13 +24,13 @@ namespace QLGara
         {
             Entity_User getUser = LoginForm.MyProfile;
             this.pnl = this.pnlProfile;
-            this.lblFullname.Text = getUser.FullName;
-            this.lblUsername.Text = getUser.Username;
-            this.lblEmail.Text = getUser.Email;
-            this.lblGender.Text = getUser.Gender ? "Nam" : "Nữ";
-            this.lblPhone.Text = getUser.Phone;
-            this.lblDirection.Text = getUser.Direction;
-            this.lblBirthday.Text = getUser.Birthday.ToShortDateString();
+            //this.lblFullname.Text = getUser.FullName;
+            //this.lblUsername.Text = getUser.Username;
+            //this.lblEmail.Text = getUser.Email;
+            //this.lblGender.Text = getUser.Gender ? "Nam" : "Nữ";
+            //this.lblPhone.Text = getUser.Phone;
+            //this.lblDirection.Text = getUser.Direction;
+            //this.lblBirthday.Text = getUser.Birthday.ToShortDateString();
 
         }
     }
