@@ -207,5 +207,11 @@ namespace QLGara
             MessageBox.Show(guide, "Hướng dẫn sử dụng",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Application.Exit();
+        }
     }
 }
