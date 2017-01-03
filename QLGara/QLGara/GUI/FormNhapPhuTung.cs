@@ -18,7 +18,6 @@ namespace QLGara
         {
             InitializeComponent();
             this.pnl = this.pnlPhieuNhap;
-            this.gwPhieuNhap.AutoGenerateColumns = false;
             this.gwPhieuNhap.DataSource = pn.getData();
         }
     }

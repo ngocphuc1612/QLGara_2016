@@ -43,6 +43,7 @@
     <Compile Include="BUS_CTPhieuNhap.cs" />
     <Compile Include="BUS_CTPSC.cs" />
     <Compile Include="BUS_DongXe.cs" />
+    <Compile Include="BUS_HieuXe.cs" />
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_NhaCungCap.cs" />
     <Compile Include="BUS_PhieuNhap.cs" />

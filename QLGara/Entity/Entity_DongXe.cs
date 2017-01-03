@@ -7,12 +7,12 @@ namespace Entity
 
         #region Fields
         private string dongXeId;
-        private string hieuXe;
+        private int hieuXe;
         private string tskt;
         #endregion
 
         #region Constructor
-        public Entity_DongXe(string dongXeId, string hieuXe, string tskt)
+        public Entity_DongXe(string dongXeId, int hieuXe, string tskt)
         {
             this.dongXeId = dongXeId;
             this.hieuXe = hieuXe;
@@ -30,7 +30,7 @@ namespace Entity
 
         }
 
-        public string HieuXe
+        public int HieuXe
         {
             get
             {

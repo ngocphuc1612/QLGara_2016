@@ -20,7 +20,6 @@ namespace QLGara
         {
             InitializeComponent();
             this.pnl = this.pnlXe;
-            this.gwXe.AutoGenerateColumns = false;
             this.gwXe.DataSource = xe.getData();
 
             reset();

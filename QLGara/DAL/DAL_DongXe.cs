@@ -52,23 +52,5 @@ namespace DAL
             }
         }
 
-        public bool delDongXe(string dongXe)
-        {
-            try
-            {
-                const string strSQL = "SP_DEL_DONGXE";
-                string[] pNames = { "@id" };
-                object[] pValues = { dongXe };
-                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
-                if (count >= 0)
-                    return true;
-                else return false;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
     }
 }

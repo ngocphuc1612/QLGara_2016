@@ -43,6 +43,7 @@
     <Compile Include="DAL_CTPhieuNhap.cs" />
     <Compile Include="DAL_CTPSC.cs" />
     <Compile Include="DAL_DongXe.cs" />
+    <Compile Include="DAL_HieuXe.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_PhieuNhap.cs" />
