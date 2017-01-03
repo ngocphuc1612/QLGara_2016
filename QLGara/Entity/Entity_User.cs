@@ -6,7 +6,7 @@ namespace Entity
     public class Entity_User
     {
         #region Constructor
-        public Entity_User(string username, string email, string pass, int role, bool gender, DateTime dt, string fullName, string phone, string direction)
+        public Entity_User(int id, string username, string email, string pass, int role, bool gender, DateTime dt, string fullName, string phone, string direction)
         {
             this.username = username;
             this.email = email;
