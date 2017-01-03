@@ -6,28 +6,22 @@ namespace Entity
     {
 
         #region Fields
-        private int dongXeId;
+        private string dongXeId;
         private int hieuXe;
-        private int soCua, soGhe;
-        private string hopSo, danDong, nguyenLieu, kieuDang;
+        private string tskt;
         #endregion
 
         #region Constructor
-        public Entity_DongXe(int dongXeId, int hieuXe, string hopSo, string danDong, string nguyenLieu, string kieuDang, int soCua = 2, int soGhe = 4)
+        public Entity_DongXe(string dongXeId, int hieuXe, string tskt)
         {
             this.dongXeId = dongXeId;
             this.hieuXe = hieuXe;
-            this.soCua = soCua;
-            this.soGhe = soGhe;
-            this.hopSo = hopSo;
-            this.danDong = danDong;
-            this.nguyenLieu = nguyenLieu;
-            this.kieuDang = kieuDang;
+            this.tskt = tskt;
         }
         #endregion
 
         #region Properties
-        public int DongXeId
+        public string DongXeId
         {
             get
             {
@@ -44,52 +38,13 @@ namespace Entity
             }
         }
 
-        public int SoCua
+        public string Tskt
         {
             get
             {
-                return soCua;
+                return tskt;
             }
-        }
 
-        public int SoGhe
-        {
-            get
-            {
-                return soGhe;
-            }
-        }
-
-        public string HopSo
-        {
-            get
-            {
-                return hopSo;
-            }
-        }
-
-        public string DanDong
-        {
-            get
-            {
-                return danDong;
-            }
-        }
-
-        public string NguyenLieu
-        {
-            get
-            {
-                return nguyenLieu;
-            }
-        }
-
-        public string KieuDang
-        {
-            get
-            {
-                return kieuDang;
-            }
         }
         #endregion
 

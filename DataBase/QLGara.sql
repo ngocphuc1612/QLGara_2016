@@ -37,10 +37,10 @@ CREATE PROCEDURE SP_GETDATA
 		Set @sql = N'Select * from ' + @tableName
 		Exec sp_executesql @sql
 	END
-----Register Procedure------
+----Register Procedure------ 
 CREATE PROCEDURE SP_REGISTER
 	@username varchar(60),
-	@email varchar(100),
+	@email varchar(50),
 	@pass varchar(255),
 	@role tinyint,
 	@gender bit,
@@ -54,7 +54,7 @@ CREATE PROCEDURE SP_REGISTER
 		set @count = (SELECT MAX(USER_ID) FROM USERS) + 1
 		if (@username not in (select USERNAME FROM USERS))
 		BEGIN
-			insert into USERS values(@count, @username, @email, @pass, @role, @gender, @birthday, @full_name, @phone, @direction)
+			insert into USERS values(@count, @username, @email, @pass, @role, @gender, @birthday, @full_name, @phone, @direction, GETDATE(), null, 'active')
 		END
 		ELSE
 		BEGIN
@@ -79,7 +79,9 @@ CREATE PROC SP_INSERT_HIEUXE
 	@tenHx nvarchar(50)
 	as
 	begin
-		insert into HIEUXE values(@maHx, @tenHx)
+		DECLARE @date smalldatetime
+		set @date = GETDATE()
+		insert into HIEUXE values(@maHx, @tenHx, @date, null, 'active')
 	end
 
 ---Delete hieuXe -----
@@ -88,8 +90,6 @@ CREATE PROC SP_DEL_HIEUXE
 	as
 	begin
 		delete from HIEUXE where MAHX = @maHx
-	end
-
 ---Update Hieu Xe----
 CREATE PROC SP_UPDATE_HIEUXE
 	@maHx int,
@@ -97,10 +97,9 @@ CREATE PROC SP_UPDATE_HIEUXE
 	AS
 	BEGIN
 		UPDATE HIEUXE
-		set TENHX = @tenHx
+		set TENHX = @tenHx, NGAY_CN_CUOI = GETDATE()
 		WHERE MAHX = @maHx
 	END
-
 ----Vat Tu Zone-----
 -----Inset Vat Tu---
 CREATE PROC SP_INSERT_VATTU
@@ -110,7 +109,7 @@ CREATE PROC SP_INSERT_VATTU
 	@sl int
 	AS
 	BEGIN
-		INSERT INTO VATTU VALUES(@maVt, @tenVt, @donGia, @sl)
+		INSERT INTO VATTU VALUES(@maVt, @tenVt, @donGia, @sl, GETDATE(), null, 'active')
 	END
 
 
@@ -123,10 +122,9 @@ CREATE PROC SP_UPDATE_VATTU
 	AS
 	BEGIN
 		UPDATE VATTU
-		SET TENVT = @tenVt, DONGIA = @donGia, SL = @sl
+		SET TENVT = @tenVt, DONGIA = @donGia, SL = @sl, NGAY_CN_CUOI = GETDATE()
 		WHERE MAVT = @maVt
 	END
-
 ----DEL VAT TU-----
 CREATE PROC SP_DEL_VATTU
 	@maVt int
@@ -140,31 +138,31 @@ CREATE PROC SP_DEL_VATTU
 CREATE PROC SP_INSERT_KHACHHANG
 	@id int,
 	@ten nvarchar(50),
-	@sdt varchar(50),
+	@sdt varchar(15),
 	@email nvarchar(50),
-	@diaChi nvarchar(50),
+	@diaChi nvarchar(200),
 	@ngaySinh smalldatetime,
 	@gender bit,
 	@congNo money
 	AS
 	BEGIN
-		INSERT INTO KHACHHANG VALUES(@id, @ten, @sdt, @email, @diaChi, @ngaySinh, @gender, @congNo)
+		INSERT INTO KHACHHANG VALUES(@id, @ten, @sdt, @email, @diaChi, @ngaySinh, @gender, @congNo, GETDATE(), null, 'active')
 	END
 
-----UPDATE KHACH HANG---
+----UPDATE KHACH HANG--- 
 CREATE PROC SP_UPDATE_KHACHHANG
 	@id int,
 	@ten nvarchar(50),
-	@sdt varchar(50),
+	@sdt varchar(15),
 	@email nvarchar(50),
-	@diaChi nvarchar(50),
+	@diaChi nvarchar(200),
 	@ngaySinh smalldatetime,
 	@gender bit,
 	@congNo money
 	AS
 	BEGIN
 		UPDATE KHACHHANG
-		SET KH_TEN = @ten, KH_SDT = @sdt, KH_EMAIL = @email, KH_DIACHI = @diaChi, KH_NGAYSINH = @ngaySinh, KH_GIOITINH = @gender, KH_CONGNO = @congNo
+		SET KH_TEN = @ten, KH_SDT = @sdt, KH_EMAIL = @email, KH_DIACHI = @diaChi, KH_NGAYSINH = @ngaySinh, KH_GIOITINH = @gender, KH_CONGNO = @congNo, NGAY_CN_CUOI = GETDATE()
 		WHERE KH_ID = @id
 	END
 
@@ -177,34 +175,78 @@ CREATE PROC SP_DEL_KHACHHANG
 	END
 
 ----///// Xe ----------------\
----Insert Xe
+---Insert Xe 
 CREATE PROC SP_INSERT_XE
 	@bs varchar(50),
-	@userId bigint,
+	@userId int,
 	@ngayTN smalldatetime,
 	@dongXeId int,
 	@mau nvarchar(50),
-	@mota nvarchar(150),
+	@mota nvarchar(1000),
 	@mauTrong nvarchar(50),
 	@namXX varchar(50),
 	@xuatXu nvarchar(50)
 	AS
 	BEGIN
-		INSERT INTO XE VALUES(@bs, @userId, @ngayTN, @dongXeId, @mau, @mota, @mauTrong, @namXX, @xuatXu)
+		INSERT INTO XE VALUES(@bs, @userId, @ngayTN, @dongXeId, @mau, @mota, @mauTrong, @namXX, @xuatXu, GETDATE(), null, 'active')
 	END
+	
 
+---UPDate Xe----
 CREATE PROC SP_UPDATE_XE
 	@bs varchar(50),
-	@userId bigint,
+	@userId int,
 	@ngayTN smalldatetime,
 	@dongXeId int,
 	@mau nvarchar(50),
-	@mota nvarchar(150),
+	@mota nvarchar(1000),
 	@mauTrong nvarchar(50),
 	@namXX varchar(50),
 	@xuatXu nvarchar(50)
 	AS
 	BEGIN
 		UPDATE XE
-		SET USER_ID = @userId, NGAYTN = @ngayTN, DONGXE_ID = @dongXeId, MAU_XE = @mau, MOTA = @mota, MAU_NOI_THAT = @mauTrong, NAM_XUAT_XU = @namXX, XUAT_XU = @xuatXu
+		SET USER_ID = @userId, NGAYTN = @ngayTN, DONGXE_ID = @dongXeId, MAU_XE = @mau, MOTA = @mota, MAU_NOI_THAT = @mauTrong, NAM_XUAT_XU = @namXX, XUAT_XU = @xuatXu, NGAY_CN_CUOI = GETDATE()
 		WHERE BIENSO = @bs
+	END
+
+----DEl xe
+CREATE PROC SP_DEL_XE
+	@bs varchar(50)
+	AS
+	BEGIN
+		DELETE FROM XE WHERE BIENSO = @bs
+	END
+
+---/////DONG XE -------
+---Insert hieu Xe
+CREATE PROC SP_INSERT_DONGXE
+	@id varchar(50),
+	@hieuXe int,
+	@tskt nvarchar(max)
+	AS
+	BEGIN
+		INSERT INTO CACLOAIXE VALUES(@id, @hieuXe, @tskt, GETDATE(), null, 'active')
+	END
+
+---Update Dong Xe -----
+CREATE PROC SP_UPDATE_DONGXE
+	@id varchar(50),
+	@hieuXe int,
+	@tskt nvarchar(max)
+	AS
+	BEGIN
+		UPDATE CACLOAIXE
+		SET HIEU_XE = @hieuXe, THONG_SO_KY_THUAT = @tskt, NGAY_CN_CUOI = GETDATE()
+		WHERE DONGXE_ID = @id
+	END
+
+---DEL Hieu Xe-----
+CREATE PROC SP_DEL_DONGXE
+	@id varchar(50)
+	AS
+	BEGIN
+		DELETE FROM CACLOAIXE WHERE DONGXE_ID = @id
+	END
+
+----/////////////////////////////////-----

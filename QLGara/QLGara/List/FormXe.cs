@@ -29,7 +29,7 @@ namespace QLGara
         private void reset()
         {
             cbbDongXe.DataSource = dx.getData();
-            cbbDongXe.DisplayMember = "HIEU_XE";
+            cbbDongXe.DisplayMember = "DONGXE_ID";
             cbbDongXe.ValueMember = "DONGXE_ID";
         }
 
@@ -42,7 +42,7 @@ namespace QLGara
             string mota = this.txtMota.Text;
             string mauTrong = this.txtMauTrong.Text;
             string namSX = this.txtNamSX.Text;
-            string xuatXu = this.txtNamXx.Text;
+            string xuatXu = this.txtXuatxu.Text;
             if (bienSo == "" || userID == "" || dongXe == "" || mau == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,7 +79,7 @@ namespace QLGara
             string mota = this.txtMota.Text;
             string mauTrong = this.txtMauTrong.Text;
             string namSX = this.txtNamSX.Text;
-            string xuatXu = this.txtNamXx.Text;
+            string xuatXu = this.txtXuatxu.Text;
             if (bienSo == "" || userID == "" || dongXe == "" || mau == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -119,6 +119,29 @@ namespace QLGara
                 }
                 else
                     MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void gwXe_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewCell cell = null;
+            foreach (DataGridViewCell selectedCell in gwXe.SelectedCells)
+            {
+                cell = selectedCell;
+                break;
+            }
+            if (cell != null)
+            {
+
+                DataGridViewRow row = cell.OwningRow;
+                this.txtBienSo.Text = row.Cells["Xe_BIENSO"].Value.ToString();
+                this.txtIdChu.Text = row.Cells["Xe_USERID"].Value.ToString();
+                this.txtMau.Text = row.Cells["Xe_MAU"].Value.ToString();
+                this.txtMota.Text = row.Cells["Xe_MOTA"].Value.ToString();
+                this.txtMauTrong.Text = row.Cells["Xe_MAUNT"].Value.ToString();
+                this.txtNamSX.Text = row.Cells["Xe_NAMXX"].Value.ToString();
+                this.txtXuatxu.Text = row.Cells["Xe_XUATXU"].Value.ToString();
+                this.cbbDongXe.SelectedValue = row.Cells["Xe_ID_DX"].Value;
             }
         }
     }

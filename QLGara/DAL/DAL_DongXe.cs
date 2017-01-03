@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entity;
 
 namespace DAL
 {
@@ -14,5 +15,42 @@ namespace DAL
             //return con.GetData(strSQL, pNames, pValues);
             return GetAllInfor.GetData("CACLOAIXE");
         }
+
+        public bool insertDongXe(Entity_DongXe _dx)
+        {
+            try
+            {
+                const string strSQL = "SP_INSERT_DONGXE";
+                string[] pNames = { "@id", "@hieuXe", "@tskt" };
+                object[] pValues = { _dx.DongXeId, _dx.HieuXe, _dx.Tskt };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool updateDongXe(Entity_DongXe _dx)
+        {
+            try
+            {
+                const string strSQL = "SP_UPDATE_DONGXE";
+                string[] pNames = { "@id", "@hieuXe", "@tskt" };
+                object[] pValues = { _dx.DongXeId, _dx.HieuXe, _dx.Tskt };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
