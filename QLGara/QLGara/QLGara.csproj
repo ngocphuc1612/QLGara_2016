@@ -35,12 +35,22 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevComponents.DotNetBar.Layout, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar2, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.Instrumentation, Version=12.9.0.6, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.SuperGrid.Design, Version=12.9.0.6, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.SuperGrid.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1fea3f5d8d482bff, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeRush.Common, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.StructuralParser, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.UserControls, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DXCore.Controls, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraBars.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraTreeList.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraVerticalGrid.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Parser, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Platform, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -70,100 +80,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main\FormPhieuDanhGia.cs">
+    <Compile Include="GUI\FormPhieuDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\FormPhieuDanhGia.Designer.cs">
+    <Compile Include="GUI\FormPhieuDanhGia.Designer.cs">
       <DependentUpon>FormPhieuDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\FormPhieuTiepNhanXe.cs">
+    <Compile Include="GUI\FormTiepNhanXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\FormPhieuTiepNhanXe.Designer.cs">
-      <DependentUpon>FormPhieuTiepNhanXe.cs</DependentUpon>
+    <Compile Include="GUI\FormTiepNhanXe.Designer.cs">
+      <DependentUpon>FormTiepNhanXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\FormUsersList.cs">
+    <Compile Include="GUI\FormUsersList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\FormUsersList.Designer.cs">
+    <Compile Include="GUI\FormUsersList.Designer.cs">
       <DependentUpon>FormUsersList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stock\FormCTPhieuNhap.cs">
+    <Compile Include="GUI\FormNhapPhuTungCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock\FormCTPhieuNhap.Designer.cs">
-      <DependentUpon>FormCTPhieuNhap.cs</DependentUpon>
+    <Compile Include="GUI\FormNhapPhuTungCT.Designer.cs">
+      <DependentUpon>FormNhapPhuTungCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\FormCTPSC.cs">
+    <Compile Include="GUI\FormDongXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\FormCTPSC.Designer.cs">
-      <DependentUpon>FormCTPSC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="List\FormDongXe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="List\FormDongXe.Designer.cs">
+    <Compile Include="GUI\FormDongXe.Designer.cs">
       <DependentUpon>FormDongXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="List\FormHieuXe.cs">
+    <Compile Include="GUI\FormHieuXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="List\FormHieuXe.Designer.cs">
+    <Compile Include="GUI\FormHieuXe.Designer.cs">
       <DependentUpon>FormHieuXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="List\FormKhachHang.cs">
+    <Compile Include="GUI\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="List\FormKhachHang.Designer.cs">
+    <Compile Include="GUI\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="List\FormNhaCungCap.cs">
+    <Compile Include="GUI\FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="List\FormNhaCungCap.Designer.cs">
+    <Compile Include="GUI\FormNhaCungCap.Designer.cs">
       <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stock\FormPhieuNhap.cs">
+    <Compile Include="GUI\FormNhapPhuTung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock\FormPhieuNhap.Designer.cs">
-      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
+    <Compile Include="GUI\FormNhapPhuTung.Designer.cs">
+      <DependentUpon>FormNhapPhuTung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\FormPhieuSC.cs">
+    <Compile Include="GUI\FormPhieuSC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\FormPhieuSC.Designer.cs">
+    <Compile Include="GUI\FormPhieuSC.Designer.cs">
       <DependentUpon>FormPhieuSC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\FormPhieuTT.cs">
+    <Compile Include="GUI\FormThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\FormPhieuTT.Designer.cs">
-      <DependentUpon>FormPhieuTT.cs</DependentUpon>
+    <Compile Include="GUI\FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\FormProfile.cs">
+    <Compile Include="GUI\FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\FormProfile.Designer.cs">
+    <Compile Include="GUI\FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTienCong.cs">
+    <Compile Include="GUI\FormVatTu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTienCong.Designer.cs">
-      <DependentUpon>FormTienCong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="List\FormVatTu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="List\FormVatTu.Designer.cs">
+    <Compile Include="GUI\FormVatTu.Designer.cs">
       <DependentUpon>FormVatTu.cs</DependentUpon>
     </Compile>
-    <Compile Include="List\FormXe.cs">
+    <Compile Include="GUI\FormXe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="List\FormXe.Designer.cs">
+    <Compile Include="GUI\FormXe.Designer.cs">
       <DependentUpon>FormXe.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
@@ -187,53 +185,47 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="Main\FormPhieuDanhGia.resx">
+    <EmbeddedResource Include="GUI\FormPhieuDanhGia.resx">
       <DependentUpon>FormPhieuDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\FormPhieuTiepNhanXe.resx">
-      <DependentUpon>FormPhieuTiepNhanXe.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormTiepNhanXe.resx">
+      <DependentUpon>FormTiepNhanXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="User\FormUsersList.resx">
+    <EmbeddedResource Include="GUI\FormUsersList.resx">
       <DependentUpon>FormUsersList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock\FormCTPhieuNhap.resx">
-      <DependentUpon>FormCTPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormNhapPhuTungCT.resx">
+      <DependentUpon>FormNhapPhuTungCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\FormCTPSC.resx">
-      <DependentUpon>FormCTPSC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="List\FormDongXe.resx">
+    <EmbeddedResource Include="GUI\FormDongXe.resx">
       <DependentUpon>FormDongXe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="List\FormHieuXe.resx">
+    <EmbeddedResource Include="GUI\FormHieuXe.resx">
       <DependentUpon>FormHieuXe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="List\FormKhachHang.resx">
+    <EmbeddedResource Include="GUI\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="List\FormNhaCungCap.resx">
+    <EmbeddedResource Include="GUI\FormNhaCungCap.resx">
       <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock\FormPhieuNhap.resx">
-      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormNhapPhuTung.resx">
+      <DependentUpon>FormNhapPhuTung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\FormPhieuSC.resx">
+    <EmbeddedResource Include="GUI\FormPhieuSC.resx">
       <DependentUpon>FormPhieuSC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\FormPhieuTT.resx">
-      <DependentUpon>FormPhieuTT.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\FormProfile.resx">
+    <EmbeddedResource Include="GUI\FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTienCong.resx">
-      <DependentUpon>FormTienCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="List\FormVatTu.resx">
+    <EmbeddedResource Include="GUI\FormVatTu.resx">
       <DependentUpon>FormVatTu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="List\FormXe.resx">
+    <EmbeddedResource Include="GUI\FormXe.resx">
       <DependentUpon>FormXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -296,11 +288,7 @@
   <ItemGroup>
     <None Include="Resources\payment.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Help\" />
-    <Folder Include="Report\" />
-    <Folder Include="Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Logout-icon.png" />
   </ItemGroup>
