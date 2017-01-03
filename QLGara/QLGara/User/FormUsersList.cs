@@ -25,6 +25,7 @@ namespace QLGara
         {
             this.pnl = this.pnlUsers;
             DataTable dt = us.GetData();
+            this.gvUsers.AutoGenerateColumns = false;
             this.gvUsers.DataSource = Utility.Instance.changeGender(dt, "GENDER");
             
         }

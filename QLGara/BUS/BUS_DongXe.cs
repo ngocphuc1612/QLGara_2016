@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -11,6 +12,20 @@ namespace BUS
         public DataTable getData()
         {
             return dx.GetData();
+        }
+
+        public bool insertDongXe(Entity_DongXe _dx)
+        {
+            return dx.insertDongXe(_dx);
+        }
+
+        public bool updateDongXe(Entity_DongXe _dx)
+        {
+            return dx.updateDongXe(_dx);
+        }
+        public bool delDongXe(string id)
+        {
+            return dx.delDongXe(id);
         }
        
     }

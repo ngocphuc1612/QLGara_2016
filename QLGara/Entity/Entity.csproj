@@ -43,7 +43,6 @@
     <Compile Include="Entity_CTPhieuNhap.cs" />
     <Compile Include="Entity_CTPSC.cs" />
     <Compile Include="Entity_DongXe.cs" />
-    <Compile Include="Entity_HieuXe.cs" />
     <Compile Include="Entity_KhachHang.cs" />
     <Compile Include="Entity_NhaCungCap.cs" />
     <Compile Include="Entity_PhieuNhap.cs" />

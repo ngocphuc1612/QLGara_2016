@@ -229,10 +229,10 @@ CREATE PROC SP_INSERT_DONGXE
 		INSERT INTO CACLOAIXE VALUES(@id, @hieuXe, @tskt, GETDATE(), null, 'active')
 	END
 
----Update Dong Xe -----
+---Update Dong Xe ----- 
 CREATE PROC SP_UPDATE_DONGXE
 	@id varchar(50),
-	@hieuXe int,
+	@hieuXe varchar(50),
 	@tskt nvarchar(max)
 	AS
 	BEGIN

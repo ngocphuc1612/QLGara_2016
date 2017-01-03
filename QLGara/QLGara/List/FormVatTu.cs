@@ -13,6 +13,7 @@ namespace QLGara
         {
             InitializeComponent();
             this.pnl = this.pnlVatTu;
+            this.gwVatTu.AutoGenerateColumns = false;
             this.gwVatTu.DataSource = vt.GetData();
         }
 

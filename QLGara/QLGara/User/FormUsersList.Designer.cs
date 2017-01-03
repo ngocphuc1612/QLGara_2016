@@ -149,7 +149,8 @@
             // 
             // gvUsers
             // 
-            this.gvUsers.AllowUserToOrderColumns = true;
+            this.gvUsers.AllowUserToAddRows = false;
+            this.gvUsers.AllowUserToDeleteRows = false;
             this.gvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -168,6 +169,7 @@
             this.PASS});
             this.gvUsers.Location = new System.Drawing.Point(2, 20);
             this.gvUsers.Name = "gvUsers";
+            this.gvUsers.ReadOnly = true;
             this.gvUsers.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gvUsers.Size = new System.Drawing.Size(646, 201);
             this.gvUsers.TabIndex = 2;
@@ -693,7 +695,6 @@
 
         private System.Windows.Forms.TableLayoutPanel pnlUsers;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.DataGridView gvUsers;
         private System.Windows.Forms.DataGridViewTextBoxColumn USER_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
@@ -741,5 +742,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private System.Windows.Forms.DataGridView gvUsers;
     }
 }
