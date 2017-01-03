@@ -53,7 +53,6 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnListCustomerVip = new DevExpress.XtraBars.BarButtonItem();
             this.btnBaoDuong = new DevExpress.XtraBars.BarButtonItem();
-            this.btnXeTiepNhan1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportHetHan = new DevExpress.XtraBars.BarButtonItem();
             this.barReportCanNhap = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -125,7 +124,6 @@
             this.barButtonItem1,
             this.btnListCustomerVip,
             this.btnBaoDuong,
-            this.btnXeTiepNhan1,
             this.btnReportHetHan,
             this.barReportCanNhap,
             this.barButtonItem2,
@@ -318,7 +316,7 @@
             this.btnMainNewCar.Caption = "Tiếp Nhận Xe";
             this.btnMainNewCar.Glyph = ((System.Drawing.Image)(resources.GetObject("btnMainNewCar.Glyph")));
             this.btnMainNewCar.Id = 27;
-            this.btnMainNewCar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMainNewCar.LargeGlyph")));
+            this.btnMainNewCar.LargeGlyph = global::QLGara.Properties.Resources.car;
             this.btnMainNewCar.LargeWidth = 100;
             this.btnMainNewCar.Name = "btnMainNewCar";
             this.btnMainNewCar.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -405,16 +403,6 @@
             this.btnBaoDuong.LargeWidth = 100;
             this.btnBaoDuong.Name = "btnBaoDuong";
             this.btnBaoDuong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // btnXeTiepNhan1
-            // 
-            this.btnXeTiepNhan1.Caption = "Xe tiếp nhận";
-            this.btnXeTiepNhan1.Id = 37;
-            this.btnXeTiepNhan1.LargeGlyph = global::QLGara.Properties.Resources.car;
-            this.btnXeTiepNhan1.LargeWidth = 100;
-            this.btnXeTiepNhan1.Name = "btnXeTiepNhan1";
-            this.btnXeTiepNhan1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // btnReportHetHan
@@ -527,7 +515,6 @@
             // 
             this.ribbonGaraGroup1.Glyph = global::QLGara.Properties.Resources.apply_32x32;
             this.ribbonGaraGroup1.ItemLinks.Add(this.btnMainNewCar);
-            this.ribbonGaraGroup1.ItemLinks.Add(this.btnXeTiepNhan1);
             this.ribbonGaraGroup1.Name = "ribbonGaraGroup1";
             this.ribbonGaraGroup1.Text = "Tiếp nhận";
             // 
@@ -798,7 +785,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnListCustomerVip;
         private DevExpress.XtraBars.BarButtonItem btnBaoDuong;
-        private DevExpress.XtraBars.BarButtonItem btnXeTiepNhan1;
         private DevExpress.XtraBars.BarButtonItem btnReportHetHan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup2;
         private DevExpress.XtraBars.BarButtonItem barReportCanNhap;

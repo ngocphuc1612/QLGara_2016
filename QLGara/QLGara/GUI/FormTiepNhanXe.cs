@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLGara
 {
-    public partial class FormPhieuTiepNhanXe : MyFormPage
+    public partial class FormTiepNhanXe : MyFormPage
     {
-        public FormPhieuTiepNhanXe()
+        public FormTiepNhanXe()
         {
             InitializeComponent();
         }

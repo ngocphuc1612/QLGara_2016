@@ -11,15 +11,15 @@ using BUS;
 
 namespace QLGara
 {
-    public partial class FormCTPhieuNhap : MyFormPage
+    public partial class FormNhapPhuTung : MyFormPage
     {
-        private BUS_CTPhieuNhap ct = new BUS_CTPhieuNhap();
-        public FormCTPhieuNhap()
+        private BUS_PhieuNhap pn = new BUS_PhieuNhap();
+        public FormNhapPhuTung()
         {
             InitializeComponent();
-            this.pnl = this.pnlCTPhieuNhap;
-            this.gwCTPhieuNhap.AutoGenerateColumns = false;
-            this.gwCTPhieuNhap.DataSource = ct.getData();
+            this.pnl = this.pnlPhieuNhap;
+            this.gwPhieuNhap.AutoGenerateColumns = false;
+            this.gwPhieuNhap.DataSource = pn.getData();
         }
     }
 }

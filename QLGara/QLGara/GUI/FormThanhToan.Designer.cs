@@ -1,6 +1,6 @@
 ﻿namespace QLGara
 {
-    partial class FormPhieuTT
+    partial class FormThanhToan
     {
         /// <summary>
         /// Required designer variable.

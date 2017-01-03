@@ -11,9 +11,11 @@ using BUS;
 
 namespace QLGara
 {
-    public partial class FormPhieuTT : MyFormPage
+    public partial class FormThanhToan : MyFormPage
     {
-        private BUS_PhieuThanhToan ptt = new BUS_PhieuThanhToan();
-
+        public FormThanhToan()
+        {
+            InitializeComponent();
+        }
     }
 }
