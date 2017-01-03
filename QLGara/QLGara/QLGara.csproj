@@ -110,12 +110,6 @@
     <Compile Include="GUI\FormDongXe.Designer.cs">
       <DependentUpon>FormDongXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormHieuXe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormHieuXe.Designer.cs">
-      <DependentUpon>FormHieuXe.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDongXe.resx">
       <DependentUpon>FormDongXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormHieuXe.resx">
-      <DependentUpon>FormHieuXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
