@@ -1,4 +1,4 @@
-create database QLGara
+Ecreate database QLGara
 Go
 use [QLGara]
 go
@@ -72,4 +72,139 @@ CREATE PROCEDURE SP_LOGIN
 	BEGIN
 		SELECT * FROM USERS WHERE (@username = USERNAME AND @pass = PASS)
 	END
---/////////////////----
+--///Hieu Xe///////----
+---Insert HieuXe---
+CREATE PROC SP_INSERT_HIEUXE
+	@maHx int,
+	@tenHx nvarchar(50)
+	as
+	begin
+		insert into HIEUXE values(@maHx, @tenHx)
+	end
+
+---Delete hieuXe -----
+CREATE PROC SP_DEL_HIEUXE
+	@maHx int
+	as
+	begin
+		delete from HIEUXE where MAHX = @maHx
+	end
+
+---Update Hieu Xe----
+CREATE PROC SP_UPDATE_HIEUXE
+	@maHx int,
+	@tenHx nvarchar(50)
+	AS
+	BEGIN
+		UPDATE HIEUXE
+		set TENHX = @tenHx
+		WHERE MAHX = @maHx
+	END
+
+----Vat Tu Zone-----
+-----Inset Vat Tu---
+CREATE PROC SP_INSERT_VATTU
+	@maVt int,
+	@tenVt nvarchar(50),
+	@donGia money,
+	@sl int
+	AS
+	BEGIN
+		INSERT INTO VATTU VALUES(@maVt, @tenVt, @donGia, @sl)
+	END
+
+
+----Update Vat TU----
+CREATE PROC SP_UPDATE_VATTU
+	@maVt int,
+	@tenVt nvarchar(50),
+	@donGia money,
+	@sl int
+	AS
+	BEGIN
+		UPDATE VATTU
+		SET TENVT = @tenVt, DONGIA = @donGia, SL = @sl
+		WHERE MAVT = @maVt
+	END
+
+----DEL VAT TU-----
+CREATE PROC SP_DEL_VATTU
+	@maVt int
+	AS
+	BEGIN
+		DELETE FROM VATTU WHERE MAVT = @maVt
+	END
+
+----////KHACH HANG-----
+----INSERT KHACH HANG----
+CREATE PROC SP_INSERT_KHACHHANG
+	@id int,
+	@ten nvarchar(50),
+	@sdt varchar(50),
+	@email nvarchar(50),
+	@diaChi nvarchar(50),
+	@ngaySinh smalldatetime,
+	@gender bit,
+	@congNo money
+	AS
+	BEGIN
+		INSERT INTO KHACHHANG VALUES(@id, @ten, @sdt, @email, @diaChi, @ngaySinh, @gender, @congNo)
+	END
+
+----UPDATE KHACH HANG---
+CREATE PROC SP_UPDATE_KHACHHANG
+	@id int,
+	@ten nvarchar(50),
+	@sdt varchar(50),
+	@email nvarchar(50),
+	@diaChi nvarchar(50),
+	@ngaySinh smalldatetime,
+	@gender bit,
+	@congNo money
+	AS
+	BEGIN
+		UPDATE KHACHHANG
+		SET KH_TEN = @ten, KH_SDT = @sdt, KH_EMAIL = @email, KH_DIACHI = @diaChi, KH_NGAYSINH = @ngaySinh, KH_GIOITINH = @gender, KH_CONGNO = @congNo
+		WHERE KH_ID = @id
+	END
+
+---DEL Khach Hang
+CREATE PROC SP_DEL_KHACHHANG
+	@id int
+	AS
+	BEGIN
+		DELETE FROM KHACHHANG WHERE KH_ID = @id
+	END
+
+----///// Xe ----------------\
+---Insert Xe
+CREATE PROC SP_INSERT_XE
+	@bs varchar(50),
+	@userId bigint,
+	@ngayTN smalldatetime,
+	@dongXeId int,
+	@mau nvarchar(50),
+	@mota nvarchar(150),
+	@mauTrong nvarchar(50),
+	@namXX varchar(50),
+	@xuatXu nvarchar(50)
+	AS
+	BEGIN
+		INSERT INTO XE VALUES(@bs, @userId, @ngayTN, @dongXeId, @mau, @mota, @mauTrong, @namXX, @xuatXu)
+	END
+
+CREATE PROC SP_UPDATE_XE
+	@bs varchar(50),
+	@userId bigint,
+	@ngayTN smalldatetime,
+	@dongXeId int,
+	@mau nvarchar(50),
+	@mota nvarchar(150),
+	@mauTrong nvarchar(50),
+	@namXX varchar(50),
+	@xuatXu nvarchar(50)
+	AS
+	BEGIN
+		UPDATE XE
+		SET USER_ID = @userId, NGAYTN = @ngayTN, DONGXE_ID = @dongXeId, MAU_XE = @mau, MOTA = @mota, MAU_NOI_THAT = @mauTrong, NAM_XUAT_XU = @namXX, XUAT_XU = @xuatXu
+		WHERE BIENSO = @bs

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace QLGara
 {
@@ -19,6 +20,16 @@ namespace QLGara
             }
 
             return dtCloned;
+        }
+
+        public int autoKey(DataGridView gr)
+        {
+            if (gr.RowCount == 0) {
+                return 1;
+            } else
+            {
+                return Int32.Parse(gr.Rows[gr.RowCount - 1].Cells[0].Value.ToString()) + 1;
+            }
         }
 
     }

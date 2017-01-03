@@ -213,5 +213,22 @@ namespace QLGara
             if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void btnMainNewCar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!CheckOpenTabs("Tiếp nhận Xe"))
+            {
+                SuperTabItem t = superTab.CreateTab("Tiếp nhận Xe");
+                FormXe frm = new FormXe();
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+                t.AttachedControl.Controls.Add(frm.pnl);
+                frm.Show();
+                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            }
+            else
+                superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
     }
 }

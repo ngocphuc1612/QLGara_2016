@@ -323,6 +323,7 @@
             this.btnMainNewCar.Name = "btnMainNewCar";
             this.btnMainNewCar.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnMainNewCar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMainNewCar_ItemClick);
             // 
             // btnMainCheckCar
             // 
