@@ -55,5 +55,37 @@ namespace QLGara
             }
         }
 
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            this.txtTen.Text = null;
+            this.txtEmail.Text = null;
+            this.rdNam.Checked = true;
+            this.dtDoB.Value = DateTime.Now;
+            this.txtPhone.Text = null;
+            this.txtAddress.Text = null;
+            this.txtCongNo.Text = null;
+
+            this.btnThemMoi.TabStop = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chăc muốn xóa khách hàng này?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (kh.delKhachHang(this.txtID.Text) == true)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.gwKhachHang.DataSource = kh.getData();
+                }
+                else
+                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.gwKhachHang.DataSource = kh.searchKH(this.txtSearch.Text);
+        }
     }
 }

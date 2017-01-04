@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlKhachHang = new System.Windows.Forms.Panel();
             this.gwKhachHang = new System.Windows.Forms.DataGridView();
             this.KH_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -188,8 +188,8 @@
             // KH_CONGNO
             // 
             this.KH_CONGNO.DataPropertyName = "KH_CONGNO";
-            dataGridViewCellStyle1.Format = "N0";
-            this.KH_CONGNO.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "N0";
+            this.KH_CONGNO.DefaultCellStyle = dataGridViewCellStyle5;
             this.KH_CONGNO.HeaderText = "Công nợ";
             this.KH_CONGNO.Name = "KH_CONGNO";
             this.KH_CONGNO.ReadOnly = true;
@@ -243,6 +243,7 @@
             this.txtSearch.Size = new System.Drawing.Size(231, 20);
             this.txtSearch.StyleController = this.layoutControl1;
             this.txtSearch.TabIndex = 15;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtCongNo
             // 
@@ -267,6 +268,7 @@
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -291,6 +293,7 @@
             this.btnThemMoi.TabIndex = 5;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = true;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // txtPhone
             // 
