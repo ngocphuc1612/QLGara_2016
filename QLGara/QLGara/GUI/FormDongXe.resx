@@ -117,28 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DX_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="DONGXE_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="DX_HX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="HIEU_XE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="DX_SOCUA.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DX_SOGHE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DX_HOPSO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DX_DANDONG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DX_NHIENLIEU.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DX_KIEUDANG.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="THONG_SO_KY_THUAT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="USER_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -177,4 +162,29 @@
   <metadata name="radioButton1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AFRUVJREREX4AAACAAAAAbwAAAGUAAABdAAAAUwAA
+        AEgAAAA8AAAAMgAAACEAAAAEAwMDFwAAACUAAAAtAAAATkdHR6tOTk7+AwIC/wEAAOoAAADPAAAAvCEh
+        IbtBQUG+NjY2riAgINkGBgbPAAAAUDs6OqkQDQzRDgYCnBIGAMdsaGbxgH5+/y8eFP9XS0T9V05J8UlA
+        Otx/enfivb29976+vfOurKz+RT04/yMcF7RtZF7lSCsa/ToYAvQ+FwD9RToz/19VT/9vQyj/XEMz/3pw
+        av9samn/f318/4KBgP+TkZD/k5GQ/4mDgP+Bdm/WbFhL8286Gf9iJgD/bCsB/1YwGf9/X0v/kVYw/1kt
+        Ev+AbWL/i4mI/4CBgv97fHz/iImJ/4SFhf+OiIX/b1pOvMaYfJ6vXSn7q1Yg/7BaI//AazX/0YRV/8Bu
+        O/+wiW//rKim/5qQiv93Z13/aFdM/2xbUf96bGP/lpCM/6CXks/FajEtyXtH1s6CT/3Nh1v+wXpM/8l6
+        SP/Pi1//zKqU/8Cxp/+5m4f/mmdH/6FsSP+2gl7xzKKG2NO9r8S3tbN5qEoSCcGegqDTtZz33M/E+suh
+        hP7Rr5j+xKuZ/Zt8YvWEWjj2hFAm7ohUKOSpcknG2aqMVfvLqxj8yqgR8tXBBLy0qACvkHhovaCJ8c27
+        qv/ctZr/1cOy/6WMcf1/VCbobDwI44NSHtWnflTRtYdjWdDUugCmZTsAAAAAAAAAAACqlYYAqJOFDqiM
+        eVeojXihrYdu0J5/Z+V/WzrodEsn5n1VMt6XdFfDsY50hbmAXRG2hWUAAAAAAAAAAAAAAAAAAAAAAP//
+        /wBQNSsAysTEB56EdRaWemojloBzK5Z9byiggXEdoIBxE6eamAWjkIsAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAP//AAD+PwAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACADwAAgA8AAOAf
+        AAD//wAA//8AAA==
+</value>
+  </data>
 </root>

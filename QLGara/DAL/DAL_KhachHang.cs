@@ -15,6 +15,22 @@ namespace DAL
             return GetAllInfor.GetData("KHACHHANG");
         }
 
+        public DataTable findByID(string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SELECT_KHACHHANG";
+                string[] pNames = { "@id" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         public bool delKhachHang(string khachhang)
         {
             try

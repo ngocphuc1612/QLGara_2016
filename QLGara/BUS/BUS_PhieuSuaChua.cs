@@ -11,5 +11,10 @@ namespace BUS
         {
             return psc.GetData();
         }
+
+        public DataTable findByID(string id)
+        {
+            return psc.findByID(id);
+        }
     }
 }

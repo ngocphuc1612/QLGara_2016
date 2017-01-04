@@ -12,6 +12,16 @@ namespace BUS
         {
             return dx.GetData();
         }
-       
+
+        public bool delDongXe(string khachhang)
+        {
+            return dx.delObject(khachhang);
+        }
+
+        public DataTable searchKH(string content)
+        {
+            return dx.searchObject(content);
+        }
+
     }
 }

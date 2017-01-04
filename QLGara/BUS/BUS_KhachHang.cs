@@ -11,6 +11,10 @@ namespace BUS
         {
             return kh.GetData();
         }
+        public DataTable findByID(string id)
+        {
+            return kh.findByID(id);
+        }
 
         public bool delKhachHang(string khachhang)
         {

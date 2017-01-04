@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlKhachHang = new System.Windows.Forms.Panel();
             this.gwKhachHang = new System.Windows.Forms.DataGridView();
             this.KH_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -188,8 +188,8 @@
             // KH_CONGNO
             // 
             this.KH_CONGNO.DataPropertyName = "KH_CONGNO";
-            dataGridViewCellStyle5.Format = "N0";
-            this.KH_CONGNO.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "N0";
+            this.KH_CONGNO.DefaultCellStyle = dataGridViewCellStyle1;
             this.KH_CONGNO.HeaderText = "Công nợ";
             this.KH_CONGNO.Name = "KH_CONGNO";
             this.KH_CONGNO.ReadOnly = true;

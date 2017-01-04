@@ -52,5 +52,41 @@ namespace DAL
             }
         }
 
+        public bool delObject(string obj)
+        {
+            try
+            {
+                const string strSQL = "SP_DEL_DONGXE";
+                string[] pNames = { "@id" };
+                object[] pValues = { obj };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+
+            }
+            catch
+            {
+
+                return false;
+            }
+        }
+
+        public DataTable searchObject(string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SEARCH_DONGXE";
+                string[] pNames = { "@content" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }
