@@ -32,7 +32,6 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYourProfile = new DevExpress.XtraBars.BarButtonItem();
             this.btnAllUsers = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNewUser = new DevExpress.XtraBars.BarButtonItem();
             this.btnAccessary = new DevExpress.XtraBars.BarButtonItem();
             this.btnBuyAccessary = new DevExpress.XtraBars.BarButtonItem();
             this.btnSellAccessary = new DevExpress.XtraBars.BarButtonItem();
@@ -48,11 +47,9 @@
             this.btnMainCheckCar = new DevExpress.XtraBars.BarButtonItem();
             this.btnMainRepairCar = new DevExpress.XtraBars.BarButtonItem();
             this.btnPayment = new DevExpress.XtraBars.BarButtonItem();
-            this.btnReportDTBaoDuong = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportDTSuaChua = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnListCustomerVip = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBaoDuong = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportHetHan = new DevExpress.XtraBars.BarButtonItem();
             this.barReportCanNhap = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -103,7 +100,6 @@
             this.ribbonControl.ExpandCollapseItem,
             this.btnYourProfile,
             this.btnAllUsers,
-            this.btnNewUser,
             this.btnAccessary,
             this.btnBuyAccessary,
             this.btnSellAccessary,
@@ -119,11 +115,9 @@
             this.btnMainCheckCar,
             this.btnMainRepairCar,
             this.btnPayment,
-            this.btnReportDTBaoDuong,
             this.btnReportDTSuaChua,
             this.barButtonItem1,
             this.btnListCustomerVip,
-            this.btnBaoDuong,
             this.btnReportHetHan,
             this.barReportCanNhap,
             this.barButtonItem2,
@@ -174,18 +168,6 @@
             this.btnAllUsers.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnAllUsers.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAllUsers_ItemClick);
-            // 
-            // btnNewUser
-            // 
-            this.btnNewUser.Caption = "Thêm mới";
-            this.btnNewUser.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNewUser.Glyph")));
-            this.btnNewUser.Id = 12;
-            this.btnNewUser.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNewUser.LargeGlyph")));
-            this.btnNewUser.LargeWidth = 80;
-            this.btnNewUser.Name = "btnNewUser";
-            this.btnNewUser.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnNewUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewUser_ItemClick);
             // 
             // btnAccessary
             // 
@@ -356,17 +338,6 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnPayment.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPayment_ItemClick);
             // 
-            // btnReportDTBaoDuong
-            // 
-            this.btnReportDTBaoDuong.Caption = "Bảo dưỡng";
-            this.btnReportDTBaoDuong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportDTBaoDuong.Glyph")));
-            this.btnReportDTBaoDuong.Id = 31;
-            this.btnReportDTBaoDuong.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportDTBaoDuong.LargeGlyph")));
-            this.btnReportDTBaoDuong.LargeWidth = 100;
-            this.btnReportDTBaoDuong.Name = "btnReportDTBaoDuong";
-            this.btnReportDTBaoDuong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
             // btnReportDTSuaChua
             // 
             this.btnReportDTSuaChua.Caption = "Sửa chữa";
@@ -393,17 +364,6 @@
             this.btnListCustomerVip.LargeWidth = 120;
             this.btnListCustomerVip.Name = "btnListCustomerVip";
             this.btnListCustomerVip.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // btnBaoDuong
-            // 
-            this.btnBaoDuong.Caption = "Phiếu bảo dưỡng";
-            this.btnBaoDuong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnBaoDuong.Glyph")));
-            this.btnBaoDuong.Id = 35;
-            this.btnBaoDuong.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBaoDuong.LargeGlyph")));
-            this.btnBaoDuong.LargeWidth = 100;
-            this.btnBaoDuong.Name = "btnBaoDuong";
-            this.btnBaoDuong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // btnReportHetHan
@@ -523,7 +483,6 @@
             // 
             this.ribbonGaraGroup2.ItemLinks.Add(this.btnMainCheckCar);
             this.ribbonGaraGroup2.ItemLinks.Add(this.btnMainRepairCar);
-            this.ribbonGaraGroup2.ItemLinks.Add(this.btnBaoDuong);
             this.ribbonGaraGroup2.Name = "ribbonGaraGroup2";
             this.ribbonGaraGroup2.Text = "Sửa chữa";
             // 
@@ -582,7 +541,6 @@
             // 
             // ribbonReportGroup1
             // 
-            this.ribbonReportGroup1.ItemLinks.Add(this.btnReportDTBaoDuong);
             this.ribbonReportGroup1.ItemLinks.Add(this.btnReportDTSuaChua);
             this.ribbonReportGroup1.Name = "ribbonReportGroup1";
             this.ribbonReportGroup1.Text = "Báo cáo doanh thu";
@@ -612,7 +570,6 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnAllUsers);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewUser);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnYourProfile);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnUserRoles);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -757,7 +714,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonUsers;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem btnAllUsers;
-        private DevExpress.XtraBars.BarButtonItem btnNewUser;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonListPartner;
         private DevExpress.XtraBars.BarButtonItem btnAccessary;
         private DevExpress.XtraBars.BarButtonItem btnBuyAccessary;
@@ -779,13 +735,11 @@
         private DevExpress.XtraBars.BarButtonItem btnMainCheckCar;
         private DevExpress.XtraBars.BarButtonItem btnMainRepairCar;
         private DevExpress.XtraBars.BarButtonItem btnPayment;
-        private DevExpress.XtraBars.BarButtonItem btnReportDTBaoDuong;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonReport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup1;
         private DevExpress.XtraBars.BarButtonItem btnReportDTSuaChua;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnListCustomerVip;
-        private DevExpress.XtraBars.BarButtonItem btnBaoDuong;
         private DevExpress.XtraBars.BarButtonItem btnReportHetHan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup2;
         private DevExpress.XtraBars.BarButtonItem barReportCanNhap;
