@@ -50,14 +50,22 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gwHoaDon = new System.Windows.Forms.DataGridView();
+            this.MAPTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAPSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIENSO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TONGHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.gw = new System.Windows.Forms.DataGridView();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pnlPhieuTT.SuspendLayout();
             this.pnlHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -80,15 +88,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gwHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPhieuTT
@@ -125,6 +137,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.gw);
             this.layoutControl1.Controls.Add(this.comboBoxEdit2);
             this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.button2);
@@ -214,7 +227,8 @@
             this.emptySpaceItem8,
             this.layoutControlItem13,
             this.layoutControlItem14,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(395, 345);
@@ -241,9 +255,9 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 214);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(206, 214);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(375, 111);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(169, 111);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
@@ -314,6 +328,14 @@
             this.layoutControlItem14.Text = "Khách hàng";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(99, 13);
             // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(375, 74);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControl3
             // 
             this.layoutControl3.Controls.Add(this.groupControl1);
@@ -328,18 +350,72 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Controls.Add(this.gwHoaDon);
             this.groupControl1.Location = new System.Drawing.Point(12, 36);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(204, 297);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Danh sách hóa đơn";
             // 
+            // gwHoaDon
+            // 
+            this.gwHoaDon.AllowUserToAddRows = false;
+            this.gwHoaDon.AllowUserToDeleteRows = false;
+            this.gwHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gwHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gwHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAPTT,
+            this.MAPSC,
+            this.NGAYTT,
+            this.BIENSO,
+            this.TONGHD});
+            this.gwHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gwHoaDon.Location = new System.Drawing.Point(2, 20);
+            this.gwHoaDon.Name = "gwHoaDon";
+            this.gwHoaDon.ReadOnly = true;
+            this.gwHoaDon.Size = new System.Drawing.Size(200, 275);
+            this.gwHoaDon.TabIndex = 0;
+            // 
+            // MAPTT
+            // 
+            this.MAPTT.DataPropertyName = "MAPTT";
+            this.MAPTT.HeaderText = "Mã PTT";
+            this.MAPTT.Name = "MAPTT";
+            this.MAPTT.ReadOnly = true;
+            // 
+            // MAPSC
+            // 
+            this.MAPSC.DataPropertyName = "MAPSC";
+            this.MAPSC.HeaderText = "Mã PSC";
+            this.MAPSC.Name = "MAPSC";
+            this.MAPSC.ReadOnly = true;
+            // 
+            // NGAYTT
+            // 
+            this.NGAYTT.DataPropertyName = "NGAYTT";
+            this.NGAYTT.HeaderText = "Ngày TT";
+            this.NGAYTT.Name = "NGAYTT";
+            this.NGAYTT.ReadOnly = true;
+            // 
+            // BIENSO
+            // 
+            this.BIENSO.DataPropertyName = "BIENSO";
+            this.BIENSO.HeaderText = "Xe";
+            this.BIENSO.Name = "BIENSO";
+            this.BIENSO.ReadOnly = true;
+            // 
+            // TONGHD
+            // 
+            this.TONGHD.DataPropertyName = "TONGTIEN";
+            this.TONGHD.HeaderText = "Tổng HD";
+            this.TONGHD.Name = "TONGHD";
+            this.TONGHD.ReadOnly = true;
+            // 
             // textEdit8
             // 
             this.textEdit8.Location = new System.Drawing.Point(55, 12);
             this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(56, 20);
+            this.textEdit8.Size = new System.Drawing.Size(104, 20);
             this.textEdit8.StyleController = this.layoutControl3;
             this.textEdit8.TabIndex = 4;
             // 
@@ -361,7 +437,7 @@
             this.layoutControlItem11.Control = this.textEdit8;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(103, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(151, 24);
             this.layoutControlItem11.Text = "Tìm kiếm";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(40, 13);
             // 
@@ -377,18 +453,26 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(103, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(151, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(105, 24);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(57, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem1
+            // gw
             // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(375, 74);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.gw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gw.Location = new System.Drawing.Point(114, 226);
+            this.gw.Name = "gw";
+            this.gw.Size = new System.Drawing.Size(100, 107);
+            this.gw.TabIndex = 16;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.gw;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 214);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(206, 111);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(99, 13);
             // 
             // FormHoaDon
             // 
@@ -420,15 +504,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gwHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,5 +553,13 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private System.Windows.Forms.DataGridView gwHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPSC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIENSO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TONGHD;
+        private System.Windows.Forms.DataGridView gw;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

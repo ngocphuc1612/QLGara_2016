@@ -16,5 +16,21 @@ namespace DAL
             return GetAllInfor.GetData("PHIEUTHANHTOAN");
         }
 
+        public DataTable getHoaDon()
+        {
+            try
+            {
+                const string strSQL = "SP_GETALL_PHIEUTT";
+                string[] pNames = { "@content" };
+                object[] pValues = { "2" };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }
