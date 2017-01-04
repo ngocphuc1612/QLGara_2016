@@ -17,6 +17,7 @@ namespace Entity
         {
             this.bienSo = bienSo;
             this.dongXeId = dongXeId;
+            this.user_id = user_id;
             this.mauXe = mauXe;
             this.moTa = mota;
             this.mauNoiThat = mauNoiThat;

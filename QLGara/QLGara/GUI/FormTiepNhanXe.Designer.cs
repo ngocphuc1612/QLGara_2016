@@ -73,6 +73,10 @@
             this.gridSplitContainer1Grid = new DevExpress.XtraGrid.GridControl();
             this.gridSplitContainer1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gwXe = new System.Windows.Forms.DataGridView();
+            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.NGAYTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BIENSO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USER_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,10 +86,6 @@
             this.NAM_XUAT_XU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XUAT_XU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pnlTiepNhanXe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -594,71 +594,6 @@
             this.gwXe.TabIndex = 1;
             this.gwXe.SelectionChanged += new System.EventHandler(this.gwXe_SelectionChanged);
             // 
-            // NGAYTN
-            // 
-            this.NGAYTN.DataPropertyName = "NGAYTN";
-            this.NGAYTN.HeaderText = "Ngày tiếp nhận";
-            this.NGAYTN.Name = "NGAYTN";
-            this.NGAYTN.ReadOnly = true;
-            // 
-            // BIENSO
-            // 
-            this.BIENSO.DataPropertyName = "BIENSO";
-            this.BIENSO.HeaderText = "Xe";
-            this.BIENSO.MinimumWidth = 20;
-            this.BIENSO.Name = "BIENSO";
-            this.BIENSO.ReadOnly = true;
-            // 
-            // USER_ID
-            // 
-            this.USER_ID.DataPropertyName = "USER_ID";
-            this.USER_ID.HeaderText = "Khách hàng";
-            this.USER_ID.MinimumWidth = 50;
-            this.USER_ID.Name = "USER_ID";
-            this.USER_ID.ReadOnly = true;
-            // 
-            // DONGXE_ID
-            // 
-            this.DONGXE_ID.DataPropertyName = "DONGXE_ID";
-            this.DONGXE_ID.HeaderText = "Dòng xe";
-            this.DONGXE_ID.Name = "DONGXE_ID";
-            this.DONGXE_ID.ReadOnly = true;
-            // 
-            // MAU_XE
-            // 
-            this.MAU_XE.DataPropertyName = "MAU_XE";
-            this.MAU_XE.HeaderText = "Màu";
-            this.MAU_XE.Name = "MAU_XE";
-            this.MAU_XE.ReadOnly = true;
-            // 
-            // MAU_NOI_THAT
-            // 
-            this.MAU_NOI_THAT.DataPropertyName = "MAU_NOI_THAT";
-            this.MAU_NOI_THAT.HeaderText = "Màu nội thất";
-            this.MAU_NOI_THAT.Name = "MAU_NOI_THAT";
-            this.MAU_NOI_THAT.ReadOnly = true;
-            // 
-            // NAM_XUAT_XU
-            // 
-            this.NAM_XUAT_XU.DataPropertyName = "NAM_XUAT_XU";
-            this.NAM_XUAT_XU.HeaderText = "Năm SX";
-            this.NAM_XUAT_XU.Name = "NAM_XUAT_XU";
-            this.NAM_XUAT_XU.ReadOnly = true;
-            // 
-            // XUAT_XU
-            // 
-            this.XUAT_XU.DataPropertyName = "XUAT_XU";
-            this.XUAT_XU.HeaderText = "Xuất xứ";
-            this.XUAT_XU.Name = "XUAT_XU";
-            this.XUAT_XU.ReadOnly = true;
-            // 
-            // MOTA
-            // 
-            this.MOTA.DataPropertyName = "MOTA";
-            this.MOTA.HeaderText = "Mô tả";
-            this.MOTA.Name = "MOTA";
-            this.MOTA.ReadOnly = true;
-            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(55, 12);
@@ -697,6 +632,87 @@
             this.layoutControlItem14.Size = new System.Drawing.Size(324, 24);
             this.layoutControlItem14.Text = "Tìm kiếm";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(40, 13);
+            // 
+            // NGAYTN
+            // 
+            this.NGAYTN.DataPropertyName = "NGAYTN";
+            this.NGAYTN.FillWeight = 74.53671F;
+            this.NGAYTN.HeaderText = "Ngày tiếp nhận";
+            this.NGAYTN.MinimumWidth = 28;
+            this.NGAYTN.Name = "NGAYTN";
+            this.NGAYTN.ReadOnly = true;
+            // 
+            // BIENSO
+            // 
+            this.BIENSO.DataPropertyName = "BIENSO";
+            this.BIENSO.FillWeight = 219.4365F;
+            this.BIENSO.HeaderText = "Xe";
+            this.BIENSO.MinimumWidth = 30;
+            this.BIENSO.Name = "BIENSO";
+            this.BIENSO.ReadOnly = true;
+            // 
+            // USER_ID
+            // 
+            this.USER_ID.DataPropertyName = "USER_ID";
+            this.USER_ID.FillWeight = 377.6951F;
+            this.USER_ID.HeaderText = "Khách hàng";
+            this.USER_ID.MinimumWidth = 50;
+            this.USER_ID.Name = "USER_ID";
+            this.USER_ID.ReadOnly = true;
+            // 
+            // DONGXE_ID
+            // 
+            this.DONGXE_ID.DataPropertyName = "DONGXE_ID";
+            this.DONGXE_ID.FillWeight = 27.39224F;
+            this.DONGXE_ID.HeaderText = "Dòng xe";
+            this.DONGXE_ID.MinimumWidth = 20;
+            this.DONGXE_ID.Name = "DONGXE_ID";
+            this.DONGXE_ID.ReadOnly = true;
+            // 
+            // MAU_XE
+            // 
+            this.MAU_XE.DataPropertyName = "MAU_XE";
+            this.MAU_XE.FillWeight = 91.37055F;
+            this.MAU_XE.HeaderText = "Màu";
+            this.MAU_XE.MinimumWidth = 20;
+            this.MAU_XE.Name = "MAU_XE";
+            this.MAU_XE.ReadOnly = true;
+            // 
+            // MAU_NOI_THAT
+            // 
+            this.MAU_NOI_THAT.DataPropertyName = "MAU_NOI_THAT";
+            this.MAU_NOI_THAT.FillWeight = 27.39224F;
+            this.MAU_NOI_THAT.HeaderText = "Màu nội thất";
+            this.MAU_NOI_THAT.MinimumWidth = 20;
+            this.MAU_NOI_THAT.Name = "MAU_NOI_THAT";
+            this.MAU_NOI_THAT.ReadOnly = true;
+            // 
+            // NAM_XUAT_XU
+            // 
+            this.NAM_XUAT_XU.DataPropertyName = "NAM_XUAT_XU";
+            this.NAM_XUAT_XU.FillWeight = 27.39224F;
+            this.NAM_XUAT_XU.HeaderText = "Năm SX";
+            this.NAM_XUAT_XU.MinimumWidth = 20;
+            this.NAM_XUAT_XU.Name = "NAM_XUAT_XU";
+            this.NAM_XUAT_XU.ReadOnly = true;
+            // 
+            // XUAT_XU
+            // 
+            this.XUAT_XU.DataPropertyName = "XUAT_XU";
+            this.XUAT_XU.FillWeight = 27.39224F;
+            this.XUAT_XU.HeaderText = "Xuất xứ";
+            this.XUAT_XU.MinimumWidth = 50;
+            this.XUAT_XU.Name = "XUAT_XU";
+            this.XUAT_XU.ReadOnly = true;
+            // 
+            // MOTA
+            // 
+            this.MOTA.DataPropertyName = "MOTA";
+            this.MOTA.FillWeight = 27.39224F;
+            this.MOTA.HeaderText = "Mô tả";
+            this.MOTA.MinimumWidth = 50;
+            this.MOTA.Name = "MOTA";
+            this.MOTA.ReadOnly = true;
             // 
             // FormTiepNhanXe
             // 
