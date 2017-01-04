@@ -28,5 +28,10 @@ namespace BUS
         {
             return vt.delVatTu(maVt);
         }
+
+        public DataTable searchVatTu(string content)
+        {
+            return vt.searchVatTu(content);
+        }
     }
 }

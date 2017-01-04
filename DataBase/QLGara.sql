@@ -72,6 +72,26 @@ CREATE PROCEDURE SP_LOGIN
 	BEGIN
 		SELECT * FROM USERS WHERE (@username = USERNAME AND @pass = PASS)
 	END
+
+----Del user------
+CREATE PROC SP_DEL_USER
+	@username varchar(50)
+	as
+	begin
+		DELETE FROM USERS WHERE USERNAME = @username
+	end
+
+----Search User---- drop proc SP_SEARCH_USER
+CREATE PROC SP_SEARCH_USER
+	@content varchar(20)
+	as
+	begin
+		declare @searchString varchar(22)
+		set @searchString = '%' + @content + '%'
+		select * from USERS
+		where (USERNAME like @searchString)--- or (EMAIL like @searchString)
+	end
+
 --///Hieu Xe///////----
 ---Insert HieuXe---
 CREATE PROC SP_INSERT_HIEUXE

@@ -66,5 +66,21 @@ namespace DAL
             }
         }
 
+        public DataTable searchVatTu(string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SEARCH_VATTU";
+                string[] pNames = { "@content" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }

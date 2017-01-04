@@ -57,5 +57,42 @@ namespace DAL
             }
         }
 
+        public bool delUser(string username)
+        {
+            try
+            {
+                const string strSQL = "SP_DEL_USER";
+                string[] pNames = { "@username" };
+                object[] pValues = { username };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+
+            }
+            catch
+            {
+
+                return false;
+            }
+        }
+
+        public DataTable searchUser(string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SEARCH_USER";
+                string[] pNames = { "@content" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+
+            }
+            catch
+            {
+
+                return null;
+            }
+        }
     }
 }

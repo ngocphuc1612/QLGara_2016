@@ -86,6 +86,14 @@ namespace QLGara
             this.dtDoB.Value = DateTime.Now;
         }
 
+        private void afterAdd()
+        {
+            this.txtUsername.ReadOnly = true;
+            this.txtPass.ReadOnly = true;
+            this.txtComfirm.ReadOnly = true;
+            this.txtEmail.ReadOnly = true;
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             string userName = this.txtUsername.Text;
@@ -128,11 +136,42 @@ namespace QLGara
             {
                 MessageBox.Show("Lưu thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gvUsers.DataSource = us.GetData();
+                afterAdd();
             }
             else
             {
                 MessageBox.Show("Không thể thêm!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            afterAdd();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chăc muốn xóa thành viên này?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (this.cbbRole.SelectedValue.ToString() == "1")
+                {
+                    MessageBox.Show("Không thể xóa Admin", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (us.delUser(this.txtUsername.Text) == true)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.gvUsers.DataSource = us.GetData();
+                }
+                else
+                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.gvUsers.DataSource = us.searchUser(this.txtSearch.Text);
         }
     }
 }

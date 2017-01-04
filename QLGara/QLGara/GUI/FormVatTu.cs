@@ -119,5 +119,10 @@ namespace QLGara
                 txtDonGia.Text = row.Cells["VT_DONGIA"].Value.ToString();
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            this.gwVatTu.DataSource = vt.searchVatTu(this.txtSearch.Text);
+        }
     }
 }

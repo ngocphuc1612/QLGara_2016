@@ -38,7 +38,7 @@
             this.VT_SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtSearch = new System.Windows.Forms.RichTextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -112,6 +112,8 @@
             // 
             // gwVatTu
             // 
+            this.gwVatTu.AllowUserToAddRows = false;
+            this.gwVatTu.AllowUserToDeleteRows = false;
             this.gwVatTu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gwVatTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gwVatTu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -122,20 +124,24 @@
             this.gwVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gwVatTu.Location = new System.Drawing.Point(2, 20);
             this.gwVatTu.Name = "gwVatTu";
+            this.gwVatTu.ReadOnly = true;
             this.gwVatTu.Size = new System.Drawing.Size(642, 186);
             this.gwVatTu.TabIndex = 1;
+            this.gwVatTu.SelectionChanged += new System.EventHandler(this.gwVatTu_SelectionChanged);
             // 
             // VT_MAVT
             // 
             this.VT_MAVT.DataPropertyName = "MAVT";
             this.VT_MAVT.HeaderText = "Mã VT";
             this.VT_MAVT.Name = "VT_MAVT";
+            this.VT_MAVT.ReadOnly = true;
             // 
             // VT_TENVT
             // 
             this.VT_TENVT.DataPropertyName = "TENVT";
             this.VT_TENVT.HeaderText = "Tên VT";
             this.VT_TENVT.Name = "VT_TENVT";
+            this.VT_TENVT.ReadOnly = true;
             // 
             // VT_DONGIA
             // 
@@ -144,12 +150,14 @@
             this.VT_DONGIA.DefaultCellStyle = dataGridViewCellStyle1;
             this.VT_DONGIA.HeaderText = "Đơn giá";
             this.VT_DONGIA.Name = "VT_DONGIA";
+            this.VT_DONGIA.ReadOnly = true;
             // 
             // VT_SL
             // 
             this.VT_SL.DataPropertyName = "SL";
             this.VT_SL.HeaderText = "Số lượng";
             this.VT_SL.Name = "VT_SL";
+            this.VT_SL.ReadOnly = true;
             // 
             // groupControl2
             // 
@@ -164,7 +172,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.richTextBox1);
+            this.layoutControl1.Controls.Add(this.txtSearch);
             this.layoutControl1.Controls.Add(this.btnXoa);
             this.layoutControl1.Controls.Add(this.btnSua);
             this.layoutControl1.Controls.Add(this.btnThemMoi);
@@ -180,13 +188,14 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // richTextBox1
+            // txtSearch
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(130, 179);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(142, 23);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.txtSearch.Location = new System.Drawing.Point(130, 179);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(142, 23);
+            this.txtSearch.TabIndex = 9;
+            this.txtSearch.Text = "";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnXoa
             // 
@@ -254,7 +263,7 @@
             // 
             this.txtMaVT.Location = new System.Drawing.Point(127, 24);
             this.txtMaVT.Name = "txtMaVT";
-            this.txtMaVT.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMaVT.Properties.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtMaVT.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaVT.Properties.ReadOnly = true;
             this.txtMaVT.Size = new System.Drawing.Size(217, 20);
@@ -402,7 +411,7 @@
             // 
             // txtSeach
             // 
-            this.txtSeach.Control = this.richTextBox1;
+            this.txtSeach.Control = this.txtSearch;
             this.txtSeach.Location = new System.Drawing.Point(59, 164);
             this.txtSeach.Name = "txtSeach";
             this.txtSeach.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
@@ -480,7 +489,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_TENVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_DONGIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_SL;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtSearch;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.LayoutControlItem txtSeach;
     }

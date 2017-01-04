@@ -21,5 +21,15 @@ namespace BUS
         {
             return us.login(user, pass);
         }
+
+        public bool delUser(string user)
+        {
+            return us.delUser(user);
+        }
+
+        public DataTable searchUser(string content)
+        {
+            return us.searchUser(content);
+        }
     }
 }
