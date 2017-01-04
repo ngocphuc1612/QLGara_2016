@@ -27,5 +27,9 @@ namespace BUS
             return xe.DelXe(bienSo);
         }
 
+        public DataTable searchXe(string content)
+        {
+            return xe.searchXe(content);
+        }
     }
 }

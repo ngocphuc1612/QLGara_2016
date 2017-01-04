@@ -6,16 +6,16 @@ namespace Entity
     {
         #region Fields
         private string bienSo;
-        private int user_id, dongXeId;
+        private string dongXeId;
+        private int user_id;
         private DateTime ngayTn;
         private string mauXe, moTa, mauNoiThat, namSx, xuatSu;
         #endregion
 
         #region Constructor
-        public Entity_Xe(string bienSo, int userId, int dongXeId, string mauXe = "Đen", string mota = "", string mauNoiThat = "Xám", string namSx = "2000", string xuatSu = "Việt Nam")
+        public Entity_Xe(string bienSo, int user_id, string dongXeId, string mauXe = "Đen", string mota = "", string mauNoiThat = "Xám", string namSx = "2000", string xuatSu = "Việt Nam")
         {
             this.bienSo = bienSo;
-            this.user_id = userId;
             this.dongXeId = dongXeId;
             this.mauXe = mauXe;
             this.moTa = mota;
@@ -36,16 +36,7 @@ namespace Entity
             }
         }
 
-        public int User_id
-        {
-            get
-            {
-                return user_id;
-            }
-
-        }
-
-        public int DongXeId
+        public string DongXeId
         {
             get
             {
@@ -106,6 +97,19 @@ namespace Entity
                 return xuatSu;
             }
 
+        }
+
+        public int User_id
+        {
+            get
+            {
+                return user_id;
+            }
+
+            set
+            {
+                user_id = value;
+            }
         }
         #endregion
     }

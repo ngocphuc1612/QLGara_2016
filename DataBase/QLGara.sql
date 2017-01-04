@@ -26,6 +26,7 @@ CREATE TABLE ROLES
 
 --Constraints
 ALTER TABLE USERS ADD CONSTRAINT FK_USERS_ROLES FOREIGN KEY (ROLE_ID) REFERENCES ROLES(ROLE_ID)
+ALTER TABLE XE ADD CONSTRAINT FK_XE_KHACHHANG FOREIGN KEY (USER_ID) REFERENCES KHACHHANG(KH_ID)
 
 --Store procedur------------
 ----Get all row of table----
@@ -89,7 +90,7 @@ CREATE PROC SP_SEARCH_USER
 		declare @searchString varchar(22)
 		set @searchString = '%' + @content + '%'
 		select * from USERS
-		where (USERNAME like @searchString)--- or (EMAIL like @searchString)
+		where (USERNAME like @searchString) or (EMAIL like @searchString)
 	end
 
 --///Hieu Xe///////----
@@ -153,6 +154,23 @@ CREATE PROC SP_DEL_VATTU
 		DELETE FROM VATTU WHERE MAVT = @maVt
 	END
 
+----Search Vat tu---- drop proc SP_SEARCH_VATTU
+
+CREATE PROC SP_SEARCH_VATTU
+	@content nvarchar(20)
+	as
+	begin
+		declare @search nvarchar(30)
+		set @search = N'%' + @content + N'%'
+		print(@search)
+		begin
+			select * from VATTU 
+			where TENVT like @search
+		end
+	end
+
+
+
 ----////KHACH HANG-----
 ----INSERT KHACH HANG----
 CREATE PROC SP_INSERT_KHACHHANG
@@ -200,7 +218,7 @@ CREATE PROC SP_INSERT_XE
 	@bs varchar(50),
 	@userId int,
 	@ngayTN smalldatetime,
-	@dongXeId int,
+	@dongXeId varchar(50),
 	@mau nvarchar(50),
 	@mota nvarchar(1000),
 	@mauTrong nvarchar(50),
@@ -212,12 +230,12 @@ CREATE PROC SP_INSERT_XE
 	END
 	
 
----UPDate Xe----
+---UPDate Xe---- drop proc SP_UPDATE_XE
 CREATE PROC SP_UPDATE_XE
 	@bs varchar(50),
 	@userId int,
 	@ngayTN smalldatetime,
-	@dongXeId int,
+	@dongXeId varchar(50),
 	@mau nvarchar(50),
 	@mota nvarchar(1000),
 	@mauTrong nvarchar(50),
@@ -237,6 +255,18 @@ CREATE PROC SP_DEL_XE
 	BEGIN
 		DELETE FROM XE WHERE BIENSO = @bs
 	END
+
+---Search----
+CREATE PROC SP_SEARCH_XE
+	@content nvarchar(20)
+	as
+	begin
+		declare @searchString nvarchar(23)
+		set @searchString = N'%' + @content + N'%'
+		select * from XE
+		where (BIENSO like @searchString) or (XUAT_XU like @searchString) or (MOTA like @searchString)
+	end
+
 
 ---/////DONG XE -------
 ---Insert hieu Xe
@@ -269,4 +299,4 @@ CREATE PROC SP_DEL_DONGXE
 		DELETE FROM CACLOAIXE WHERE DONGXE_ID = @id
 	END
 
-----/////////////////////////////////-----
+----/////////Tiep Nhan Xe////////////////-----

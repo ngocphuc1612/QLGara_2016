@@ -65,5 +65,21 @@ namespace DAL
                 return false;
             }
         }
+
+        public DataTable searchXe(string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SEARCH_XE";
+                string[] pNames = { "@content" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }

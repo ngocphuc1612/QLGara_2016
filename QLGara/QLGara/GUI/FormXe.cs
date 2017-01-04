@@ -49,18 +49,16 @@ namespace QLGara
                 return;
             }
             int userId = 1;
-            int dongXeID = 1;
             try
             {
                 userId = Int32.Parse(userID);
-                dongXeID = Int32.Parse(dongXe);
             } catch
             {
                 MessageBox.Show("Vui lòng kiểm tra lại Dòng xe ID và ID chủ xe!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            Entity_Xe _xe = new Entity_Xe(bienSo, userId, dongXeID, mau, mota, mauTrong, namSX, xuatXu);
+            Entity_Xe _xe = new Entity_Xe(bienSo, userId, dongXe, mau, mota, mauTrong, namSX, xuatXu);
             if (xe.insertXe(_xe) == true)
             {
                 MessageBox.Show("Thêm thành công Xe " + _xe.BienSo, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,11 +84,9 @@ namespace QLGara
                 return;
             }
             int userId = 1;
-            int dongXeID = 1;
             try
             {
                 userId = Int32.Parse(userID);
-                dongXeID = Int32.Parse(dongXe);
             }
             catch
             {
@@ -98,7 +94,7 @@ namespace QLGara
                 return;
             }
 
-            Entity_Xe _xe = new Entity_Xe(bienSo, userId, dongXeID, mau, mota, mauTrong, namSX, xuatXu);
+            Entity_Xe _xe = new Entity_Xe(bienSo, userId, dongXe, mau, mota, mauTrong, namSX, xuatXu);
             if (xe.updateXe(_xe) == true)
             {
                 MessageBox.Show("Sửa thành công Xe " + _xe.BienSo, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
