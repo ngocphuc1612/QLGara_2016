@@ -247,5 +247,39 @@ namespace QLGara
             else
                 superTab.TabIndex = superTab.Tabs.Count - 1;
         }
+
+        private void btnMainCheckCar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!CheckOpenTabs("Phiếu đánh giá"))
+            {
+                SuperTabItem t = superTab.CreateTab("Phiếu đánh giá");
+                FormPhieuDanhGia frm = new FormPhieuDanhGia();
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+                t.AttachedControl.Controls.Add(frm.pnl);
+                frm.Show();
+                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            }
+            else
+                superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
+
+        private void btnMainRepairCar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!CheckOpenTabs("Phiếu sửa chữa"))
+            {
+                SuperTabItem t = superTab.CreateTab("Phiếu sửa chữa");
+                FormPhieuSC frm = new FormPhieuSC();
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+                t.AttachedControl.Controls.Add(frm.pnl);
+                frm.Show();
+                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            }
+            else
+                superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
     }
 }

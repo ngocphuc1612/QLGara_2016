@@ -18,7 +18,7 @@ namespace QLGara
         {
             InitializeComponent();
             this.pnl = this.pnlPhieuSC;
-            this.gwPhieuSC.DataSource = psc.getData();
+            //this.gwPhieuSC.DataSource = psc.getData();
         }
     }
 }
