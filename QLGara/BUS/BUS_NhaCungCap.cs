@@ -11,5 +11,15 @@ namespace BUS
         {
             return ncc.GetData();
         }
+
+        public bool delNCC(string content)
+        {
+            return ncc.delObject(content);
+        }
+
+        public DataTable searchNCC(string content)
+        {
+            return ncc.searchObject(content);
+        }
     }
 }
