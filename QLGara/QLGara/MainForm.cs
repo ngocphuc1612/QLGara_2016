@@ -219,7 +219,7 @@ namespace QLGara
             if (!CheckOpenTabs("Tiếp nhận Xe"))
             {
                 SuperTabItem t = superTab.CreateTab("Tiếp nhận Xe");
-                FormXe frm = new FormXe();
+                FormTiepNhanXe frm = new FormTiepNhanXe();
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
                 frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

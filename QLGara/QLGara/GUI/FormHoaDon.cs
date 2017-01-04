@@ -16,6 +16,7 @@ namespace QLGara
         public FormHoaDon()
         {
             InitializeComponent();
+            this.pnl = this.pnlHoaDon;
         }
     }
 }
