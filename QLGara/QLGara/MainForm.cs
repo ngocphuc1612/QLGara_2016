@@ -197,7 +197,7 @@ namespace QLGara
 
         private void btnSupport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            string guide = "1. Quản lý Gara \n";
+            string guide = "1. Quản lý Gara\n";
             guide += "2. Quản lý Kho \n";
             guide += "3. Danh mục thống kê \n";
             guide += "4. Báo cáo \n";
@@ -220,6 +220,23 @@ namespace QLGara
             {
                 SuperTabItem t = superTab.CreateTab("Tiếp nhận Xe");
                 FormXe frm = new FormXe();
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+                t.AttachedControl.Controls.Add(frm.pnl);
+                frm.Show();
+                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            }
+            else
+                superTab.TabIndex = superTab.Tabs.Count - 1;
+        }
+
+        private void btnPayment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!CheckOpenTabs("Hóa đơn"))
+            {
+                SuperTabItem t = superTab.CreateTab("Hóa đơn");
+                FormHoaDon frm = new FormHoaDon();
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
                 frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

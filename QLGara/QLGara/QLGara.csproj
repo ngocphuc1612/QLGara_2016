@@ -35,10 +35,9 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevComponents.DotNetBar.Layout, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar2, Version=12.9.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.Instrumentation, Version=12.9.0.6, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.SuperGrid.Design, Version=12.9.0.6, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.SuperGrid.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1fea3f5d8d482bff, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.Common, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.StructuralParser, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
@@ -52,7 +51,9 @@
     <Reference Include="DevExpress.DXCore.Controls.XtraVerticalGrid.v6.3, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Parser, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Platform, Version=15.1.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,6 +62,7 @@
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -86,6 +88,12 @@
     </Compile>
     <Compile Include="GUI\FormPhieuDanhGia.Designer.cs">
       <DependentUpon>FormPhieuDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormTiepNhanXe.cs">
       <SubType>Form</SubType>
@@ -182,6 +190,9 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="GUI\FormPhieuDanhGia.resx">
       <DependentUpon>FormPhieuDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormTiepNhanXe.resx">
       <DependentUpon>FormTiepNhanXe.cs</DependentUpon>

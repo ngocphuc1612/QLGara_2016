@@ -1,6 +1,6 @@
 ﻿namespace QLGara
 {
-    partial class FormThanhToan
+    partial class FormHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -31,25 +31,16 @@
             this.pnlPhieuTT = new System.Windows.Forms.Panel();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.button3 = new System.Windows.Forms.Button();
             this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -58,7 +49,6 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -74,20 +64,12 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -96,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -136,14 +117,10 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.button3);
             this.layoutControl1.Controls.Add(this.comboBoxEdit2);
             this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.button2);
             this.layoutControl1.Controls.Add(this.button1);
-            this.layoutControl1.Controls.Add(this.textEdit7);
-            this.layoutControl1.Controls.Add(this.textEdit6);
-            this.layoutControl1.Controls.Add(this.textEdit5);
             this.layoutControl1.Controls.Add(this.textEdit4);
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -153,15 +130,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(395, 345);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(280, 174);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 20);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Thanh toán";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // comboBoxEdit2
             // 
@@ -198,40 +166,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 26);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Thanh toán hết";
+            this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textEdit7
-            // 
-            this.textEdit7.Location = new System.Drawing.Point(114, 174);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit7.Properties.Mask.EditMask = "c0";
-            this.textEdit7.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit7.Properties.ValidateOnEnterKey = true;
-            this.textEdit7.Size = new System.Drawing.Size(152, 20);
-            this.textEdit7.StyleController = this.layoutControl1;
-            this.textEdit7.TabIndex = 10;
-            // 
-            // textEdit6
-            // 
-            this.textEdit6.Location = new System.Drawing.Point(114, 132);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Mask.EditMask = "c0";
-            this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit6.Size = new System.Drawing.Size(269, 20);
-            this.textEdit6.StyleController = this.layoutControl1;
-            this.textEdit6.TabIndex = 9;
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.Location = new System.Drawing.Point(114, 108);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Mask.EditMask = "c0";
-            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit5.Size = new System.Drawing.Size(269, 20);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 8;
             // 
             // textEdit4
             // 
@@ -260,13 +196,8 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem1,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
             this.layoutControlItem4,
             this.emptySpaceItem3,
-            this.layoutControlItem7,
-            this.emptySpaceItem4,
             this.emptySpaceItem5,
             this.layoutControlItem8,
             this.layoutControlItem9,
@@ -274,8 +205,7 @@
             this.emptySpaceItem7,
             this.emptySpaceItem8,
             this.layoutControlItem13,
-            this.layoutControlItem14,
-            this.layoutControlItem2});
+            this.layoutControlItem14});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(395, 345);
@@ -289,32 +219,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(375, 24);
             this.layoutControlItem1.Text = "Mã phiếu thanh toán";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 144);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(375, 18);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.textEdit5;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(375, 24);
-            this.layoutControlItem5.Text = "Đã thanh toán";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.textEdit6;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(375, 24);
-            this.layoutControlItem6.Text = "Còn lại";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem4
             // 
@@ -332,23 +236,6 @@
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(375, 73);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.textEdit7;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 162);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(258, 24);
-            this.layoutControlItem7.Text = "Số tiền thanh toán";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(258, 162);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 24);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
@@ -395,9 +282,9 @@
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 186);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 36);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 126);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
@@ -417,15 +304,6 @@
             this.layoutControlItem14.Size = new System.Drawing.Size(375, 24);
             this.layoutControlItem14.Text = "Khách hàng";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.button3;
-            this.layoutControlItem2.Location = new System.Drawing.Point(268, 162);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(107, 24);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControl3
             // 
@@ -504,13 +382,13 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(72, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // FormThanhToan
+            // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 345);
             this.Controls.Add(this.pnlPhieuTT);
-            this.Name = "FormThanhToan";
+            this.Name = "FormHoaDon";
             this.Text = "Hóa đơn";
             this.pnlPhieuTT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -519,20 +397,12 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -541,7 +411,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -564,17 +433,9 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
@@ -595,7 +456,5 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private System.Windows.Forms.Button button3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

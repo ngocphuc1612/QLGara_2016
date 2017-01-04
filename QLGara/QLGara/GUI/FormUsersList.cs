@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace QLGara
 {
@@ -54,7 +55,6 @@ namespace QLGara
 
                 DataGridViewRow row = cell.OwningRow;
 
-                this.txtID.Text = row.Cells["USER_ID"].Value.ToString();
                 this.txtUsername.Text = row.Cells["USERNAME"].Value.ToString();
                 this.txtEmail.Text = row.Cells["EMAIL"].Value.ToString();
                 try
@@ -67,14 +67,27 @@ namespace QLGara
                 this.txtName.Text = row.Cells["FULL_NAME"].Value.ToString();
                 this.txtPhone.Text = row.Cells["PHONE"].Value.ToString();
                 this.txtAddress.Text = row.Cells["DIRECTION"].Value.ToString();
-                this.cbbRole.SelectedValue = row.Cells["ROLE_ID"].Value;
+                //this.cbbRole.SelectedValue = row.Cells["ROLE_ID"].Value;
                 
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string id = this.txtID.Text;
+            this.txtUsername.ReadOnly = false;
+            this.txtPass.ReadOnly = false;
+            this.txtComfirm.ReadOnly = false;
+            this.txtEmail.ReadOnly = false;
+            this.txtAddress.Text = null;
+            this.txtEmail.Text = null;
+            this.txtName.Text = null;
+            this.txtPhone.Text = null;
+            this.cbbRole.SelectedValue = 5;
+            this.dtDoB.Value = DateTime.Now;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
             string userName = this.txtUsername.Text;
             string pass = this.txtPass.Text;
             string comfirm = this.txtComfirm.Text;
@@ -85,11 +98,21 @@ namespace QLGara
             string sdt = this.txtPhone.Text;
             string address = this.txtAddress.Text;
             string role = this.cbbRole.SelectedValue.ToString();
-            if (id == "" || userName == "" || pass == "" || comfirm == "" || email == "" || name == "" )
+            if (userName == "" || pass == "" || comfirm == "" || email == "" || name == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (new EmailAddressAttribute().IsValid(email))
+            {
+                // check email exists
+            }
+            else
+            {
+                MessageBox.Show("E-mail nhập vào chưa chính xác!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if (pass != comfirm)
             {
                 MessageBox.Show("Vui lòng điền xác nhận lại mật khẩu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,16 +123,16 @@ namespace QLGara
 
             int idUser = Utility.Instance.autoKey(gvUsers);
 
-            Entity_User _us = new Entity_User(idUser, userName,email,pass,Int32.Parse(role), gender, dob,name, sdt, address);
-            if(us.insertUser(_us) == true)
+            Entity_User _us = new Entity_User(idUser, userName, email, pass, Int32.Parse(role), gender, dob, name, sdt, address);
+            if (us.insertUser(_us) == true)
             {
-                MessageBox.Show("Thêm thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gvUsers.DataSource = us.GetData();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Không thể thêm!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
     }
 }
