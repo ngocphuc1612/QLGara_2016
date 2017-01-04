@@ -16,8 +16,8 @@ namespace QLGara
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FormKhachHang());
             Application.Run(new LoginForm());
-            //Application.Run(new FormThanhToank());
         }
     }
 }
