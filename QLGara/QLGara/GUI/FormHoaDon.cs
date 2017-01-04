@@ -41,14 +41,15 @@ namespace QLGara
 
                 string psc_id = row.Cells["MAPSC"].Value.ToString();
                 this.txtID.Text = psc_id;
-                DataTable dt = new DataTable();
-                dt = hd_psc.findByID(psc_id);
-                this.gw2.DataSource = dt;
-                //this.cbbKH.DataSource = hd_kh.getData();
-                //this.cbbKH.DisplayMember = "KH_TEN";
-                //this.cbbKH.ValueMember = "KH_ID";
-                //this.cbbKH.SelectedValue = kh_id;
+                //DataTable dt = new DataTable();
+                //dt = hd_psc.findByID(psc_id);
+                //this.gw2.DataSource = dt;
+                this.cbbKH.DataSource = hd_kh.getData();
+                this.cbbKH.DisplayMember = "KH_TEN";
+                this.cbbKH.ValueMember = "KH_ID";
+                this.cbbKH.SelectedText = row.Cells["KH_TEN"].Value.ToString();
                 this.txtTong.Text = row.Cells["TONGTIEN"].Value.ToString();
+                this.txtBienSo.Text = row.Cells["BIENSO"].Value.ToString();
             }
         }
     }

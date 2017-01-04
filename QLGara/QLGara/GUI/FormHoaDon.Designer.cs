@@ -32,8 +32,6 @@
             this.pnlHoaDon = new System.Windows.Forms.Panel();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.gw2 = new System.Windows.Forms.DataGridView();
-            this.cbbXe = new System.Windows.Forms.ComboBox();
             this.cbbKH = new System.Windows.Forms.ComboBox();
             this.btn_Huy = new System.Windows.Forms.Button();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
@@ -51,14 +49,13 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gwHoaDon = new System.Windows.Forms.DataGridView();
             this.MAPTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAPSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KH_TEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BIENSO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
@@ -66,13 +63,14 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.txtBienSo = new System.Windows.Forms.TextBox();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pnlPhieuTT.SuspendLayout();
             this.pnlHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gw2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -87,8 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -99,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPhieuTT
@@ -135,8 +132,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.gw2);
-            this.layoutControl1.Controls.Add(this.cbbXe);
+            this.layoutControl1.Controls.Add(this.txtBienSo);
             this.layoutControl1.Controls.Add(this.cbbKH);
             this.layoutControl1.Controls.Add(this.btn_Huy);
             this.layoutControl1.Controls.Add(this.btn_ThanhToan);
@@ -150,30 +146,10 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // gw2
-            // 
-            this.gw2.AllowUserToAddRows = false;
-            this.gw2.AllowUserToDeleteRows = false;
-            this.gw2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gw2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gw2.Location = new System.Drawing.Point(124, 229);
-            this.gw2.Name = "gw2";
-            this.gw2.ReadOnly = true;
-            this.gw2.Size = new System.Drawing.Size(259, 104);
-            this.gw2.TabIndex = 18;
-            // 
-            // cbbXe
-            // 
-            this.cbbXe.FormattingEnabled = true;
-            this.cbbXe.Location = new System.Drawing.Point(114, 135);
-            this.cbbXe.Name = "cbbXe";
-            this.cbbXe.Size = new System.Drawing.Size(269, 21);
-            this.cbbXe.TabIndex = 17;
-            // 
             // cbbKH
             // 
             this.cbbKH.FormattingEnabled = true;
-            this.cbbKH.Location = new System.Drawing.Point(114, 110);
+            this.cbbKH.Location = new System.Drawing.Point(114, 68);
             this.cbbKH.Name = "cbbKH";
             this.cbbKH.Size = new System.Drawing.Size(269, 21);
             this.cbbKH.TabIndex = 16;
@@ -198,7 +174,7 @@
             // 
             // txtTong
             // 
-            this.txtTong.Location = new System.Drawing.Point(114, 160);
+            this.txtTong.Location = new System.Drawing.Point(114, 117);
             this.txtTong.Name = "txtTong";
             this.txtTong.Properties.Mask.EditMask = "c0";
             this.txtTong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -209,7 +185,7 @@
             // txtID
             // 
             this.txtID.EditValue = "";
-            this.txtID.Location = new System.Drawing.Point(114, 86);
+            this.txtID.Location = new System.Drawing.Point(114, 44);
             this.txtID.Name = "txtID";
             this.txtID.Properties.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(269, 20);
@@ -233,8 +209,7 @@
             this.emptySpaceItem8,
             this.emptySpaceItem1,
             this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem5});
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(395, 345);
@@ -243,7 +218,7 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtID;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(375, 24);
             this.layoutControlItem1.Text = "Mã phiếu thanh toán";
@@ -252,7 +227,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtTong;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 148);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 105);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(375, 24);
             this.layoutControlItem4.Text = "Tổng hóa đơn";
@@ -263,7 +238,7 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 217);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 108);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(375, 108);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
@@ -311,9 +286,9 @@
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 172);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 129);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 17);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 60);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
@@ -321,35 +296,17 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(375, 74);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(375, 32);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cbbKH;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 98);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(375, 25);
             this.layoutControlItem2.Text = "Khách Hàng";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.cbbXe;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 123);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(375, 25);
-            this.layoutControlItem3.Text = "Xe/Biển Số";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.gw2;
-            this.layoutControlItem5.Location = new System.Drawing.Point(10, 217);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(365, 108);
-            this.layoutControlItem5.Text = "1";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControl3
             // 
@@ -381,7 +338,8 @@
             this.gwHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAPTT,
             this.MAPSC,
-            this.NGAYTT,
+            this.NGAYSC,
+            this.KH_TEN,
             this.BIENSO,
             this.TONGTIEN});
             this.gwHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -406,12 +364,19 @@
             this.MAPSC.Name = "MAPSC";
             this.MAPSC.ReadOnly = true;
             // 
-            // NGAYTT
+            // NGAYSC
             // 
-            this.NGAYTT.DataPropertyName = "NGAYTT";
-            this.NGAYTT.HeaderText = "Ngày TT";
-            this.NGAYTT.Name = "NGAYTT";
-            this.NGAYTT.ReadOnly = true;
+            this.NGAYSC.DataPropertyName = "NGAYSC";
+            this.NGAYSC.HeaderText = "Ngày TT";
+            this.NGAYSC.Name = "NGAYSC";
+            this.NGAYSC.ReadOnly = true;
+            // 
+            // KH_TEN
+            // 
+            this.KH_TEN.DataPropertyName = "KH_TEN";
+            this.KH_TEN.HeaderText = "Khách hàng";
+            this.KH_TEN.Name = "KH_TEN";
+            this.KH_TEN.ReadOnly = true;
             // 
             // BIENSO
             // 
@@ -474,6 +439,22 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(99, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // txtBienSo
+            // 
+            this.txtBienSo.Location = new System.Drawing.Point(114, 93);
+            this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.Size = new System.Drawing.Size(269, 20);
+            this.txtBienSo.TabIndex = 17;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtBienSo;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 81);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(375, 24);
+            this.layoutControlItem3.Text = "Biển số";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(99, 13);
+            // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,7 +469,6 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gw2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -503,8 +483,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -515,6 +493,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,14 +529,13 @@
         private System.Windows.Forms.DataGridView gwHoaDon;
         private System.Windows.Forms.ComboBox cbbKH;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private System.Windows.Forms.ComboBox cbbXe;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPSC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYSC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KH_TEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn BIENSO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
-        private System.Windows.Forms.DataGridView gw2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private System.Windows.Forms.TextBox txtBienSo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

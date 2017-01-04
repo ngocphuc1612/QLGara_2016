@@ -143,12 +143,6 @@
     <Compile Include="GUI\FormPhieuSC.Designer.cs">
       <DependentUpon>FormPhieuSC.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormThanhToan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormThanhToan.Designer.cs">
-      <DependentUpon>FormThanhToan.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormPhieuSC.resx">
       <DependentUpon>FormPhieuSC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormThanhToan.resx">
-      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
