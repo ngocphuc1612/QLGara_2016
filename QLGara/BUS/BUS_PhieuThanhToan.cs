@@ -11,5 +11,11 @@ namespace BUS
         {
             return ptt.GetData();
         }
+
+        public DataTable getHoaDon()
+        {
+            return ptt.getHoaDon();
+        }
+        
     }
 }
