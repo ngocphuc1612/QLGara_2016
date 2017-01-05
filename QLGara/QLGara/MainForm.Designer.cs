@@ -52,7 +52,6 @@
             this.btnReportHetHan = new DevExpress.XtraBars.BarButtonItem();
             this.barReportCanNhap = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnReportCNDoanhNghiep = new DevExpress.XtraBars.BarButtonItem();
             this.btnReportCNCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaiKhoan = new DevExpress.XtraBars.BarLinkContainerItem();
@@ -70,11 +69,8 @@
             this.ribbonReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonReportGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonReportGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonReportGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonUsers = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonOptions = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonOptionsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
@@ -120,7 +116,6 @@
             this.btnReportHetHan,
             this.barReportCanNhap,
             this.barButtonItem2,
-            this.btnReportCNDoanhNghiep,
             this.btnReportCNCaNhan,
             this.barButtonItem3,
             this.btnTaiKhoan,
@@ -136,7 +131,6 @@
             this.ribbonLists,
             this.ribbonReport,
             this.ribbonUsers,
-            this.ribbonOptions,
             this.ribbonHelp});
             this.ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPictureEdit1,
@@ -389,17 +383,6 @@
             this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // btnReportCNDoanhNghiep
-            // 
-            this.btnReportCNDoanhNghiep.Caption = "Doanh nghiệp";
-            this.btnReportCNDoanhNghiep.Glyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNDoanhNghiep.Glyph")));
-            this.btnReportCNDoanhNghiep.Id = 41;
-            this.btnReportCNDoanhNghiep.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnReportCNDoanhNghiep.LargeGlyph")));
-            this.btnReportCNDoanhNghiep.LargeWidth = 100;
-            this.btnReportCNDoanhNghiep.Name = "btnReportCNDoanhNghiep";
-            this.btnReportCNDoanhNghiep.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
             // btnReportCNCaNhan
             // 
             this.btnReportCNCaNhan.Caption = "Cá Nhân";
@@ -523,8 +506,7 @@
             // 
             this.ribbonReport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonReportGroup1,
-            this.ribbonReportGroup2,
-            this.ribbonReportGroup3});
+            this.ribbonReportGroup2});
             this.ribbonReport.Name = "ribbonReport";
             this.ribbonReport.Text = "Báo cáo";
             // 
@@ -542,13 +524,6 @@
             this.ribbonReportGroup2.Name = "ribbonReportGroup2";
             this.ribbonReportGroup2.Text = "Báo cáo tồn kho";
             // 
-            // ribbonReportGroup3
-            // 
-            this.ribbonReportGroup3.ItemLinks.Add(this.btnReportCNDoanhNghiep);
-            this.ribbonReportGroup3.ItemLinks.Add(this.btnReportCNCaNhan);
-            this.ribbonReportGroup3.Name = "ribbonReportGroup3";
-            this.ribbonReportGroup3.Text = "Công nợ";
-            // 
             // ribbonUsers
             // 
             this.ribbonUsers.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -562,19 +537,6 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btnYourProfile);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Thành viên";
-            // 
-            // ribbonOptions
-            // 
-            this.ribbonOptions.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonOptionsGroup});
-            this.ribbonOptions.Name = "ribbonOptions";
-            this.ribbonOptions.Text = "Hệ thống";
-            // 
-            // ribbonOptionsGroup
-            // 
-            this.ribbonOptionsGroup.ItemLinks.Add(this.btnSettings);
-            this.ribbonOptionsGroup.Name = "ribbonOptionsGroup";
-            this.ribbonOptionsGroup.Text = "Hệ thống";
             // 
             // ribbonHelp
             // 
@@ -708,7 +670,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonStock;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonListsGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonLists;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonOptions;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonHelp;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonUsers;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
@@ -724,7 +685,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btnListCustomer;
         private DevExpress.XtraBars.BarButtonItem btnListPartner;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonOptionsGroup;
         private DevExpress.XtraBars.BarButtonItem btnSettings;
         private DevExpress.XtraBars.BarButtonItem btnListCar;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonListOrthers;
@@ -742,9 +702,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup2;
         private DevExpress.XtraBars.BarButtonItem barReportCanNhap;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem btnReportCNDoanhNghiep;
         private DevExpress.XtraBars.BarButtonItem btnReportCNCaNhan;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonReportGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraBars.BarLinkContainerItem btnTaiKhoan;

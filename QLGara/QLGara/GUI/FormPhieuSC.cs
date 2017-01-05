@@ -149,6 +149,7 @@ namespace QLGara
             {
                 //MessageBox.Show("Thêm thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.gwCTPhieuSuaChua.DataSource = ctpsc.getData();
+                this.gwCTPhieuSuaChua.DataSource = psc.getPscByID(Int32.Parse(this.txtMPSC.Text));
             }
         }
 

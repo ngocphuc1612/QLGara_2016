@@ -16,7 +16,7 @@ namespace QLGara
     {
         BUS_PhieuThanhToan ptt = new BUS_PhieuThanhToan();
         BUS_KhachHang hd_kh = new BUS_KhachHang();
-        BUS_PhieuSuaChua hd_psc = new BUS_PhieuSuaChua();
+        BUS_Xe xe = new BUS_Xe();
         public FormHoaDon()
         {
             InitializeComponent();
@@ -47,10 +47,16 @@ namespace QLGara
                 this.cbbKH.DataSource = hd_kh.getData();
                 this.cbbKH.DisplayMember = "KH_TEN";
                 this.cbbKH.ValueMember = "KH_ID";
+                this.cbbKH.Text = "";
                 this.cbbKH.SelectedText = row.Cells["KH_TEN"].Value.ToString();
+                this.cbbBienSo.DataSource = xe.getData();
+                this.cbbBienSo.DisplayMember = "BIENSO";
+                this.cbbBienSo.ValueMember = "BIENSO";
+                this.cbbBienSo.Text = "";
+                this.cbbBienSo.SelectedText = row.Cells["BIENSO"].Value.ToString();
                 this.txtTong.Text = row.Cells["TONGTIEN"].Value.ToString();
-                this.txtBienSo.Text = row.Cells["BIENSO"].Value.ToString();
                 this.txtMaPSC.Text = row.Cells["MAPSC"].Value.ToString();
+                
             }
         }
 
@@ -94,7 +100,7 @@ namespace QLGara
 
         private void btnMoi_Click(object sender, EventArgs e)
         {
-            this.txtBienSo.Text = "";
+            this.txtMaPSC.Text = "";
             this.txtTong.Text = "";
             this.txtMaPSC.Text = "";
             this.txtID.Text = Utility.Instance.autoKey(gwHoaDon).ToString();
@@ -114,6 +120,11 @@ namespace QLGara
                 else
                     MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void txtTimKiem_EditValueChanged(object sender, EventArgs e)
+        {
+            this.gwHoaDon.DataSource = ptt.searchHoaDon(this.txtTimKiem.Text);
         }
     }
 }
