@@ -41,9 +41,9 @@
             this.KH_CONGNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCongNo = new System.Windows.Forms.TextBox();
             this.dtDoB = new System.Windows.Forms.DateTimePicker();
             this.txtSearch = new DevExpress.XtraEditors.TextEdit();
-            this.txtCongNo = new DevExpress.XtraEditors.TextEdit();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -68,8 +68,8 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutNgaySinh = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pnlKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gwKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -77,7 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCongNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
@@ -97,8 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutNgaySinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlKhachHang
@@ -207,9 +206,9 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txtCongNo);
             this.layoutControl1.Controls.Add(this.dtDoB);
             this.layoutControl1.Controls.Add(this.txtSearch);
-            this.layoutControl1.Controls.Add(this.txtCongNo);
             this.layoutControl1.Controls.Add(this.btnXoa);
             this.layoutControl1.Controls.Add(this.btnLuu);
             this.layoutControl1.Controls.Add(this.btnThemMoi);
@@ -228,6 +227,13 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtCongNo
+            // 
+            this.txtCongNo.Location = new System.Drawing.Point(464, 65);
+            this.txtCongNo.Name = "txtCongNo";
+            this.txtCongNo.Size = new System.Drawing.Size(319, 20);
+            this.txtCongNo.TabIndex = 17;
+            // 
             // dtDoB
             // 
             this.dtDoB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -244,19 +250,6 @@
             this.txtSearch.StyleController = this.layoutControl1;
             this.txtSearch.TabIndex = 15;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // txtCongNo
-            // 
-            this.txtCongNo.Location = new System.Drawing.Point(474, 65);
-            this.txtCongNo.Name = "txtCongNo";
-            this.txtCongNo.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtCongNo.Properties.Appearance.Options.UseBackColor = true;
-            this.txtCongNo.Properties.Mask.EditMask = "c0";
-            this.txtCongNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCongNo.Properties.ReadOnly = true;
-            this.txtCongNo.Size = new System.Drawing.Size(309, 20);
-            this.txtCongNo.StyleController = this.layoutControl1;
-            this.txtCongNo.TabIndex = 14;
             // 
             // btnXoa
             // 
@@ -280,6 +273,7 @@
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThemMoi
             // 
@@ -376,8 +370,8 @@
             this.layoutControlItem11,
             this.emptySpaceItem2,
             this.layoutControlItem5,
-            this.layoutControlItem16,
-            this.layoutNgaySinh});
+            this.layoutNgaySinh,
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(795, 212);
@@ -506,16 +500,6 @@
             this.layoutControlItem5.Text = "Email";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(62, 13);
             // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.txtCongNo;
-            this.layoutControlItem16.Location = new System.Drawing.Point(387, 53);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 2, 2, 2);
-            this.layoutControlItem16.Size = new System.Drawing.Size(388, 24);
-            this.layoutControlItem16.Text = "Công nợ";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(62, 13);
-            // 
             // layoutNgaySinh
             // 
             this.layoutNgaySinh.Control = this.dtDoB;
@@ -525,6 +509,15 @@
             this.layoutNgaySinh.Size = new System.Drawing.Size(252, 29);
             this.layoutNgaySinh.Text = "Ngày sinh";
             this.layoutNgaySinh.TextSize = new System.Drawing.Size(62, 13);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.txtCongNo;
+            this.layoutControlItem2.Location = new System.Drawing.Point(387, 53);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(388, 24);
+            this.layoutControlItem2.Text = "Công nợ";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(62, 13);
             // 
             // FormKhachHang
             // 
@@ -541,7 +534,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCongNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
@@ -561,8 +553,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutNgaySinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,8 +589,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraEditors.TextEdit txtCongNo;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private System.Windows.Forms.DataGridView gwKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn KH_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn KH_TEN;
@@ -610,5 +600,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KH_CONGNO;
         private System.Windows.Forms.DateTimePicker dtDoB;
         private DevExpress.XtraLayout.LayoutControlItem layoutNgaySinh;
+        private System.Windows.Forms.TextBox txtCongNo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

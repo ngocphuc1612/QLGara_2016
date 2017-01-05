@@ -78,7 +78,8 @@ namespace QLGara
                     this.dtNgaySC.Value = DateTime.Now;
                     this.txtTong.Text = "0";
                 }
-                this.cbbKhachHang.SelectedValue = row.Cells["USER_ID"].Value;
+                this.cbbKhachHang.SelectedValue = row.Cells["USER_ID"].Value.ToString();
+
             }
         }
 

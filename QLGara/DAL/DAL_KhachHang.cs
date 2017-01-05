@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entity;
 
 namespace DAL
 {
@@ -28,6 +29,24 @@ namespace DAL
             catch
             {
                 return null;
+            }
+        }
+
+        public bool insertKhachHang(Entity_KhachHang _kh)
+        {
+            try
+            {
+                const string strSQL = "SP_INSERT_KHACHHANG";
+                string[] pNames = { "@id", "@ten", "@sdt", "@email", "@diaChi", "@ngaySinh", "@gender", "@congNo" };
+                object[] pValues = { _kh.KhId, _kh.Ten, _kh.Sdt, _kh.Email, _kh.DiaChi, _kh.NgaySinh, _kh.GioiTinh, _kh.CongNo };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
             }
         }
 

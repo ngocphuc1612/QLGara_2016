@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Entity;
 
 namespace QLGara
 {
@@ -20,6 +21,8 @@ namespace QLGara
             this.pnl = this.pnlNhacCungCap;
             this.gwNhacCungCap.AutoGenerateColumns = false;
             this.gwNhacCungCap.DataSource = ncc.getData();
+
+            this.btnLuu.Enabled = false;
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -28,13 +31,36 @@ namespace QLGara
             this.txtEmail.Text = null;
             this.txtPhone.Text = null;
             this.txtAddress.Text = null;
-
+            this.btnLuu.Enabled = true;
             this.btnThemMoi.TabStop = true;
+            this.txtID.Text = Utility.Instance.autoKey(gwNhacCungCap).ToString();
 
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            string ten = this.txtTenNCC.Text;
+            string diaChi = this.txtAddress.Text;
+            string email = this.txtEmail.Text;
+            string sdt = this.txtPhone.Text;
+
+            if(ten == "" || diaChi == "" || email == "" || sdt == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Entity_NhaCungCap _ncc = new Entity_NhaCungCap(Int32.Parse(this.txtID.Text), ten, sdt, email, diaChi);
+            if (ncc.insertNCC(_ncc) == true)
+            {
+                MessageBox.Show("Thêm thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.gwNhacCungCap.DataSource = ncc.getData();
+                this.btnLuu.Enabled = false;
+            } else
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm mới nhà cung cấp!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.btnLuu.Enabled = false;
+            }
 
         }
 

@@ -15,7 +15,7 @@ namespace Entity
         #endregion
 
         #region Constructor
-        public Entity_KhachHang(int id, string ten, string sdt, string email, string diaChi, DateTime ns, bool gt, int role, Double congNo)
+        public Entity_KhachHang(int id, string ten, string sdt, string email, string diaChi, DateTime ns, bool gt, Double congNo)
         {
             this.khId = id;
             this.ten = ten;
@@ -24,7 +24,6 @@ namespace Entity
             this.diaChi = diaChi;
             this.ngaySinh = ns;
             this.gioiTinh = gt;
-            this.role = role;
             this.congNo = congNo;
         }
         #endregion

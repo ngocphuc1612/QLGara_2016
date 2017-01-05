@@ -416,3 +416,28 @@ CREATE PROC SP_INSERT_HOADON
 	begin
 		insert into PHIEUTHANHTOAN values(@maPtt, @maPsc, GETDATE(), GETDATE(), null, 'active')
 	end
+
+
+----// Nhà cung cấp zone ----
+---search ncc
+CREATE PROC SP_SEARCH_NHACUNGCAP
+	@content nvarchar(20)
+	as
+	begin
+		declare @searchString nvarchar(30)
+		set @searchString = N'%' + @content + N'%'
+		select * from NHACUNGCAP
+		where (NCC_EMAIL like @searchString) or (NCC_TEN like @searchString) or (NCC_DIACHI like @searchString)
+	end
+
+--Insert Nha cung cap---
+CREATE PROC SP_INSERT_NCC
+	@id int,
+	@ten nvarchar(50),
+	@email nvarchar(50),
+	@sdt varchar(15),
+	@diaChi nvarchar(200)
+	as
+	begin
+		insert into NHACUNGCAP values(@id, @ten, @sdt, @email, @diaChi, GETDATE(), null, 'active')
+	end

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -20,6 +21,11 @@ namespace BUS
         public DataTable searchNCC(string content)
         {
             return ncc.searchObject(content);
+        }
+
+        public bool insertNCC(Entity_NhaCungCap _ncc)
+        {
+            return ncc.insertNCC(_ncc);
         }
     }
 }

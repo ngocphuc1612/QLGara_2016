@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Entity;
 
 namespace QLGara
 {
@@ -66,6 +67,8 @@ namespace QLGara
             this.txtCongNo.Text = null;
 
             this.btnThemMoi.TabStop = true;
+
+            this.txtID.Text = Utility.Instance.autoKey(gwKhachHang).ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -86,6 +89,45 @@ namespace QLGara
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             this.gwKhachHang.DataSource = kh.searchKH(this.txtSearch.Text);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string email = this.txtEmail.Text;
+            string hoTen = this.txtTen.Text;
+            string sdt = this.txtPhone.Text;
+            string diaChi = this.txtAddress.Text;
+
+            int id = 1;
+            double congNo = 0;
+            bool isMan = this.rdNam.Checked;
+            DateTime dob = this.dtDoB.Value;
+
+            if(email == "" || hoTen == "" || sdt == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            try
+            {
+                id = Int32.Parse(this.txtID.Text);
+                congNo = Double.Parse(this.txtCongNo.Text);
+            } catch
+            {
+                id = 1;
+                congNo = 0;
+            }
+            Entity_KhachHang _kh = new Entity_KhachHang(id, hoTen, sdt, email, diaChi, dob, isMan, congNo);
+            if (kh.insertKhachHang(_kh) == true)
+            {
+                MessageBox.Show("Thêm thành công khách hàng!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.gwKhachHang.DataSource = kh.getData();
+            } else
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }
