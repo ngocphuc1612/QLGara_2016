@@ -407,3 +407,12 @@ CREATE PROC SP_INSERT_CTPSC
 		set SL = SL - @sl, NGAY_CN_CUOI = GETDATE()
 		where @maVt = MAVT
 	end
+
+----// INsert HOA DON -----
+CREATE PROC SP_INSERT_HOADON
+	@maPtt int,
+	@maPsc int
+	as
+	begin
+		insert into PHIEUTHANHTOAN values(@maPtt, @maPsc, GETDATE(), GETDATE(), null, 'active')
+	end

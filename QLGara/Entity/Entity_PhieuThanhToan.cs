@@ -11,12 +11,10 @@ namespace Entity
         #endregion
 
         #region Constructor
-        public Entity_PhieuThanhToan(int maPtt, int maPsc, Double tong)
+        public Entity_PhieuThanhToan(int maPtt, int maPsc)
         {
             this.maPtt = maPtt;
             this.maPsc = maPsc;
-            this.tongTt = tong;
-            this.ngayTt = DateTime.Now;
         }
         #endregion
 

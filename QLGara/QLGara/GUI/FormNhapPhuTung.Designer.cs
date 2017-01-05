@@ -359,13 +359,13 @@
             this.PN_TONGTIENNHAP.Name = "PN_TONGTIENNHAP";
             this.PN_TONGTIENNHAP.ReadOnly = true;
             // 
-            // FormPhieuNhap
+            // FormNhapPhuTung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 361);
             this.Controls.Add(this.pnlPhieuNhap);
-            this.Name = "FormPhieuNhap";
+            this.Name = "FormNhapPhuTung";
             this.Text = "FormPhieuNhap";
             this.pnlPhieuNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

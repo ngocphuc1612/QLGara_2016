@@ -24,6 +24,7 @@ namespace QLGara
 
             this.gwHoaDon.AutoGenerateColumns = false;
             this.gwHoaDon.DataSource = ptt.getHoaDon();
+            this.btnLuu.Enabled = false;
         }
 
         private void gwHoaDon_SelectionChanged(object sender, EventArgs e)
@@ -50,12 +51,60 @@ namespace QLGara
                 this.cbbKH.SelectedText = row.Cells["KH_TEN"].Value.ToString();
                 this.txtTong.Text = row.Cells["TONGTIEN"].Value.ToString();
                 this.txtBienSo.Text = row.Cells["BIENSO"].Value.ToString();
+                this.txtMaPSC.Text = row.Cells["MAPSC"].Value.ToString();
             }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             this.gwHoaDon.DataSource = ptt.searchHoaDon(this.txtTimKiem.Text);
+        }
+
+        private void btn_ThemMoi_Click(object sender, EventArgs e)
+        {
+            this.txtBienSo.Text = "";
+            this.txtTong.Text = "";
+            this.txtMaPSC.Text = "";
+            this.txtID.Text = Utility.Instance.autoKey(gwHoaDon).ToString();
+            this.btnLuu.Enabled = true;
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            int maPsc = 1;
+            int maPtt = 1;
+
+            if (this.txtMaPSC.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try
+            {
+                maPsc = Int32.Parse(this.txtMaPSC.Text);
+                maPtt = Utility.Instance.autoKey(gwHoaDon);
+            } catch
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            Entity_PhieuThanhToan _ptt = new Entity_PhieuThanhToan(maPtt, maPsc);
+            if (ptt.insertHoaDon(_ptt) == true)
+            {
+                MessageBox.Show("Thêm thành công Hóa đơn!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.gwHoaDon.DataSource = ptt.getHoaDon();
+                this.btnLuu.Enabled = false;
+            } else
+            {
+                MessageBox.Show("Có lỗi xảy ra, không thể thêm hóa đơn!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.btnLuu.Enabled = false;
         }
     }
 }

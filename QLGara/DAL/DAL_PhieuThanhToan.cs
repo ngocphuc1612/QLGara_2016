@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entity;
 
 namespace DAL
 {
@@ -29,6 +30,24 @@ namespace DAL
             catch
             {
                 return null;
+            }
+        }
+
+        public bool insertHoaDon(Entity_PhieuThanhToan _ptt)
+        {
+            try
+            {
+                const string strSQL = "SP_INSERT_HOADON";
+                string[] pNames = { "@maPtt", "@maPsc" };
+                object[] pValues = { _ptt.MaPtt, _ptt.MaPsc };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
             }
         }
 

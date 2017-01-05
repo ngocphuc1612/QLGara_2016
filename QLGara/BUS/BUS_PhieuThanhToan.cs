@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -20,6 +21,11 @@ namespace BUS
         public DataTable searchHoaDon(string content)
         {
             return ptt.searchHoaDon(content);
+        }
+
+        public bool insertHoaDon(Entity_PhieuThanhToan _ptt)
+        {
+            return ptt.insertHoaDon(_ptt);
         }
     }
 }
