@@ -10,7 +10,11 @@ namespace BUS
         private DAL_CTPSC psc = new DAL_CTPSC();
         public DataTable getData()
         {
-            return psc.GetData();
+            return psc.getData();
+        }
+        public DataTable getData(string val)
+        {
+            return psc.getData(val);
         }
         public bool insertCTPSC(Entity_CTPSC _ct)
         {

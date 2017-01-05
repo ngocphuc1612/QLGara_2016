@@ -314,6 +314,8 @@
             // 
             // cbbPhuTung
             // 
+            this.cbbPhuTung.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbbPhuTung.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbbPhuTung.FormattingEnabled = true;
             this.cbbPhuTung.Location = new System.Drawing.Point(71, 289);
             this.cbbPhuTung.Name = "cbbPhuTung";
@@ -335,7 +337,7 @@
             this.btnThemCT.Name = "btnThemCT";
             this.btnThemCT.Size = new System.Drawing.Size(105, 20);
             this.btnThemCT.TabIndex = 19;
-            this.btnThemCT.Text = "Thêm";
+            this.btnThemCT.Text = "Lưu";
             this.btnThemCT.UseVisualStyleBackColor = true;
             this.btnThemCT.Click += new System.EventHandler(this.btnThemCT_Click);
             // 
@@ -748,6 +750,7 @@
             // gwPhieuSuaChua
             // 
             this.gwPhieuSuaChua.AllowUserToAddRows = false;
+            this.gwPhieuSuaChua.AllowUserToDeleteRows = false;
             this.gwPhieuSuaChua.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gwPhieuSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gwPhieuSuaChua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -759,6 +762,8 @@
             this.gwPhieuSuaChua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gwPhieuSuaChua.Location = new System.Drawing.Point(2, 20);
             this.gwPhieuSuaChua.Name = "gwPhieuSuaChua";
+            this.gwPhieuSuaChua.ReadOnly = true;
+            this.gwPhieuSuaChua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gwPhieuSuaChua.Size = new System.Drawing.Size(352, 206);
             this.gwPhieuSuaChua.TabIndex = 0;
             this.gwPhieuSuaChua.TabStop = false;
@@ -795,6 +800,7 @@
             this.TONGTIEN.DefaultCellStyle = dataGridViewCellStyle5;
             this.TONGTIEN.HeaderText = "Tổng tiền";
             this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.ReadOnly = true;
             // 
             // textEdit3
             // 

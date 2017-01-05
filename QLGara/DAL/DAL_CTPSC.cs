@@ -7,13 +7,30 @@ namespace DAL
     public class DAL_CTPSC
     {
         DataProvider con = new DataProvider();
-        public DataTable GetData()
+        public DataTable getData()
         {
             //const string strSQL = "SP_GETDATA";
             //const string pNames = "@tableName";
             //const string pValues = "CT_PHIEUSUACHUA";
             //return con.GetData(strSQL, pNames, pValues);
             return GetAllInfor.GetData("CT_PHIEUSUACHUA");
+        }
+        public DataTable getData(string val)
+        {
+            try
+            {
+                const string strSQL = "SP_SELECT_CTPSC";
+                string pNames = "@content";
+                object[] pValues = { val };
+
+                return con.GetData(strSQL, pNames, pValues);
+
+            }
+            catch
+            {
+
+                return null;
+            }
         }
         public bool insertCTPSC(Entity_CTPSC _ct)
         {

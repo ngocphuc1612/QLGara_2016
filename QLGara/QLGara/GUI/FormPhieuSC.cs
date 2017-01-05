@@ -17,6 +17,7 @@ namespace QLGara
         private BUS_PhieuSuaChua psc = new BUS_PhieuSuaChua();
         private BUS_CTPSC ctpsc = new BUS_CTPSC();
         private BUS_KhachHang kh = new BUS_KhachHang();
+        private BUS_Xe xe = new BUS_Xe();
         private BUS_VatTu vt = new BUS_VatTu();
         private int maPSC = 1;
         private double tong = 0;
@@ -38,7 +39,7 @@ namespace QLGara
             this.gwCTPhieuSuaChua.AutoGenerateColumns = false;
             this.gwCTPhieuSuaChua.DataSource = ctpsc.getData();
             //
-            this.cbbBienSo.DataSource = gwPhieuSuaChua.DataSource;
+            this.cbbBienSo.DataSource = xe.getData();
             this.cbbBienSo.DisplayMember = "BIENSO";
             this.cbbBienSo.ValueMember = "BIENSO";
             //
@@ -79,8 +80,12 @@ namespace QLGara
                     this.txtTong.Text = "0";
                 }
                 this.cbbKhachHang.SelectedValue = row.Cells["USER_ID"].Value.ToString();
+                this.gwCTPhieuSuaChua.DataSource = ctpsc.getData(this.txtMPSC.Text);
 
             }
+            this.btnThemCT.Enabled  = (this.txtMPSC.Text != null) ? true : false;
+            this.txtSoLuong.Enabled = (this.txtMPSC.Text != null) ? true : false;
+            this.cbbPhuTung.Enabled = (this.txtMPSC.Text != null) ? true : false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -149,9 +154,6 @@ namespace QLGara
         private void btnThem_Click(object sender, EventArgs e)
         {
             this.txtTong.Text = "";
-            this.txtSoLuong.Enabled = true;
-            this.cbbPhuTung.Enabled = true;
-            this.btnThemCT.Enabled = true;
             try
             {
                 maPSC = Utility.Instance.autoKey(gwPhieuSuaChua);
