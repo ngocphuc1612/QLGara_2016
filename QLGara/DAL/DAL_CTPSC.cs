@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entity;
 
 namespace DAL
 {
@@ -13,6 +14,23 @@ namespace DAL
             //const string pValues = "CT_PHIEUSUACHUA";
             //return con.GetData(strSQL, pNames, pValues);
             return GetAllInfor.GetData("CT_PHIEUSUACHUA");
+        }
+        public bool insertCTPSC(Entity_CTPSC _ct)
+        {
+            try
+            {
+                const string strSQL = "SP_INSERT_CTPSC";
+                 string[] pNames = { "@maPsc", "@maVt", "@sl" };
+                object[] pValues = { _ct.MaPsc, _ct.MaVt, _ct.SoLuong };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

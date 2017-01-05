@@ -15,13 +15,11 @@ namespace Entity
         #endregion
 
         #region Constructor
-        public Entity_PhieuSuaChua(int maPsc, string bienSo, int user_id, int maTc, Double tongTt)
+        public Entity_PhieuSuaChua(int maPsc, string bienSo, int user_id)
         {
             this.maPsc = maPsc;
             this.bienSo = bienSo;
             this.user_id = user_id;
-            this.maTc = maTc;
-            this.tongTt = tongTt;
             this.ngaySc = DateTime.Now;
         }
         #endregion

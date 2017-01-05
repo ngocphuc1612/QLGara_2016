@@ -17,5 +17,9 @@ namespace BUS
             return ptt.getHoaDon();
         }
         
+        public DataTable searchHoaDon(string content)
+        {
+            return ptt.searchHoaDon(content);
+        }
     }
 }

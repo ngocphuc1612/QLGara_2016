@@ -12,13 +12,11 @@ namespace Entity
 
         #region Constructor
 
-        public Entity_CTPSC(int maPsc, int maVt, int soLuong, string noiDung, Double donGia)
+        public Entity_CTPSC(int maPsc, int maVt, int soLuong)
         {
             this.maPsc = maPsc;
             this.maVt = maVt;
             this.soLuong = soLuong;
-            this.noiDung = noiDung;
-            this.donGia = donGia;
         }
 
         #endregion

@@ -32,5 +32,21 @@ namespace DAL
             }
         }
 
+        public DataTable searchHoaDon (string content)
+        {
+            try
+            {
+                const string strSQL = "SP_SEARCH_HOADON";
+                string[] pNames = { "@content" };
+                object[] pValues = { content };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }

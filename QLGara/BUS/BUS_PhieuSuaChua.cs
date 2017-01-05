@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -15,6 +16,20 @@ namespace BUS
         public DataTable findByID(string id)
         {
             return psc.findByID(id);
+        }
+
+        public bool insertPSC(Entity_PhieuSuaChua _psc)
+        {
+            return psc.insertPSC(_psc);
+        }
+        public bool updatePSC(Entity_PhieuSuaChua _psc)
+        {
+            return psc.updatePSC(_psc);
+        }
+
+        public bool delPSC(int maPsc)
+        {
+            return psc.delPSC(maPsc);
         }
     }
 }

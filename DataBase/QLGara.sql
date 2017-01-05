@@ -28,6 +28,7 @@ CREATE TABLE ROLES
 ALTER TABLE USERS ADD CONSTRAINT FK_USERS_ROLES FOREIGN KEY (ROLE_ID) REFERENCES ROLES(ROLE_ID)
 ALTER TABLE XE ADD CONSTRAINT FK_XE_KHACHHANG FOREIGN KEY (USER_ID) REFERENCES KHACHHANG(KH_ID)
 ALTER TABLE PHIEUSUACHUA ADD CONSTRAINT FK_PSC_XE FOREIGN KEY (BIENSO) REFERENCES XE(BIENSO)
+ALTER TABLE PHIEUSUACHUA ADD CONSTRAINT FK_PSC_KHACHHANG FOREIGN KEY (USER_ID) REFERENCES KHACHHANG(KH_ID)
 
 --Store procedur------------
 ----Get all row of table----
@@ -301,16 +302,17 @@ CREATE PROC SP_DEL_DONGXE
 	END
 
 ----/////////HOA DOn////////////////----- drop proc SP_GETALL_PHIEUTT
+---get all hoa don
 CREATE PROC SP_GETALL_PHIEUTT
 	@content varchar(10)
 	as
 	begin
-		select B.MAPTT, A.MAPSC, B.NGAYTT, A.BIENSO, A.TONGTIEN
-		from PHIEUSUACHUA A, PHIEUTHANHTOAN B
-		where A.MAPSC = B.MAPSC
+		select B.MAPTT, A.MAPSC, A.NGAYSC, C.KH_TEN, A.BIENSO, A.TONGTIEN
+		from PHIEUSUACHUA A, PHIEUTHANHTOAN B, KHACHHANG C
+		where A.MAPSC = B.MAPSC and C.KH_ID = A.USER_ID
 	end
 
-
+----get khach hang
 CREATE PROCEDURE [dbo].[SP_SELECT_KHACHHANG]
 	@id int
 	AS
@@ -325,3 +327,83 @@ CREATE PROCEDURE [dbo].[SP_SELECT_PHIEUSUACHUA]
 		SELECT * FROM PHIEUSUACHUA WHERE (@id = MAPSC )
 	END
 
+go
+-----Search Hoa DOn----- drop proc SP_SEARCH_HOADON
+create table ##temp(
+			MAPTT int,
+			MAPSC int,
+			NGAYSC smalldatetime,
+			KH_TEN nvarchar(50),
+			BIENSO nvarchar(50),
+			TONGTIEN money
+			)
+
+CREATE PROC SP_SEARCH_HOADON
+	@content nvarchar(20)
+	as
+	begin
+		delete from ##temp
+		insert into ##temp(MAPTT, MAPSC, NGAYSC, KH_TEN, BIENSO, TONGTIEN)
+		select B.MAPTT, A.MAPSC, A.NGAYSC, C.KH_TEN, A.BIENSO, A.TONGTIEN
+		from PHIEUSUACHUA A, PHIEUTHANHTOAN B, KHACHHANG C
+		where A.MAPSC = B.MAPSC and C.KH_ID = A.USER_ID
+
+		declare @searchString nvarchar(25)
+		set @searchString = N'%' + @content + N'%'
+		select * from ##temp
+		where KH_TEN like @searchString
+	end
+
+----///PHIEU SUA CHUA///---
+---insert
+CREATE PROC SP_INSERT_PSC
+	@maPsc int,
+	@bs varchar(50),
+	@uid int
+	as
+	begin
+		declare @tong money
+		set @tong = (select SUM(DONGIA * SOLUONG) from CT_PHIEUSUACHUA where MAPSC = @maPsc)
+		insert into PHIEUSUACHUA values(@maPsc, @bs, @uid, GETDATE(), @tong, GETDATE(), null, 'active')
+	end
+
+--update psc drop proc SP_UPDATE_PSC
+CREATE PROC SP_UPDATE_PSC
+	@maPsc int
+	as
+	begin
+		declare @tong money
+		set @tong = (select SUM(DONGIA) from CT_PHIEUSUACHUA where MAPSC = @maPsc)
+		update PHIEUSUACHUA
+		set TONGTIEN = @tong, NGAY_CN_CUOI = GETDATE()
+		where MAPSC = @maPsc
+
+	end
+---DElete psc
+
+create proc SP_DEL_PSC
+	@maPsc int
+	as
+	begin
+		delete from CT_PHIEUSUACHUA
+		where MAPSC = @maPsc
+		delete from PHIEUSUACHUA
+		where MAPSC = @maPsc
+	end
+
+	--Insert cTPSC drop proc SP_INSERT_CTPSC
+CREATE PROC SP_INSERT_CTPSC
+	@maPsc int,
+	@maVt int,
+	@sl int
+	as
+	begin
+		declare @donGia money
+		set @donGia = (select DONGIA from VATTU where MAVT = @maVt)
+
+		insert into CT_PHIEUSUACHUA values(@maPsc, @maVt, @sl, @donGia, GETDATE(), null, 'active')
+
+		update VATTU
+		set SL = SL - @sl, NGAY_CN_CUOI = GETDATE()
+		where @maVt = MAVT
+	end

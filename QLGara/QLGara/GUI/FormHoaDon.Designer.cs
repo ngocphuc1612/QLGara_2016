@@ -32,6 +32,7 @@
             this.pnlHoaDon = new System.Windows.Forms.Panel();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtBienSo = new System.Windows.Forms.TextBox();
             this.cbbKH = new System.Windows.Forms.ComboBox();
             this.btn_Huy = new System.Windows.Forms.Button();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gwHoaDon = new System.Windows.Forms.DataGridView();
@@ -63,8 +65,6 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.txtBienSo = new System.Windows.Forms.TextBox();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.pnlPhieuTT.SuspendLayout();
             this.pnlHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -85,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPhieuTT
@@ -145,6 +145,13 @@
             this.layoutControl1.Size = new System.Drawing.Size(395, 345);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtBienSo
+            // 
+            this.txtBienSo.Location = new System.Drawing.Point(114, 93);
+            this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.Size = new System.Drawing.Size(269, 20);
+            this.txtBienSo.TabIndex = 17;
             // 
             // cbbKH
             // 
@@ -308,6 +315,15 @@
             this.layoutControlItem2.Text = "Khách Hàng";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(99, 13);
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtBienSo;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 81);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(375, 24);
+            this.layoutControlItem3.Text = "Biển số";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(99, 13);
+            // 
             // layoutControl3
             // 
             this.layoutControl3.Controls.Add(this.groupControl1);
@@ -399,6 +415,7 @@
             this.txtTimKiem.Size = new System.Drawing.Size(217, 20);
             this.txtTimKiem.StyleController = this.layoutControl3;
             this.txtTimKiem.TabIndex = 4;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // layoutControlGroup3
             // 
@@ -439,22 +456,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(99, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // txtBienSo
-            // 
-            this.txtBienSo.Location = new System.Drawing.Point(114, 93);
-            this.txtBienSo.Name = "txtBienSo";
-            this.txtBienSo.Size = new System.Drawing.Size(269, 20);
-            this.txtBienSo.TabIndex = 17;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txtBienSo;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 81);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(375, 24);
-            this.layoutControlItem3.Text = "Biển số";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(99, 13);
-            // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -493,7 +495,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }

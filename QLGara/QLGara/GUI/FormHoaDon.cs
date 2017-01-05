@@ -52,5 +52,10 @@ namespace QLGara
                 this.txtBienSo.Text = row.Cells["BIENSO"].Value.ToString();
             }
         }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            this.gwHoaDon.DataSource = ptt.searchHoaDon(this.txtTimKiem.Text);
+        }
     }
 }
