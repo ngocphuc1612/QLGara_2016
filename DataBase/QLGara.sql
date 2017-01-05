@@ -480,3 +480,32 @@ CREATE PROC [dbo].[SP_SELECT_CTPSC]
 	end
 
 -----get ct psc
+
+
+CREATE PROC [dbo].[SP_SEARCH_KHACHHANG]
+	@content varchar(20)
+	as
+	begin
+		declare @searchString varchar(22)
+		set @searchString = '%' + @content + '%'
+		select * from KHACHHANG
+		where (KH_TEN like @searchString) or
+		(KH_DIACHI like @searchString) or
+		(KH_SDT like @searchString) or
+		(KH_NGAYSINH like @searchString) or
+		(KH_EMAIL like @searchString)
+	end
+
+
+
+	CREATE PROC [dbo].[SP_SEARCH_PHIEUSUACHUA]
+	@content varchar(20)
+	as
+	begin
+		declare @searchString varchar(22)
+		set @searchString = '%' + @content + '%'
+		select A.* from PHIEUSUACHUA A, KHACHHANG B
+		where (A.MAPSC like @searchString) or
+		(A.BIENSO like @searchString) or
+		(A.USER_ID = B.KH_ID AND B.KH_TEN LIKE @searchString)
+	end
