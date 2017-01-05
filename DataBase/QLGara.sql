@@ -479,3 +479,4 @@ CREATE PROC [dbo].[SP_SELECT_CTPSC]
 		where (MAPSC = @searchString)
 	end
 
+-----get ct psc

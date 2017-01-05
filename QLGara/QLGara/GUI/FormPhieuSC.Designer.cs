@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PSC_TONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PSC_MATC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PSC_NGAYSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -209,7 +209,7 @@
             this.pnlPhieuSC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPhieuSC.Location = new System.Drawing.Point(0, 0);
             this.pnlPhieuSC.Name = "pnlPhieuSC";
-            this.pnlPhieuSC.Size = new System.Drawing.Size(726, 471);
+            this.pnlPhieuSC.Size = new System.Drawing.Size(744, 471);
             this.pnlPhieuSC.TabIndex = 0;
             // 
             // splitContainerControl1
@@ -222,7 +222,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl3);
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(726, 471);
+            this.splitContainerControl1.Size = new System.Drawing.Size(744, 471);
             this.splitContainerControl1.SplitterPosition = 341;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -645,7 +645,7 @@
             this.layoutControl3.Location = new System.Drawing.Point(0, 276);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
-            this.layoutControl3.Size = new System.Drawing.Size(380, 195);
+            this.layoutControl3.Size = new System.Drawing.Size(398, 195);
             this.layoutControl3.TabIndex = 1;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -654,7 +654,7 @@
             this.groupControl1.Controls.Add(this.gwCTPhieuSuaChua);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(356, 171);
+            this.groupControl1.Size = new System.Drawing.Size(374, 171);
             this.groupControl1.TabIndex = 17;
             this.groupControl1.Text = "Chi tiết phiếu sửa chữa";
             // 
@@ -674,7 +674,7 @@
             this.gwCTPhieuSuaChua.Name = "gwCTPhieuSuaChua";
             this.gwCTPhieuSuaChua.ReadOnly = true;
             this.gwCTPhieuSuaChua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gwCTPhieuSuaChua.Size = new System.Drawing.Size(352, 149);
+            this.gwCTPhieuSuaChua.Size = new System.Drawing.Size(370, 149);
             this.gwCTPhieuSuaChua.TabIndex = 0;
             this.gwCTPhieuSuaChua.TabStop = false;
             // 
@@ -714,7 +714,7 @@
             this.layoutControlItem7});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(380, 195);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(398, 195);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem7
@@ -722,7 +722,7 @@
             this.layoutControlItem7.Control = this.groupControl1;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(360, 175);
+            this.layoutControlItem7.Size = new System.Drawing.Size(378, 175);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -734,7 +734,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(380, 276);
+            this.layoutControl2.Size = new System.Drawing.Size(398, 276);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -743,7 +743,7 @@
             this.groupControl2.Controls.Add(this.gwPhieuSuaChua);
             this.groupControl2.Location = new System.Drawing.Point(12, 36);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(356, 228);
+            this.groupControl2.Size = new System.Drawing.Size(374, 228);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Danh sách phiếu sửa chữa";
             // 
@@ -764,7 +764,7 @@
             this.gwPhieuSuaChua.Name = "gwPhieuSuaChua";
             this.gwPhieuSuaChua.ReadOnly = true;
             this.gwPhieuSuaChua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gwPhieuSuaChua.Size = new System.Drawing.Size(352, 206);
+            this.gwPhieuSuaChua.Size = new System.Drawing.Size(370, 206);
             this.gwPhieuSuaChua.TabIndex = 0;
             this.gwPhieuSuaChua.TabStop = false;
             this.gwPhieuSuaChua.SelectionChanged += new System.EventHandler(this.gwPhieuSuaChua_SelectionChanged);
@@ -774,30 +774,34 @@
             this.MAPSC.DataPropertyName = "MAPSC";
             this.MAPSC.HeaderText = "Mã PSC";
             this.MAPSC.Name = "MAPSC";
+            this.MAPSC.ReadOnly = true;
             // 
             // BIENSO
             // 
             this.BIENSO.DataPropertyName = "BIENSO";
             this.BIENSO.HeaderText = "Biển số";
             this.BIENSO.Name = "BIENSO";
+            this.BIENSO.ReadOnly = true;
             // 
             // USER_ID
             // 
             this.USER_ID.DataPropertyName = "USER_ID";
             this.USER_ID.HeaderText = "USER_ID";
             this.USER_ID.Name = "USER_ID";
+            this.USER_ID.ReadOnly = true;
             // 
             // NGAYSC
             // 
             this.NGAYSC.DataPropertyName = "NGAYSC";
             this.NGAYSC.HeaderText = "Ngày Sửa chữa";
             this.NGAYSC.Name = "NGAYSC";
+            this.NGAYSC.ReadOnly = true;
             // 
             // TONGTIEN
             // 
             this.TONGTIEN.DataPropertyName = "TONGTIEN";
-            dataGridViewCellStyle5.Format = "N0";
-            this.TONGTIEN.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "N0";
+            this.TONGTIEN.DefaultCellStyle = dataGridViewCellStyle1;
             this.TONGTIEN.HeaderText = "Tổng tiền";
             this.TONGTIEN.Name = "TONGTIEN";
             this.TONGTIEN.ReadOnly = true;
@@ -806,7 +810,7 @@
             // 
             this.textEdit3.Location = new System.Drawing.Point(55, 12);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(313, 20);
+            this.textEdit3.Size = new System.Drawing.Size(331, 20);
             this.textEdit3.StyleController = this.layoutControl2;
             this.textEdit3.TabIndex = 4;
             // 
@@ -819,7 +823,7 @@
             this.layoutControlItem11});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(380, 276);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(398, 276);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // txtTimKiem
@@ -827,7 +831,7 @@
             this.txtTimKiem.Control = this.textEdit3;
             this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(360, 24);
+            this.txtTimKiem.Size = new System.Drawing.Size(378, 24);
             this.txtTimKiem.Text = "Tìm kiếm";
             this.txtTimKiem.TextSize = new System.Drawing.Size(40, 13);
             // 
@@ -836,7 +840,7 @@
             this.layoutControlItem11.Control = this.groupControl2;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(360, 232);
+            this.layoutControlItem11.Size = new System.Drawing.Size(378, 232);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -844,7 +848,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 471);
+            this.ClientSize = new System.Drawing.Size(744, 471);
             this.Controls.Add(this.pnlPhieuSC);
             this.Name = "FormPhieuSC";
             this.Text = "FormPhieuSC";

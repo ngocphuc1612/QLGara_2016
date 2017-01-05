@@ -32,6 +32,23 @@ namespace DAL
                 return null;
             }
         }
+
+        public DataTable get_Psc_by_id(int maPsc)
+        {
+            try
+            {
+                const string strSQL = "SP_GET_CTPSC";
+                string[] pNames = { "@maPsc" };
+                object[] pValues = { maPsc };
+
+                return con.GetValue(strSQL, pNames, pValues);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         public bool insertPSC(Entity_PhieuSuaChua _psc)
         {
             try

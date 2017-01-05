@@ -80,7 +80,8 @@ namespace QLGara
                     this.txtTong.Text = "0";
                 }
                 this.cbbKhachHang.SelectedValue = row.Cells["USER_ID"].Value.ToString();
-                this.gwCTPhieuSuaChua.DataSource = ctpsc.getData(this.txtMPSC.Text);
+                //this.gwCTPhieuSuaChua.DataSource = ctpsc.getData(this.txtMPSC.Text);
+                this.gwCTPhieuSuaChua.DataSource = psc.getPscByID(Int32.Parse(this.txtMPSC.Text));
 
             }
             this.btnThemCT.Enabled  = (this.txtMPSC.Text != null) ? true : false;

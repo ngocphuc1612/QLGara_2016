@@ -31,5 +31,10 @@ namespace BUS
         {
             return psc.delPSC(maPsc);
         }
+
+        public DataTable getPscByID(int maPsc)
+        {
+            return psc.get_Psc_by_id(maPsc);
+        }
     }
 }
