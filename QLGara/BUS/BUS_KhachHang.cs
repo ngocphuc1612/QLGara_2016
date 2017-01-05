@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -23,6 +24,11 @@ namespace BUS
         public DataTable searchKH(string content)
         {
             return kh.searchKH(content);
+        }
+
+        public bool insertKhachHang(Entity_KhachHang _kh)
+        {
+            return kh.insertKhachHang(_kh);
         }
     }
 }

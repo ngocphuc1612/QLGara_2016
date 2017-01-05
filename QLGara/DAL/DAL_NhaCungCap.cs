@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entity;
 
 namespace DAL
 {
@@ -31,6 +32,24 @@ namespace DAL
             catch
             {
 
+                return false;
+            }
+        }
+
+        public bool insertNCC(Entity_NhaCungCap _ncc)
+        {
+            try
+            {
+                const string strSQL = "SP_INSERT_NCC";
+                string[] pNames = { "@id", "@ten", "@email", "@sdt", "@diaChi" };
+                object[] pValues = { _ncc.NccId, _ncc.Ten, _ncc.Email, _ncc.Sdt, _ncc.DiaChi };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
                 return false;
             }
         }
