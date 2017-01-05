@@ -38,7 +38,7 @@
             this.VT_SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtSearch = new System.Windows.Forms.RichTextBox();
+            this.txtSearchVT = new System.Windows.Forms.RichTextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -127,7 +127,6 @@
             this.gwVatTu.ReadOnly = true;
             this.gwVatTu.Size = new System.Drawing.Size(642, 186);
             this.gwVatTu.TabIndex = 1;
-            this.gwVatTu.SelectionChanged += new System.EventHandler(this.gwVatTu_SelectionChanged);
             // 
             // VT_MAVT
             // 
@@ -172,7 +171,7 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.txtSearch);
+            this.layoutControl1.Controls.Add(this.txtSearchVT);
             this.layoutControl1.Controls.Add(this.btnXoa);
             this.layoutControl1.Controls.Add(this.btnSua);
             this.layoutControl1.Controls.Add(this.btnThemMoi);
@@ -188,14 +187,14 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // txtSearch
+            // txtSearchVT
             // 
-            this.txtSearch.Location = new System.Drawing.Point(130, 179);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(142, 23);
-            this.txtSearch.TabIndex = 9;
-            this.txtSearch.Text = "";
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearchVT.Location = new System.Drawing.Point(130, 179);
+            this.txtSearchVT.Name = "txtSearchVT";
+            this.txtSearchVT.Size = new System.Drawing.Size(142, 23);
+            this.txtSearchVT.TabIndex = 9;
+            this.txtSearchVT.Text = "";
+            this.txtSearchVT.TextChanged += new System.EventHandler(this.txtSearchVT_TextChanged);
             // 
             // btnXoa
             // 
@@ -411,7 +410,7 @@
             // 
             // txtSeach
             // 
-            this.txtSeach.Control = this.txtSearch;
+            this.txtSeach.Control = this.txtSearchVT;
             this.txtSeach.Location = new System.Drawing.Point(59, 164);
             this.txtSeach.Name = "txtSeach";
             this.txtSeach.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
@@ -489,7 +488,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_TENVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_DONGIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn VT_SL;
-        private System.Windows.Forms.RichTextBox txtSearch;
+        private System.Windows.Forms.RichTextBox txtSearchVT;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.LayoutControlItem txtSeach;
     }

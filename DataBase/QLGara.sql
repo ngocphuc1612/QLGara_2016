@@ -1,4 +1,4 @@
-﻿Ecreate database QLGara
+﻿create database QLGara
 Go
 use [QLGara]
 go
@@ -162,12 +162,12 @@ CREATE PROC SP_SEARCH_VATTU
 	@content nvarchar(20)
 	as
 	begin
-		declare @search nvarchar(30)
-		set @search = N'%' + @content + N'%'
-		print(@search)
+		declare @searchString nvarchar(30)
+		set @searchString = N'%' + @content + N'%'
+		print(@searchString)
 		begin
 			select * from VATTU 
-			where TENVT like @search
+			where TENVT like @searchString
 		end
 	end
 
@@ -441,3 +441,18 @@ CREATE PROC SP_INSERT_NCC
 	begin
 		insert into NHACUNGCAP values(@id, @ten, @sdt, @email, @diaChi, GETDATE(), null, 'active')
 	end
+
+-----UPDATE PROFILE
+CREATE PROC SP_UPDATE_PROFILE
+	@id int,
+	@email nvarchar(50),
+	@sdt varchar(15),
+	@pass varchar(50),
+	@direction nvarchar(200)
+	as
+	begin
+		update Users
+		set EMAIL = @email, PHONE = @sdt, PASS = @pass, DIRECTION = @direction
+		where USER_ID = @id
+	end
+		

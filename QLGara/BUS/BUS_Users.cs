@@ -31,5 +31,10 @@ namespace BUS
         {
             return us.searchUser(content);
         }
+
+        public bool updateProfile(Entity_User _us)
+        {
+            return us.updateProfile(_us);
+        }
     }
 }

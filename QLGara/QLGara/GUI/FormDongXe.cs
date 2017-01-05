@@ -73,5 +73,15 @@ namespace QLGara
         {
 
         }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            this.txtID.ReadOnly = false;
+            this.txtID.Enabled = true;
+            this.txtID.BackColor = Color.White;
+            this.txtID.Text = "";
+            this.txtHieuXe.Text = "";
+            this.rbThongSoKyThuat.Text = "";
+        }
     }
 }

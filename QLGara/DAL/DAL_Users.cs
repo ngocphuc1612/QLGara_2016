@@ -57,6 +57,24 @@ namespace DAL
             }
         }
 
+        public bool updateProfile(Entity_User _us)
+        {
+            try
+            {
+                const string strSQL = "SP_UPDATE_PROFILE";
+                string[] pNames = { "@id", "@email", "@sdt", "@pass", "@direction" };
+                object[] pValues = { _us.id, _us.Email, _us.Phone, _us.Pass, _us.Direction };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public bool delUser(string username)
         {
             try

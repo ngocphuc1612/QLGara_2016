@@ -120,9 +120,14 @@ namespace QLGara
             }
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void txtSearchVT_TextChanged(object sender, EventArgs e)
         {
-            this.gwVatTu.DataSource = vt.searchVatTu(this.txtSearch.Text);
+            this.gwVatTu.DataSource = vt.searchVatTu(this.txtSearchVT.Text);
         }
+
+        //private void txtSearch_TextChanged(object sender, EventArgs e)
+        //{
+        //    this.gwVatTu.DataSource = vt.searchVatTu(this.txtSearch.Text);
+        //}
     }
 }

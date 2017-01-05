@@ -19,6 +19,16 @@ namespace Entity
             this.direction = direction;
         }
 
+        //Use it for update
+        public void update(string email, string pass, string sdt, string direction)
+        {
+            this.email = email;
+            this.pass = pass;
+            this.phone = sdt;
+            this.direction = direction;
+
+        }
+
         public Entity_User(DataRow dr)
         {
             try
@@ -32,6 +42,7 @@ namespace Entity
                 this.fullName = dr["FULL_NAME"].ToString();
                 this.phone = dr["PHONE"].ToString();
                 this.direction = dr["DIRECTION"].ToString();
+                this.id = dr["USER_ID"].ToString();
             }
             catch
             {
@@ -41,10 +52,11 @@ namespace Entity
         #endregion
 
         #region Fields
+        public string id;
         private string username;
         private string email;
         private string pass;
-        private int role;
+        int role;
         private bool gender;
         private DateTime birthday;
         private string fullName;

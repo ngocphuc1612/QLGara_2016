@@ -267,6 +267,7 @@
             this.btn_Them.TabIndex = 5;
             this.btn_Them.Text = "Thêm mới";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // txtID
             // 
@@ -423,7 +424,7 @@
             this.layoutControlItem17.Name = "layoutControlItem1";
             this.layoutControlItem17.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 2, 2, 2);
             this.layoutControlItem17.Size = new System.Drawing.Size(284, 24);
-            this.layoutControlItem17.Text = "ID";
+            this.layoutControlItem17.Text = "Dòng Xe";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(87, 13);
             // 
             // gwDongXe
