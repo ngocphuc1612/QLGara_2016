@@ -68,7 +68,7 @@ namespace QLGara
             string donGia = this.txtGiaBan.Text;
             string sl = this.txtSoLuong.Text;
 
-            if (maVt == "" || tenVt == "" || donGia == "" || sl == "")
+            if ( tenVt == "" || donGia == "" || sl == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -85,8 +85,9 @@ namespace QLGara
                 MessageBox.Show("Vui lòng kiểm tra lại Đơn giá và Số lượng!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            Entity_VatTu _vt = new Entity_VatTu(Int32.Parse(maVt), tenVt, dg, sluog);
+            int vtID = Utility.Instance.autoKey(gwPhuTung);
+            vtID = (maVt == null) ? vtID : Int32.Parse(maVt);
+            Entity_VatTu _vt = new Entity_VatTu(vtID, tenVt, dg, sluog);
             if (vt.updateVatTu(_vt) == true)
             {
                 MessageBox.Show("Lưu thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -98,16 +99,18 @@ namespace QLGara
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.txtTen = null;
-            this.txtSoLuong = null;
-            this.txtGiaBan = null;
+            this.txtID.Text = null;
+            this.txtTen.Text = null;
+            this.txtSoLuong.Text = null;
+            this.txtGiaBan.Text = null;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            this.txtTen = null;
-            this.txtSoLuong = null;
-            this.txtGiaBan = null;
+            this.txtID.Text = null;
+            this.txtTen.Text = null;
+            this.txtSoLuong.Text = null;
+            this.txtGiaBan.Text = null;
         }
     }
 }
