@@ -30,6 +30,7 @@ namespace QLGara
             this.gwXe.AutoGenerateColumns = false;
             this.gwXe.DataSource = dt;
             this.txtBienSo.Enabled = false;
+            this.btnLuu.Enabled = false;
 
             this.cbbKhachHang.DataSource = kh.getData();
             this.cbbKhachHang.DisplayMember = "KH_TEN";
@@ -38,15 +39,6 @@ namespace QLGara
             this.cbbDongXe.DataSource = dx.getData();
             this.cbbDongXe.ValueMember = "DONGXE_ID";
             this.cbbDongXe.DisplayMember = "DONGXE_ID";
-        }
-
-        private void btnThemMoi_Click(object sender, EventArgs e)
-        {
-            this.txtBienSo.Enabled = true;
-            this.txtBienSo.Text = "";
-            this.txtNamSX.Text = "";
-            this.txtMoTa.Text = "";
-            this.txtXuatXu.Text = "";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -96,20 +88,12 @@ namespace QLGara
         private void button1_Click(object sender, EventArgs e)
         {
             this.txtBienSo.Enabled = false;
+            this.btnLuu.Enabled = false;
+            this.txtBienSo.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chăc muốn xóa xe này?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (xe.delXe(this.txtBienSo.Text) == true)
-                {
-                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.gwXe.DataSource = xe.getData();
-                }
-                else
-                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void gwXe_SelectionChanged(object sender, EventArgs e)
@@ -139,6 +123,30 @@ namespace QLGara
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             this.gwXe.DataSource = xe.searchXe(this.txtTimKiem.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.txtBienSo.Enabled = true;
+            this.btnLuu.Enabled = true;
+            this.txtBienSo.Text = "";
+            this.txtNamSX.Text = "";
+            this.txtMoTa.Text = "";
+            this.txtXuatXu.Text = "";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chăc muốn xóa xe này?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (xe.delXe(this.txtBienSo.Text) == true)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.gwXe.DataSource = xe.getData();
+                }
+                else
+                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

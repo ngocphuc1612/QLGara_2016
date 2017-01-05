@@ -24,7 +24,6 @@ namespace QLGara
 
             this.gwHoaDon.AutoGenerateColumns = false;
             this.gwHoaDon.DataSource = ptt.getHoaDon();
-            this.btnLuu.Enabled = false;
         }
 
         private void gwHoaDon_SelectionChanged(object sender, EventArgs e)
@@ -60,15 +59,6 @@ namespace QLGara
             this.gwHoaDon.DataSource = ptt.searchHoaDon(this.txtTimKiem.Text);
         }
 
-        private void btn_ThemMoi_Click(object sender, EventArgs e)
-        {
-            this.txtBienSo.Text = "";
-            this.txtTong.Text = "";
-            this.txtMaPSC.Text = "";
-            this.txtID.Text = Utility.Instance.autoKey(gwHoaDon).ToString();
-            this.btnLuu.Enabled = true;
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             int maPsc = 1;
@@ -91,20 +81,39 @@ namespace QLGara
             Entity_PhieuThanhToan _ptt = new Entity_PhieuThanhToan(maPtt, maPsc);
             if (ptt.insertHoaDon(_ptt) == true)
             {
-                MessageBox.Show("Thêm thành công Hóa đơn!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.gwHoaDon.DataSource = ptt.getHoaDon();
-                this.btnLuu.Enabled = false;
+                this.btnLuu.Enabled = true;
             } else
             {
-                MessageBox.Show("Có lỗi xảy ra, không thể thêm hóa đơn!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Có lỗi xảy ra, không thể lưu hóa đơn!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
         }
 
-        private void btn_Huy_Click(object sender, EventArgs e)
+        private void btnMoi_Click(object sender, EventArgs e)
         {
-            this.btnLuu.Enabled = false;
+            this.txtBienSo.Text = "";
+            this.txtTong.Text = "";
+            this.txtMaPSC.Text = "";
+            this.txtID.Text = Utility.Instance.autoKey(gwHoaDon).ToString();
+            this.btnLuu.Enabled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chăc muốn xóa?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //if (ptt.(Int32.Parse(this.txtMaVT.Text)) == true)
+                if ( 1 == 2 )
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //gwVatTu.DataSource = vt.GetData();
+                }
+                else
+                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -88,7 +88,7 @@ namespace QLGara
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            this.gwKhachHang.DataSource = kh.searchKH(this.txtSearch.Text);
+           this.gwKhachHang.DataSource = kh.searchKH(this.txtSearch.Text);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

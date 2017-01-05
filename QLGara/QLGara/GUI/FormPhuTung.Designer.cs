@@ -62,9 +62,9 @@
             this.TENVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtTimKiem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtTimKiemlkl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.pnlPhuTung.SuspendLayout();
@@ -98,9 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gwPhuTung)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiemlkl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             this.SuspendLayout();
@@ -384,7 +384,7 @@
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.groupControl1);
-            this.layoutControl2.Controls.Add(this.textEdit1);
+            this.layoutControl2.Controls.Add(this.txtTimKiem);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Name = "layoutControl2";
@@ -449,21 +449,21 @@
             this.DONGIA.Name = "DONGIA";
             this.DONGIA.ReadOnly = true;
             // 
-            // textEdit1
+            // txtTimKiem
             // 
-            this.textEdit1.Location = new System.Drawing.Point(55, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(121, 20);
-            this.textEdit1.StyleController = this.layoutControl2;
-            this.textEdit1.TabIndex = 4;
-            this.textEdit1.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtTimKiem.Location = new System.Drawing.Point(55, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(121, 20);
+            this.txtTimKiem.StyleController = this.layoutControl2;
+            this.txtTimKiem.TabIndex = 4;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.txtTimKiem,
+            this.txtTimKiemlkl,
             this.layoutControlItem2,
             this.emptySpaceItem8});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
@@ -471,14 +471,14 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(350, 431);
             this.layoutControlGroup2.TextVisible = false;
             // 
-            // txtTimKiem
+            // txtTimKiemlkl
             // 
-            this.txtTimKiem.Control = this.textEdit1;
-            this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(168, 24);
-            this.txtTimKiem.Text = "Tìm kiếm";
-            this.txtTimKiem.TextSize = new System.Drawing.Size(40, 13);
+            this.txtTimKiemlkl.Control = this.txtTimKiem;
+            this.txtTimKiemlkl.Location = new System.Drawing.Point(0, 0);
+            this.txtTimKiemlkl.Name = "txtTimKiemlkl";
+            this.txtTimKiemlkl.Size = new System.Drawing.Size(168, 24);
+            this.txtTimKiemlkl.Text = "Tìm kiếm";
+            this.txtTimKiemlkl.TextSize = new System.Drawing.Size(40, 13);
             // 
             // layoutControlItem2
             // 
@@ -536,9 +536,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gwPhuTung)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiemlkl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             this.ResumeLayout(false);
@@ -570,8 +570,8 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem txtTimKiem;
+        private DevExpress.XtraEditors.TextEdit txtTimKiem;
+        private DevExpress.XtraLayout.LayoutControlItem txtTimKiemlkl;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.DataGridView gwPhuTung;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
