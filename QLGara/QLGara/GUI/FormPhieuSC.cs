@@ -54,24 +54,6 @@ namespace QLGara
             this.cbbPhuTung.ValueMember = "MAVT";
         }
 
-
-        private void btnThemMoi_Click(object sender, EventArgs e)
-        {
-            this.txtTong.Text = "";
-            this.txtSoLuong.Enabled = true;
-            this.cbbPhuTung.Enabled = true;
-            this.btnThemCT.Enabled = true;
-            try
-            {
-                maPSC = Utility.Instance.autoKey(gwPhieuSuaChua);
-                psc.insertPSC(new Entity_PhieuSuaChua(maPSC, this.cbbBienSo.SelectedValue.ToString(), Int32.Parse(this.cbbKhachHang.SelectedValue.ToString())));
-            }
-            catch
-            {
-                return;
-            }
-        }
-
         private void gwPhieuSuaChua_SelectionChanged(object sender, EventArgs e)
         {
             DataGridViewCell cell = null;
@@ -86,7 +68,6 @@ namespace QLGara
                 DataGridViewRow row = cell.OwningRow;
                 this.txtMPSC.Text = row.Cells["MAPSC"].Value.ToString();
                 this.cbbBienSo.SelectedValue = row.Cells["BIENSO"].Value;
-
                 try
                 {
                     this.dtNgaySC.Value = Convert.ToDateTime(row.Cells["NGAYSC"].Value);
@@ -98,16 +79,7 @@ namespace QLGara
                     this.txtTong.Text = "0";
                 }
                 this.cbbKhachHang.SelectedValue = row.Cells["USER_ID"].Value;
-
             }
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            //
-            this.cbbPhuTung.Enabled = false;
-            this.txtSoLuong.Enabled = false;
-            this.btnThemCT.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -171,6 +143,31 @@ namespace QLGara
                 //MessageBox.Show("Thêm thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.gwCTPhieuSuaChua.DataSource = ctpsc.getData();
             }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            this.txtTong.Text = "";
+            this.txtSoLuong.Enabled = true;
+            this.cbbPhuTung.Enabled = true;
+            this.btnThemCT.Enabled = true;
+            try
+            {
+                maPSC = Utility.Instance.autoKey(gwPhieuSuaChua);
+                psc.insertPSC(new Entity_PhieuSuaChua(maPSC, this.cbbBienSo.SelectedValue.ToString(), Int32.Parse(this.cbbKhachHang.SelectedValue.ToString())));
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+            this.cbbPhuTung.Enabled = false;
+            this.txtSoLuong.Enabled = false;
+            this.btnThemCT.Enabled = false;
         }
     }
 }
