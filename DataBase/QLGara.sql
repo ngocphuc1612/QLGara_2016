@@ -259,14 +259,20 @@ CREATE PROC SP_DEL_XE
 	END
 
 ---Search----
-CREATE PROC SP_SEARCH_XE
+CREATE PROC [dbo].[SP_SEARCH_XE]
 	@content nvarchar(20)
 	as
 	begin
+		delete from ##temp
+		insert into ##temp(BIENSO, KH_TEN, DONGXE_ID, MAU_XE, MAU_NOI_THAT, NAM_XUAT_XU, XUAT_XU)
+		select A.BIENSO, B.KH_TEN, A.DONGXE_ID, A.MAU_XE, A.MAU_NOI_THAT, A.NAM_XUAT_XU, A.XUAT_XU 
+		from XE A, KHACHHANG B
+		where B.KH_ID = A.USER_ID
+		
 		declare @searchString nvarchar(23)
 		set @searchString = N'%' + @content + N'%'
-		select * from XE
-		where (BIENSO like @searchString) or (XUAT_XU like @searchString) or (MOTA like @searchString)
+		select * from ##temp
+		where (A.USER_ID like @searchString) or (A.BIENSO like @searchString) or (A.XUAT_XU like @searchString) or (A.MOTA like @searchString)
 	end
 
 
@@ -440,4 +446,21 @@ CREATE PROC SP_INSERT_NCC
 	as
 	begin
 		insert into NHACUNGCAP values(@id, @ten, @sdt, @email, @diaChi, GETDATE(), null, 'active')
+	end
+
+
+CREATE PROC [dbo].[SP_SELECT_CTPSC]
+	@content nvarchar(20)
+	as
+	begin
+		delete from ##temp
+		insert into ##temp(MAPSC, TENVT, SOLUONG, DONGIA, GIABAN, SL)
+		select A.MAPSC, B.TENVT, A.SOLUONG, A.DONGIA, B.DONGIA, B.SL 
+		from CT_PHIEUSUACHUA A, VATTU B
+		where B.MAVT = A.MAVT
+		
+		declare @searchString nvarchar(23)
+		set @searchString = N'%' + @content + N'%'
+		select * from ##temp
+		where (MAPSC = @searchString)
 	end
