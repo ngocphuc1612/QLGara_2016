@@ -62,10 +62,10 @@ namespace QLGara
 
         private void btnListAccessary_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!CheckOpenTabs("Danh mục phụ tùng"))
+            if (!CheckOpenTabs("Phụ tùng"))
             {
-                SuperTabItem t = superTab.CreateTab("Danh mục phụ tùng");
-                FormVatTu frm = new FormVatTu();
+                SuperTabItem t = superTab.CreateTab("Phụ tùng");
+                FormPhuTung frm = new FormPhuTung();
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
                 frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -92,11 +92,6 @@ namespace QLGara
             }
             else
                 superTab.TabIndex = superTab.Tabs.Count - 1;
-        }
-
-        private void btnNewUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
         private void superTab_SelectedTabChanged(object sender, SuperTabStripSelectedTabChangedEventArgs e)
