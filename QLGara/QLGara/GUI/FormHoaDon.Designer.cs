@@ -163,9 +163,9 @@
             // btnXoa
             // 
             this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(219, 183);
+            this.btnXoa.Location = new System.Drawing.Point(219, 184);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(113, 37);
+            this.btnXoa.Size = new System.Drawing.Size(113, 20);
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -198,9 +198,9 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(100, 183);
+            this.btnLuu.Location = new System.Drawing.Point(100, 184);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(115, 37);
+            this.btnLuu.Size = new System.Drawing.Size(115, 20);
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -271,25 +271,25 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 212);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 196);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(375, 113);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(375, 129);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 171);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 172);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(88, 41);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(88, 24);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(324, 171);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(324, 172);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(51, 41);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(51, 24);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
@@ -297,7 +297,7 @@
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 154);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 17);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(375, 18);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
@@ -320,9 +320,9 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnLuu;
-            this.layoutControlItem5.Location = new System.Drawing.Point(88, 171);
+            this.layoutControlItem5.Location = new System.Drawing.Point(88, 172);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(119, 41);
+            this.layoutControlItem5.Size = new System.Drawing.Size(119, 24);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -338,9 +338,9 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnXoa;
-            this.layoutControlItem8.Location = new System.Drawing.Point(207, 171);
+            this.layoutControlItem8.Location = new System.Drawing.Point(207, 172);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(117, 41);
+            this.layoutControlItem8.Size = new System.Drawing.Size(117, 24);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 

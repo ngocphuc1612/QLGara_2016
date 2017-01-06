@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Entity;
 
 namespace QLGara
 {
@@ -20,6 +21,7 @@ namespace QLGara
             this.pnl = pnlDongXe;
             this.gwDongXe.AutoGenerateColumns = false;
             this.gwDongXe.DataSource = dx.getData();
+            this.btn_Luu.Enabled = false;
         }
 
         private void gwDongXe_SelectionChanged(object sender, EventArgs e)
@@ -79,9 +81,57 @@ namespace QLGara
             this.txtID.ReadOnly = false;
             this.txtID.Enabled = true;
             this.txtID.BackColor = Color.White;
+            this.btn_Luu.Enabled = true;
             this.txtID.Text = "";
             this.txtHieuXe.Text = "";
             this.rbThongSoKyThuat.Text = "";
+        }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            string hieuXe = this.txtHieuXe.Text;
+            string dongXeId = this.txtID.Text;
+            string tskt = this.rbThongSoKyThuat.Text;
+
+            if (hieuXe == "" || dongXeId == "" || tskt == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            Entity_DongXe _dx = new Entity_DongXe(dongXeId, hieuXe, tskt);
+
+            if (dx.insertDongXe(_dx) )
+            {
+
+                MessageBox.Show("Thêm thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gwDongXe.DataSource = dx.getData();
+                this.btn_Luu.Enabled = false;
+
+            } else if (dx.updateDongXe(_dx))
+            {
+                MessageBox.Show("Sửa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gwDongXe.DataSource = dx.getData();
+                btn_Luu.Enabled = false;
+            } else
+            {
+                MessageBox.Show("Có lỗi xảy ra,vui lòng kiểm tra lại!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chăc muốn xóa dòng xe này?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (dx.delDongXe(this.txtID.Text))
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    gwDongXe.DataSource = dx.getData();
+                }
+                else
+                    MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

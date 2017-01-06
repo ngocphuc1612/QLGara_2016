@@ -88,13 +88,23 @@ namespace QLGara
             int vtID = Utility.Instance.autoKey(gwPhuTung);
             vtID = (maVt == null) ? vtID : Int32.Parse(maVt);
             Entity_VatTu _vt = new Entity_VatTu(vtID, tenVt, dg, sluog);
-            if (vt.updateVatTu(_vt) == true)
+            if (vt.insertVatTu(_vt) == true)
             {
-                MessageBox.Show("Lưu thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thêm thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gwPhuTung.DataSource = vt.GetData();
             }
             else
-                MessageBox.Show("Không thể lưu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                if (vt.updateVatTu(_vt) == true)
+                {
+                    MessageBox.Show("Sửa thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    gwPhuTung.DataSource = vt.GetData();
+                } else
+                {
+                    MessageBox.Show("Không thể lưu!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+               
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -107,7 +117,13 @@ namespace QLGara
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            this.txtID.Text = null;
+            try { 
+                this.txtID.Text = Utility.Instance.autoKey(gwPhuTung).ToString();
+             
+            } catch
+            {
+                this.txtID.Text = "1";
+            }
             this.txtTen.Text = null;
             this.txtSoLuong.Text = null;
             this.txtGiaBan.Text = null;

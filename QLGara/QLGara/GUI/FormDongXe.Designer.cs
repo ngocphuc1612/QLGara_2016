@@ -243,6 +243,7 @@
             this.btn_Xoa.TabIndex = 8;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Luu
             // 
@@ -254,6 +255,7 @@
             this.btn_Luu.TabIndex = 7;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // btn_Them
             // 

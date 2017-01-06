@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PSC_TONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PSC_MATC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PSC_NGAYSC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -330,6 +331,7 @@
             this.btnXoaCT.TabIndex = 20;
             this.btnXoaCT.Text = "Xóa";
             this.btnXoaCT.UseVisualStyleBackColor = true;
+            this.btnXoaCT.Click += new System.EventHandler(this.btnXoaCT_Click);
             // 
             // btnThemCT
             // 
@@ -347,6 +349,7 @@
             this.txtTong.Name = "txtTong";
             this.txtTong.Properties.Mask.EditMask = "c0";
             this.txtTong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTong.Properties.ReadOnly = true;
             this.txtTong.Size = new System.Drawing.Size(258, 20);
             this.txtTong.StyleController = this.layoutControl1;
             this.txtTong.TabIndex = 15;
@@ -367,6 +370,7 @@
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -702,6 +706,8 @@
             // DONGIA_CT
             // 
             this.DONGIA_CT.DataPropertyName = "DONGIA";
+            dataGridViewCellStyle5.Format = "N0";
+            this.DONGIA_CT.DefaultCellStyle = dataGridViewCellStyle5;
             this.DONGIA_CT.HeaderText = "Đơn giá";
             this.DONGIA_CT.Name = "DONGIA_CT";
             this.DONGIA_CT.ReadOnly = true;
@@ -800,8 +806,8 @@
             // TONGTIEN
             // 
             this.TONGTIEN.DataPropertyName = "TONGTIEN";
-            dataGridViewCellStyle1.Format = "N0";
-            this.TONGTIEN.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Format = "N0";
+            this.TONGTIEN.DefaultCellStyle = dataGridViewCellStyle6;
             this.TONGTIEN.HeaderText = "Tổng tiền";
             this.TONGTIEN.Name = "TONGTIEN";
             this.TONGTIEN.ReadOnly = true;
@@ -955,10 +961,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAPSC_CT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG_CT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA_CT;
         private System.Windows.Forms.ComboBox cbbBienSo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPSC;
@@ -981,5 +983,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.TextEdit txtMPSC;
         private DevExpress.XtraLayout.LayoutControlItem labelMaPhieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPSC_CT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAVT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG_CT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA_CT;
     }
 }

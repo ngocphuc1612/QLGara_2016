@@ -20,5 +20,9 @@ namespace BUS
         {
             return psc.insertCTPSC(_ct);
         }
+        public bool deleteCTPSC(Entity_CTPSC _ct)
+        {
+            return psc.deleteCTPSC(_ct);
+        }
     }
 }

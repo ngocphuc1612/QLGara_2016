@@ -40,6 +40,9 @@ namespace QLGara
             this.cbbRole.DataSource = rl.GetData();
             this.cbbRole.DisplayMember = "ROLE_NAME";
             this.cbbRole.ValueMember = "ROLE_ID";
+            this.cbbRole.SelectedValue = 5;
+
+
         }
 
         private void gvUsers_SelectionChanged(object sender, EventArgs e)
@@ -67,13 +70,16 @@ namespace QLGara
                 this.txtName.Text = row.Cells["FULL_NAME"].Value.ToString();
                 this.txtPhone.Text = row.Cells["PHONE"].Value.ToString();
                 this.txtAddress.Text = row.Cells["DIRECTION"].Value.ToString();
+
+                this.cbbRole.SelectedValue = row.Cells["ROLE_ID"].Value; ;
                 //this.cbbRole.SelectedValue = row.Cells["ROLE_ID"].Value;
-                
+
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            this.txtUsername.Text = null;
             this.txtUsername.ReadOnly = false;
             this.txtPass.ReadOnly = false;
             this.txtComfirm.ReadOnly = false;

@@ -357,7 +357,6 @@
             this.txtComfirm.Location = new System.Drawing.Point(406, 37);
             this.txtComfirm.Name = "txtComfirm";
             this.txtComfirm.Properties.PasswordChar = '*';
-            this.txtComfirm.Properties.ReadOnly = true;
             this.txtComfirm.Size = new System.Drawing.Size(192, 20);
             this.txtComfirm.StyleController = this.layoutControl1;
             this.txtComfirm.TabIndex = 14;
@@ -367,7 +366,6 @@
             this.txtPass.Location = new System.Drawing.Point(162, 37);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.PasswordChar = '*';
-            this.txtPass.Properties.ReadOnly = true;
             this.txtPass.Size = new System.Drawing.Size(136, 20);
             this.txtPass.StyleController = this.layoutControl1;
             this.txtPass.TabIndex = 13;

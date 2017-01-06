@@ -49,5 +49,23 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool deleteCTPSC(Entity_CTPSC _ct)
+        {
+            try
+            {
+                const string strSQL = "SP_DEL_CTPSC";
+                string[] pNames = { "@maPsc", "@maVt" };
+                object[] pValues = { _ct.MaPsc, _ct.MaVt };
+                int count = con.ExecuteStoredProcedure(strSQL, pNames, pValues);
+                if (count >= 0)
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

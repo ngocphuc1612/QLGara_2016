@@ -23,7 +23,12 @@ namespace QLGara
             this.txtUsername.Text = getUser.Username;
             this.txtEmail.Text = getUser.Email;
             this.txtName.Text = getUser.FullName;
-            this.cbbRole.SelectedText = getUser.Role.ToString();
+
+            BUS_ROLES rl = new BUS_ROLES();
+            this.cbbQuyenHan.DataSource = rl.GetData();
+            this.cbbQuyenHan.DisplayMember = "ROLE_NAME";
+            this.cbbQuyenHan.ValueMember = "ROLE_ID";
+            this.cbbQuyenHan.SelectedValue = getUser.Role;
             this.dtDob.Text = getUser.Birthday.ToString();
             this.txtAddress.Text = getUser.Direction;
             this.txtPhone.Text = getUser.Phone;           
@@ -34,7 +39,7 @@ namespace QLGara
         {
             string pass = this.txtPass.Text;
             string comfirm = this.txtComfirm.Text;
-            if (pass == comfirm && pass == LoginForm.MyProfile.Pass)
+            if (pass == comfirm && pass != "")
             {
 
                 LoginForm.MyProfile.update(this.txtEmail.Text, this.txtPass.Text, this.txtPhone.Text, this.txtAddress.Text);

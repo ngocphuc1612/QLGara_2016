@@ -135,19 +135,19 @@ namespace QLGara
 
         private void btnListAccessary_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (!CheckOpenTabs("Danh mục phụ tùng"))
-            {
-                SuperTabItem t = superTab.CreateTab("Danh mục phụ tùng");
-                FormVatTu frm = new FormVatTu();
-                frm.TopLevel = false;
-                frm.Dock = DockStyle.Fill;
-                frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-                t.AttachedControl.Controls.Add(frm.pnl);
-                frm.Show();
-                superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
-            }
-            else
-                superTab.TabIndex = superTab.Tabs.Count - 1;
+            //if (!CheckOpenTabs("Danh mục phụ tùng"))
+            //{
+            //    SuperTabItem t = superTab.CreateTab("Danh mục phụ tùng");
+            //    FormVatTu frm = new FormVatTu();
+            //    frm.TopLevel = false;
+            //    frm.Dock = DockStyle.Fill;
+            //    frm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            //    t.AttachedControl.Controls.Add(frm.pnl);
+            //    frm.Show();
+            //    superTab.SelectedTabIndex = superTab.Tabs.Count - 1;
+            //}
+            //else
+            //    superTab.TabIndex = superTab.Tabs.Count - 1;
         }
 
         private void btnListCar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

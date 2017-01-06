@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using DAL;
+using Entity;
 
 namespace BUS
 {
@@ -21,6 +22,15 @@ namespace BUS
         public DataTable searchKH(string content)
         {
             return dx.searchObject(content);
+        }
+
+        public bool insertDongXe(Entity_DongXe _dx)
+        {
+            return dx.insertDongXe(_dx);
+        }
+        public bool updateDongXe(Entity_DongXe _dx)
+        {
+            return dx.updateDongXe(_dx);
         }
 
     }

@@ -55,6 +55,12 @@ namespace QLGara
             this.cbbPhuTung.ValueMember = "MAVT";
         }
 
+        public void reset()
+        {
+            this.gwPhieuSuaChua.DataSource = psc.getData();
+            this.gwCTPhieuSuaChua.DataSource = ctpsc.getData();
+        }
+
         private void gwPhieuSuaChua_SelectionChanged(object sender, EventArgs e)
         {
             DataGridViewCell cell = null;
@@ -91,16 +97,17 @@ namespace QLGara
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string bs = this.cbbBienSo.SelectedValue.ToString();
+            string bs = this.cbbBienSo.Text;
             string khachHang = this.cbbKhachHang.SelectedValue.ToString();
             int kh_id = 1;
             try
             {
                 kh_id = Int32.Parse(khachHang);
-                
+                this.txtMPSC.Text = maPSC.ToString();
                 tong = Double.Parse(this.txtTong.Text);
 
-            } catch
+            }
+            catch
             {
                 tong = 0;
             }
@@ -110,14 +117,20 @@ namespace QLGara
                 return;
             }
             Entity_PhieuSuaChua _psc = new Entity_PhieuSuaChua(maPSC, bs, kh_id);
-            if(psc.updatePSC(_psc) == true)
+            if (psc.insertPSC(_psc))
             {
-                MessageBox.Show("Thêm thành công Phiếu sửa chửa ", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thêm thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.gwPhieuSuaChua.DataSource = psc.getData();
-            } else
+            }
+            else if (psc.updatePSC(_psc) == true)
+            {
+                MessageBox.Show("Lưu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.gwPhieuSuaChua.DataSource = psc.getData();
+            }
+            else
             {
                 MessageBox.Show("Không thể thêm!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            }
             
         }
 
@@ -143,23 +156,47 @@ namespace QLGara
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            Entity_CTPSC _ct = new Entity_CTPSC(this.maPSC, maVt, sl);
+            Entity_CTPSC _ct = new Entity_CTPSC(Int32.Parse(this.txtMPSC.Text), maVt, sl);
             //MessageBox.Show(this.maPSC.ToString());
             if (ctpsc.insertCTPSC(_ct) == true)
             {
                 //MessageBox.Show("Thêm thành công Vật tư " + _vt.TenVt, "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.gwCTPhieuSuaChua.DataSource = ctpsc.getData();
+
+                DataGridViewRow row = null;
+                int indexKey = 0;
+                foreach (DataGridViewCell selectedCell in gwPhieuSuaChua.SelectedCells)
+                {
+                    DataGridViewRow cell = selectedCell.OwningRow;
+                    if (cell.Cells["MAPSC"].Value.ToString() == _ct.MaPsc.ToString())
+                    {
+                        indexKey = cell.Index;
+                        break;
+                    }
+                }
+                reset();
+                if (indexKey != 0)
+                {
+                    this.gwPhieuSuaChua.Rows[0].Selected = false;
+                    this.gwPhieuSuaChua.Rows[indexKey].Selected = true;
+                }
                 this.gwCTPhieuSuaChua.DataSource = psc.getPscByID(Int32.Parse(this.txtMPSC.Text));
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền thông tin!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             this.txtTong.Text = "";
+            
             try
             {
                 maPSC = Utility.Instance.autoKey(gwPhieuSuaChua);
-                psc.insertPSC(new Entity_PhieuSuaChua(maPSC, this.cbbBienSo.SelectedValue.ToString(), Int32.Parse(this.cbbKhachHang.SelectedValue.ToString())));
+                //psc.insertPSC(new Entity_PhieuSuaChua(maPSC, this.cbbBienSo.SelectedValue.ToString(), Int32.Parse(this.cbbKhachHang.SelectedValue.ToString())));
+                this.txtMPSC.Text = maPSC.ToString();
+
             }
             catch
             {
@@ -173,6 +210,27 @@ namespace QLGara
             this.cbbPhuTung.Enabled = false;
             this.txtSoLuong.Enabled = false;
             this.btnThemCT.Enabled = false;
+        }
+
+        private void btnXoaCT_Click(object sender, EventArgs e)
+        {
+            //if (MessageBox.Show("Bạn có chăc muốn xóa?", "Xác nhận:", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    //if (ptt.(Int32.Parse(this.txtMaVT.Text)) == true)
+            //    Entity_CTPSC val = new Entity_CTPSC(Int32.Parse(this.txtMPSC.Text),Int32.par)
+            //    if (ctpsc.deleteCTPSC() == true)
+            //    {
+            //        MessageBox.Show("Xóa thành công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        //gwVatTu.DataSource = vt.GetData();
+            //    }
+            //    else
+            //        MessageBox.Show("Không thể xóa!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -109,6 +109,10 @@ namespace QLGara
                 return;
             }
 
+            if(this.txtCongNo.Text == "")
+            {
+                this.txtCongNo.Text = "0";
+            }
             try
             {
                 id = Int32.Parse(this.txtID.Text);
